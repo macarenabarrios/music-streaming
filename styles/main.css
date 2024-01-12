@@ -1,0 +1,238 @@
+body {
+  background-color: #F1F3FB;
+  margin: 0;
+  padding: 0;
+}
+
+#navbar {
+  background-color: #ffffff;
+  height: 100vh;
+  width: 20%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Poppins', sans-serif;
+
+}
+
+.navbar-container.navbar-logo {
+  margin-top: 50px;
+  color: #222A53;
+  margin-left: 10px;
+  font-size: 16px;
+}
+
+.navbar-container {
+  color: #7A7C8A;
+  padding: 15px;
+  margin-bottom: 45px;
+  font-size: 14px;
+  margin-left: 10px;
+}
+
+.navbar-container p {
+  margin: 0;
+  font-weight: bold;
+}
+
+.navbar-container ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+  /* Espacio entre los contenedores 2 y 3 */
+}
+
+.navbar-container li {
+  padding: 5px 0;
+  cursor: pointer;
+}
+
+.navbar-container li.active {
+  font-weight: bold;
+  color: #ED5790;
+  /* Color para el enlace activo */
+}
+
+#main-content {
+  margin-left: 20%;
+  padding: 20px;
+}
+
+#banner {
+  width: 70%;
+  margin-bottom: 20px;
+  display: flex;
+  font-family: 'Poppins', sans-serif;
+}
+
+#banner {
+  width: 100%;
+  position: relative;
+}
+
+#banner img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+#carouselTitle {
+  text-align: left;
+  font-family: 'Poppins', sans-serif;
+  font-size: 17px;
+}
+
+#carouselExample {
+  position: relative;
+}
+
+#carouselExample .carousel-inner {
+  top: 30px;
+  /* Ajusta el valor según tu preferencia */
+}
+
+#carouselExample .carousel-control-container {
+  display: flex;
+  justify-content: space-between;
+  /* Alinea las flechas a los lados opuestos del contenedor */
+  align-items: center;
+  /* Centra verticalmente las flechas */
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 60px;
+  /* Ancho total del contenedor, ajusta según sea necesario */
+}
+
+#carouselExample .carousel-control-prev,
+#carouselExample .carousel-control-next {
+  width: 100%;
+  font-size: 20px;
+  color: black;
+  /* Ajusta el tamaño de la flecha según tu preferencia */
+}
+
+#carouselExample img {
+  width: 190px;
+  /* Puedes ajustar este valor según tu preferencia */
+  height: auto;
+  /* Mantiene la proporción de aspecto */
+}
+
+#carouselExample .carousel-item img {
+  margin-right: 35px;
+  /* Puedes ajustar este valor según tu preferencia */
+}
+
+#featured-content {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 70px;
+  /* Ajusta el margen superior según sea necesario */
+}
+
+#top-songs {
+  width: 48%;
+  /* Ajusta el ancho según sea necesario */
+  font-family: 'Poppins', sans-serif;
+}
+
+#top-songs h2 {
+  font-size: 17px !important;
+  margin-bottom: 20px;
+}
+
+#artists-genres {
+  width: 48%;
+  /* Ajusta el ancho según sea necesario */
+  font-family: 'Poppins', sans-serif;
+}
+
+#artists-genres h2 {
+  font-size: 17px !important;
+  margin-bottom: 20px;
+}
+
+/* Estilos para la lista de canciones */
+#top-songs ul {
+  list-style: none;
+  padding: 0;
+}
+
+#top-songs li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #ccc;
+  padding: 10px;
+}
+
+.song-info {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.song-info img {
+  width: 50px;
+  /* Ajusta el tamaño de la portada según sea necesario */
+  margin-right: 10px;
+}
+
+.details {
+  font-size: 13px;
+}
+
+.details p {
+  margin-bottom: 4px;
+}
+
+.duration {
+  font-size: 13px;
+  margin-right: 50px;
+}
+
+.favorite-link {
+  margin: 0;
+  align-self: center;
+  text-decoration: none;
+  color: #ED5790;
+  margin-left: 10px;
+  font-size: 20px;
+}
+
+.favorite-link:hover {
+  color: #ff4d8b;
+}
+
+/* Estilos para artistas y géneros */
+.top-container,
+.bottom-container {
+  margin-bottom: 20px;
+}
+
+.artist-images,
+.genre-images {
+  display: flex;
+}
+
+.artist-images img,
+.genre-images img {
+  width: 80px;
+  /* Ajusta el tamaño de las imágenes según sea necesario */
+  border-radius: 50%;
+  /* Bordes redondeados */
+  margin-right: 10px;
+}
+
+#bottom-container h2 {
+  font-size: 17px !important;
+  margin-bottom: 20px;
+}
+
+.see-more-link {
+  margin-top: 10px;
+  display: block;
+}
