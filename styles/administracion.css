@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.titulo{
+    background-color: aquamarine;
+}
+
+table{
+    border: solid 1px black;
+}
+
+th{
+    padding: 20px 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.chau{
+    border-bottom: solid 1px black;
+    border-top: solid 1px black;
+}
+
+td{
+    padding: 15px;
+}
+
+.icono-basura{
+    font-size: 1.5rem;
+    color: red;
+    padding-left: 10px;
+    
+}
+
+.icono-lapiz{
+    font-size: 1.5rem;
+    color: blue;
+    padding-left: 10px;
+    
+}
+
