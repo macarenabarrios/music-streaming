@@ -1,0 +1,21 @@
+/*estilos del footer*/
+
+.listaFooter {
+    list-style-type: none;
+    text-align: left;
+    color: #7A7C8A;
+    padding-left: 0%;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    /*font-weight: bold; -->agregar a los titulos de las listas*/
+  }
+
+  .listaFooter a{
+    text-decoration: none;
+    color: #7A7C8A
+  }
+
+  .listaFooter a:hover{
+    color: #ED5790;
+  }
+  
