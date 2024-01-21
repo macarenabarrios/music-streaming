@@ -1,0 +1,17 @@
+#registroBtn {
+    background-color:   #ea7ba1e5;
+    border-color: #fb3374;
+    color: #ffffff;
+}
+
+#registroBtn:hover {
+    background-color: #fb3374;
+}
+
+#registroRedesBtn {
+    border-color: #fb3374
+}
+
+#registroRedesBtn:hover {
+    background-color:   #ea7ba1e5 ;
+}
