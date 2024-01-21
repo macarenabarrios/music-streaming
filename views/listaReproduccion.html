@@ -4,9 +4,176 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="../styles/styleListaReproduccion.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" 
+    rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Josefin+Sans:wght@600&family=Lato:wght@300;400&family=Orbitron:wght@900&family=Play:wght@400;700&family=Poppins:wght@200;300;400&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" 
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <title>DevTunes</title>
 </head>
 <body>
-    
+    <header>
+        <!-- Navbar -->
+        <div id="navbar">
+            <!-- Contenedor 1 -->
+            <div class="navbar-container navbar-logo">
+                <p>Nombre de la Página</p>
+            </div>
+        
+            <!-- Contenedor 2 -->
+            <div class="navbar-container">
+                <p>RECOMENDADO</p>
+                <ul>
+                    <li class="active">Explorar</li>
+                    <li>Generos</li>
+                    <li>Artistas</li>
+                    <li>Albumes</li>
+                </ul>
+            </div>
+        
+            <!-- Contenedor 3 -->
+            <div class="navbar-container">
+                <p>MI BIBLIOTECA</p>
+                <ul>
+                    <li>Escuchado Recientemente</li>
+                    <li>Favoritos</li>
+                    <li>Descargas</li>
+                </ul>
+            </div>
+        </div>
+        <!-- Fin de Navbar -->
+    </header>
+    <main>
+        <div id="main-content">
+            <div  id="banner-listadereproduccion">
+                <img src="../assets/img/banner-listadereproduccion.png" alt="banner de lista de reproduccion">
+
+
+            </div>
+
+            <div>
+            <!--aqui ira la card-->
+            </div>
+
+            <div>
+            <!--aqui ira la lista de canciones-->
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Título</th>
+                        <th scope="col">Álbum</th>
+                        <th scope="col">
+                            <i class="bi bi-clock icono-duracion"></i>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="fila-contenido">
+                        <th scope="row">1</th>
+                        <td>
+                            <div class="info-cancion">
+                                <img src="../assets/img/topsongs-1.jpeg" alt="Portada de la canción" />
+                                <div class="detalle-cancion">
+                                    <p>En La Intimidad</p>
+                                    <p id="artista-nombre">Emilia, Callejero Fino</p>
+                                </div>
+                            </div>
+                        </td>
+                        <td>En La Intimidad | CROSSOVER#1</td>
+                        <td>02:45</td>
+                        <td>
+                            <i class="bi bi-dash-circle icono-eliminar"></i>
+                        </td>
+                    </tr>
+                    
+                    <tr class="fila-contenido"> 
+                        <th scope="row">2</th>
+                        <td>
+                            <div class="info-cancion">
+                                <img src="../assets/img/topsongs-1.jpeg" alt="Portada de la canción" />
+                                <div class="detalle-cancion">
+                                    <p>En La Intimidad</p>
+                                    <p id="artista-nombre">Emilia, Callejero Fino</p>
+                                </div>
+                            </div>
+                        </td>
+                        <td>En La Intimidad | CROSSOVER#1</td>
+                        <td>02:45</td>
+                        <td>
+                            <i class="bi bi-dash-circle icono-eliminar"></i>
+                        </td>
+                    </tr>
+
+                    <tr class="fila-contenido">
+                        <th scope="row">3</th>
+                        <td>
+                            <div class="info-cancion">
+                                <img src="../assets/img/topsongs-1.jpeg" alt="Portada de la canción" />
+                                <div class="detalle-cancion">
+                                    <p>En La Intimidad</p>
+                                    <p id="artista-nombre">Emilia, Callejero Fino</p>
+                                </div>
+                            </div>
+                        </td>
+                        <td>En La Intimidad | CROSSOVER#1</td>
+                        <td>02:45</td>
+                        <td>
+                            <i class="bi bi-dash-circle icono-eliminar"></i>
+                        </td>
+                    </tr>
+
+                    <tr class="fila-contenido">
+                        <th scope="row">4</th>
+                        <td>
+                            <div class="info-cancion">
+                                <img src="../assets/img/topsongs-1.jpeg" alt="Portada de la canción" />
+                                <div class="detalle-cancion">
+                                    <p>En La Intimidad</p>
+                                    <p id="artista-nombre">Emilia, Callejero Fino</p>
+                                </div>
+                            </div>
+                        </td>
+                        <td>En La Intimidad | CROSSOVER#1</td>
+                        <td>02:45</td>
+                        <td>
+                            <i class="bi bi-dash-circle icono-eliminar"></i>
+                        </td>
+                    </tr>
+                    
+                    <tr class="fila-contenido">
+                        <th scope="row">5</th>
+                        <td>
+                            <div class="info-cancion">
+                                <img src="../assets/img/topsongs-1.jpeg" alt="Portada de la canción" />
+                                <div class="detalle-cancion">
+                                    <p>En La Intimidad</p>
+                                    <p id="artista-nombre">Emilia, Callejero Fino</p>
+                                </div>
+                            </div>
+                        </td>
+                        <td>En La Intimidad | CROSSOVER#1</td>
+                        <td>02:45</td>
+                        <td>
+                            <i class="bi bi-dash-circle icono-eliminar"></i>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            </div>
+        </div>
+
+    </main>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
 </html>
