@@ -54,11 +54,61 @@
 
 /*contenido principal*/
 #main-content {
-    margin-left: 20%;
-    padding: 20px;
+    margin-left: 20%; /*va el nav*/
+    padding: 20px; /*los espacios en blanco*/
 }
 
-#banner-listadereproduccion {
+/***encabezado playlist***/
+.encabezado-lista{
+    background-color: #f8f2f5;
+    display: flex;
+    flex-direction: row;
+}
+
+.img-contenedor{
+    display: flex;
+    flex-direction: column;
+}
+
+.btn-agregar{
+    margin: 10px;
+    margin-top: 15px;
+    border-radius: 50px;
+    background-color:   #ea7ba1e5;
+    border-color: #fb3374;
+    color: #ffffff;
+}
+
+.btn-agregar:hover {
+    background-color: #fb3374;
+}
+
+.lista-opciones li{
+    list-style-type: none;
+    display: inline;
+    
+}
+
+.lista-opciones button{
+    border: none;
+    background-color: transparent;
+}
+
+#btn-reproducir{
+    border-radius: 30px;
+    background-color:   #ea7ba1e5;
+    border-color: #fb3374;
+    color: #ffffff;
+}
+
+.encabezado-lista img{ /*bo*/
+    width: auto;
+}
+
+
+/***fin encabezado***/
+
+/*#banner-listadereproduccion {
     width: 70%;
     margin-bottom: 20px;
     display: flex;
@@ -74,7 +124,7 @@
     width: 100%;
     height: auto;
     display: block;
-}
+}*/
 
 /*lista de reproducción*/
 .icono-duracion {
