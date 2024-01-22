@@ -77,23 +77,26 @@
 }
 
 /*lista de reproducción*/
-.icono-duracion, .icono-eliminar{
+.icono-duracion {
     font-size: 20px;
     color: #131313;
 }
 
-.fila-contenido{
+.fila-contenido {
     vertical-align: middle;
     font-family: 'Poppins', sans-serif;
     font-size: 14px;
-    
 }
 
-.info-cancion {
+.info-cancion a,
+.link-album {
     display: flex;
     align-items: center;
     flex-grow: 1;
+    text-decoration: none;
+    color: #131313;
 }
+
 
 .info-cancion img {
     width: 50px;
@@ -101,13 +104,36 @@
 }
 
 .detalle-cancion p {
-    color: #131313;
     font-size: 16px;
     margin-bottom: 0px;
 }
 
-#artista-nombre{ 
+#artista-nombre {
     color: #7A7C8A;
     font-size: 13px;
 }
+
+
+.btn-eliminar {
+    border: none;
+    background-color: transparent;
+    font-size: 20px;
+    color: #131313;
+}
+
+#num-lista {
+    color: #7A7C8A;
+}
+
+/***hover a links y botones***/
+a:hover #artista-nombre {
+    color: #131313;
+}
+
+.info-cancion a:hover,
+.link-album:hover,
+.btn-eliminar:hover {
+    color: #ED5790;
+}
+
 /*Fin lista reproduccion*/
