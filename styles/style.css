@@ -1,4 +1,7 @@
 /*estilos del footer*/
+footer{
+  background-color: #f9f1fa;
+}
 .logoFooter {
   height: 100px;
 }
