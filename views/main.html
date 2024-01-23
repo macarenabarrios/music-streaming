@@ -22,13 +22,28 @@
   </head>
   <body>
     <!-- Navbar -->
+    <!-- Navbar para dispositivos móviles -->
+    <div id="mobileNavbar" class="d-md-none d-lg-none">
+      <p id="toggleNavbarBtn">DevTunes</p>
+      <button id="hideNavbarBtn" style="display: none">Ocultar</button>
+    </div>
+
+    <!-- Navbar para pantallas grandes -->
     <div id="navbar">
       <!-- Contenedor 1 -->
-      <div class="navbar-container navbar-logo">
-        <p>Nombre de la Página</p>
+      <div class="navbar-container navbar-logo" id="logoContainer">
+        <p>DevTunes</p>
       </div>
 
       <!-- Contenedor 2 -->
+      <div class="navbar-container">
+        <ul>
+          <li>Iniciar sesión</li>
+          <li>Registrarse</li>
+        </ul>
+      </div>
+
+      <!-- Contenedor 3 -->
       <div class="navbar-container">
         <p>RECOMENDADO</p>
         <ul>
@@ -39,7 +54,7 @@
         </ul>
       </div>
 
-      <!-- Contenedor 3 -->
+      <!-- Contenedor 4 -->
       <div class="navbar-container">
         <p>MI BIBLIOTECA</p>
         <ul>
@@ -49,7 +64,7 @@
         </ul>
       </div>
     </div>
-
+    <!-- Fin Navbar -->
     <!-- Contenido principal -->
     <div id="main-content">
       <div id="banner">
@@ -98,19 +113,29 @@
             <div class="carousel-item">
               <div class="d-flex">
                 <img
-                  src="../assets/img/carrousel-4.webp"
-                  class="d-block"
-                  alt="Portada 4"
-                />
-                <img
-                  src="../assets/img/carrousel-5.jpeg"
-                  class="d-block"
-                  alt="Portada 5"
-                />
-                <img
                   src="../assets/img/carrousel-6.jpeg"
                   class="d-block"
                   alt="Portada 6"
+                />
+                <img
+                  src="../assets/img/carrousel-7.jpeg"
+                  class="d-block"
+                  alt="Portada 7"
+                />
+                <img
+                  src="../assets/img/carrousel-8.jpeg"
+                  class="d-block"
+                  alt="Portada 8"
+                />
+                <img
+                  src="../assets/img/carrousel-9.jpeg"
+                  class="d-block"
+                  alt="Portada 9"
+                />
+                <img
+                  src="../assets/img/carrousel-10.jpeg"
+                  class="d-block"
+                  alt="Portada 10"
                 />
               </div>
             </div>
@@ -262,8 +287,11 @@
             <!-- Fotos de géneros con texto arriba -->
             <div class="genre-images">
               <div class="genre">
-                <img src="../assets/img/genero-1.jpeg" alt="Género 1" />
-                <img src="../assets/img/genero-2.jpeg" alt="Género 1" />
+                <img src="../assets/img/genre-1.png" alt="Género 1" />
+                <img src="../assets/img/genre-2.png" alt="Género 2" />
+                <img src="../assets/img/genre-3.png" alt="Género 3" />
+                <img src="../assets/img/genre-4.png" alt="Género 4" />
+                <img src="../assets/img/genre-6.png" alt="Género 5" />
                 <a href="#" class="see-more-link">Ver más</a>
               </div>
               <!-- Repite para los demás géneros -->
@@ -275,6 +303,7 @@
     </div>
 
     <!-- Scripts de Bootstrap y cualquier otro script necesario -->
+    <script src="../js/main.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>

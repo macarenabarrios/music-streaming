@@ -4,6 +4,7 @@ body {
   padding: 0;
 }
 
+/* Navbar */
 #navbar {
   background-color: #ffffff;
   height: 100vh;
@@ -14,11 +15,9 @@ body {
   display: flex;
   flex-direction: column;
   font-family: 'Poppins', sans-serif;
-
 }
 
 .navbar-container.navbar-logo {
-  margin-top: 50px;
   color: #222A53;
   margin-left: 10px;
   font-size: 16px;
@@ -27,7 +26,7 @@ body {
 .navbar-container {
   color: #7A7C8A;
   padding: 15px;
-  margin-bottom: 45px;
+  margin-bottom: 20px;
   font-size: 14px;
   margin-left: 10px;
 }
@@ -41,7 +40,6 @@ body {
   list-style: none;
   padding: 0;
   margin-top: 10px;
-  /* Espacio entre los contenedores 2 y 3 */
 }
 
 .navbar-container li {
@@ -52,22 +50,20 @@ body {
 .navbar-container li.active {
   font-weight: bold;
   color: #ED5790;
-  /* Color para el enlace activo */
 }
 
+/* Pagina principal */
 #main-content {
   margin-left: 20%;
-  padding: 20px;
 }
 
+/* Banner */
 #banner {
+  padding-left: 0;
   width: 70%;
   margin-bottom: 20px;
   display: flex;
   font-family: 'Poppins', sans-serif;
-}
-
-#banner {
   width: 100%;
   position: relative;
 }
@@ -78,6 +74,7 @@ body {
   display: block;
 }
 
+/* Carrousel */
 #carouselTitle {
   text-align: left;
   font-family: 'Poppins', sans-serif;
@@ -89,21 +86,17 @@ body {
 }
 
 #carouselExample .carousel-inner {
-  top: 30px;
-  /* Ajusta el valor según tu preferencia */
+  top: 15px;
 }
 
 #carouselExample .carousel-control-container {
   display: flex;
   justify-content: space-between;
-  /* Alinea las flechas a los lados opuestos del contenedor */
   align-items: center;
-  /* Centra verticalmente las flechas */
   position: absolute;
   top: 0;
   right: 0;
   width: 60px;
-  /* Ancho total del contenedor, ajusta según sea necesario */
 }
 
 #carouselExample .carousel-control-prev,
@@ -111,22 +104,17 @@ body {
   width: 100%;
   font-size: 20px;
   color: black;
-  /* Ajusta el tamaño de la flecha según tu preferencia */
-}
-
-#carouselExample img {
-  width: 190px;
-  height: auto;
 }
 
 #carouselExample .carousel-item img {
   margin-right: 35px;
 }
 
+/* TOP SONGS */
 #featured-content {
   display: flex;
   justify-content: space-between;
-  margin-top: 70px;
+  /* margin-top: 70px;  */
 }
 
 #top-songs {
@@ -139,17 +127,6 @@ body {
   margin-bottom: 20px;
 }
 
-#artists-genres {
-  width: 48%;
-  font-family: 'Poppins', sans-serif;
-}
-
-#artists-genres h2 {
-  font-size: 17px !important;
-  margin-bottom: 20px;
-}
-
-/* Estilos para la lista de canciones */
 #top-songs ul {
   list-style: none;
   padding: 0;
@@ -205,7 +182,17 @@ body {
   color: #ff4d8b;
 }
 
-/* Estilos para artistas y géneros */
+/* ARTISTAS Y GENEROS */
+#artists-genres {
+  width: 48%;
+  font-family: 'Poppins', sans-serif;
+}
+
+#artists-genres h2 {
+  font-size: 17px !important;
+  margin-bottom: 20px;
+}
+
 .top-container,
 .bottom-container {
   margin-bottom: 20px;
@@ -217,16 +204,11 @@ body {
 }
 
 .artist-images img {
-  width: 80px;
   border-radius: 30%;
-  margin-right: 25px;
-  margin-bottom: 25px;
 }
 
 .genre-images img {
   border-radius: 30%;
-  width: 120px;
-  margin-right: 25px;
 }
 
 #bottom-container h2 {
@@ -237,4 +219,226 @@ body {
 .see-more-link {
   margin-top: 10px;
   display: block;
+}
+
+/* Estilos para pantallas más pequeñas, como dispositivos móviles */
+@media only screen and (max-width: 767px) {
+  #navbar {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    width: 50%;
+  }
+
+  #mobileNavbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    padding-left: 25px;
+    padding-bottom: 0;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  #main-content {
+    margin-left: 0;
+  }
+
+  #banner {
+    width: 100%;
+    margin-bottom: 10px;
+    z-index: 1;
+  }
+
+  /* Carrousel */
+  #carouselExample {
+    position: relative;
+    margin-left: 12px;
+    margin-right: 10px;
+    z-index: 1;
+  }
+
+  #carouselExample .carousel-inner {
+    top: 10px;
+  }
+
+  #carouselExample img {
+    width: 77px;
+    height: auto;
+    margin-right: 20px;
+  }
+
+  #carouselExample .carousel-item img {
+    margin-right: 15px;
+  }
+
+  #carouselTitle {
+    font-size: 13px;
+    padding-left: 10px;
+  }
+
+  /* Contenedor con top songs, artistas y generos */
+  #featured-content {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+  }
+
+  /* Top songs */
+  #top-songs {
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  #top-songs h2 {
+    margin-top: 10px;
+    font-size: 13px !important;
+    margin-bottom: 10px;
+  }
+
+  .song-info {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+  }
+
+  .details {
+    font-size: 10px;
+  }
+
+  .details p {
+    margin-bottom: 4px;
+  }
+
+  .details p:nth-child(2) {
+    font-size: 9px;
+    color: #7A7C8A;
+  }
+
+  .song-info img {
+    width: 50px;
+    margin-right: 10px;
+    border-radius: 5%;
+  }
+
+  .duration {
+    font-size: 10px;
+    margin-right: 50px;
+  }
+
+  .favorite-link {
+    margin: 0;
+    align-self: center;
+    text-decoration: none;
+    color: #ED5790;
+    margin-right: 20px;
+    font-size: 15px;
+  }
+
+  /* Artistas y generos */
+
+  #artists-genres {
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  #artists-genres h2 {
+    font-size: 13px !important;
+    margin-bottom: 10px;
+  }
+
+  .artist-images,
+  .genre-images {
+    display: flex;
+  }
+
+  .artist-images img {
+    justify-content: space-between;
+    width: 15%;
+    margin-bottom: 10px;
+    margin-right: 14px;
+    margin-left: 4px;
+  }
+
+  .genre-images img {
+    width: 15%;
+    margin-left: 4px;
+    margin-right: 10px;
+    margin-bottom: 0;
+  }
+
+  .top-container,
+  .bottom-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+
+  .top-container h2,
+  .bottom-container h2 {
+    font-size: 13px !important;
+    margin-bottom: 10px;
+  }
+
+  .see-more-link {
+    margin-top: 10px;
+    display: block;
+    font-size: 10px;
+  }
+
+}
+
+/* Estilos para pantallas más grandes */
+@media only screen and (min-width: 768px) {
+  #main-content {
+    margin-top: 0;
+    margin-right: 10px;
+  }
+
+  .navbar-container.navbar-logo {
+    margin-top: 15px;
+    font-size: 30px;
+  }
+
+  #carouselTitle {
+    padding-left: 20px;
+  }
+
+  #carouselExample {
+    padding-left: 20px;
+  }
+
+  #carouselExample img {
+    width: 193px;
+    height: auto;
+  }
+
+  /**********/
+
+  #featured-content {
+    margin-top: 50px;
+  }
+
+  #top-songs {
+    width: 48%;
+    padding-left: 20px;
+  }
+
+  .artist-images img {
+    width: 85px;
+    margin-right: 25px;
+    margin-bottom: 25px;
+  }
+
+  .genre-images img {
+    width: 85px;
+    margin-right: 20px;
+    margin-bottom: 25px;
+  }
 }
