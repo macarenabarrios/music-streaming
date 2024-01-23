@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@500&display=swap');
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'League Spartan', sans-serif;
+
 }
 
 body{
@@ -65,21 +68,21 @@ body{
 }
 
 .cards:nth-of-type(1) .img__back{
-    background-image: url(../img/1.png);
+    background-image: url(../assets/1.png)
 }
 
 .cards:nth-of-type(2) .img__back{
-    background-image: url(../img/2.png);
+    background-image: url(../assets/2.png);
 }
 
 .cards:nth-of-type(3) .img__back{
-    background-image: url(../img/3.png);
+    background-image: url(../assets/3.png);
 }
 .cards:nth-of-type(4) .img__back{
-    background-image: url(../img/4.png);
+    background-image: url(../assets/4.png);
 }
 .cards:nth-of-type(5) .img__back{
-    background-image: url(../img/5.png);
+    background-image: url(../assets/5.png);
 }
 
 .cards:hover .img__back{
