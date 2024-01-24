@@ -4,135 +4,173 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="https://kit.fontawesome.com/e32550aef3.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="../styles/detalle-uno.css">
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
-            <div class="container-fluid">
-              <a class="navbar-brand" href="#">Navbar w/ text</a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarText">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Features</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Pricing</a>
-                  </li>
-                </ul>
-                <span class="navbar-text">
-                  Navbar text with an inline element
-                </span>
-              </div>
-            </div>
-          </nav>
-    </header>
     <main>
-        <section class="d-flex flex-row  mt-5 ">
-            <section class=" ">
-                <div class="imagen-emilia-mernes">
-                    <img src="../assets/img/EMILIA-Mernes.jpg" alt="" width="350px"  >
-                </div>
+        
+    <!-- Navbar -->
+    <div id="navbar">
+        <!-- Contenedor 1 -->
+        <div class="navbar-container navbar-logo">
+        <p>Nombre de la Página</p>
+        </div>
+        <!-- Contenedor 2 -->
+        <div class="navbar-container">
+        <p>RECOMENDADO</p>
+        <ul>
+            <li class="active">Explorar</li>
+            <li>Generos</li>
+            <li>Artistas</li>
+            <li>Albumes</li>
+        </ul>
+        </div>
+        <!-- Contenedor 3 -->
+        <div class="navbar-container">
+        <p>MI BIBLIOTECA</p>
+        <ul>
+            <li>Escuchado Recientemente</li>
+            <li>Favoritos</li>
+            <li>Descargas</li>
+        </ul>
+        </div>
+    </div>
+    <div id="main-content">
+        <div id="banner">
+            <section class="d-flex flex-row mt-5 texto">
+                    <div class="w-50 text-center">
+                        <img class="imagen-dua-lipa" src="../assets/img/dua-lipa-detalle-uno.jpg" alt="" >
+                    </div>
+                    <div class="w-50">
+                        <p>Lista de canciones</p>
+                        <h1 class="dua-lipa">Dua Lipa</h1>
+                        <p>Es una cantante pop, a demás es compositora y modelo Britanica .</p>
+                        <p>10 canciones, 25 minutos</p>
+                    </div>
+            </div>
             </section>
-            <section class="">
-                <div class="">
-                    <h3>Lista de canciones</h3>
-                    <h1>Emilia Mernes</h1>
-                    <p>Es una cantante pop, demás es compositora, bailarina y modelo argentina.</p>
-                    <p>10 canciones, 25 minutos</p>
-                </div>
+            <section class="fondo">
+            <section class="d-flex flex-row mt-4 mb-2 align-items-center seccion-medio">
+                <p><i class="bi bi-play-circle-fill fas fa-check fa-4x px-5"></i></p>
+                <p><i class="bi bi-shuffle fas fa-check fa-2x px-2"></i></p>
+                <p><i class="bi bi-plus-circle-fill fas fa-check fa-2x px-2"></i></p>
+                <p><i class="bi bi-arrow-down-circle-fill fas fa-check fa-2x px-2"></i></p>
+                <p><i class="bi bi-three-dots fas fa-check fa-2x px-2"></i></p>
+                
             </section>
+            <table>
+                <tr class="linea">
+                    <th class="d-none d-md-block lista-enumeracion">#</th>
+                    <th class="">Titulo</th>
+                    <th></th>
+                    <th></th>
+                    <th>Album</th>
+                    <th><i class="bi bi-clock-fill"></i></th>
+                    <th></th>
+                </tr>
+                <tbody>
+                <tr class="hover-lista-repodruccion">
+                    <td class="d-none d-md-block lista-enumeracion">1</td>
+                    <td><img src="../assets/img/dua-lipa-lista-1.jpg" class="imagen-lista-canciones" alt="" > Houdini</td>
+                    <td></td>
+                    <td></td>
+                    <td class="">Houdini</td>
+                    <td>03:06</td>
+                    <td><i type="button" class="bi bi-plus-circle p-2"></i><i type="button" class="bi bi-three-dots"></i></td>
+                </tr>
+                <tr class="hover-lista-repodruccion">
+                    <td class="d-none d-md-block lista-enumeracion">2</td>
+                    <td><img src="../assets/img/dua-lipa-5.jpg" class="imagen-lista-canciones" alt="" > New Rules</td>
+                    <td></td>
+                    <td></td>
+                    <td class="">Deluxe</td>
+                    <td>03:29</td>
+                    <td><i type="button" class="bi bi-plus-circle p-2"></i><i type="button" class="bi bi-three-dots"></i></td>
+                </tr>
+                <tr class="hover-lista-repodruccion">
+                    <td class="d-none d-md-block lista-enumeracion">3</td>
+                    <td class="fila2"><img src="../assets/img/dua-lipa-lista-1.jpg" alt="" class="imagen-lista-canciones"> Don't Start Now</td>
+                    <td></td>
+                    <td></td>
+                    <td class="">Future Nostalgia</td>
+                    <td>03:03</td>
+                    <td><i type="button" class="bi bi-plus-circle p-2"></i><i type="button" class="bi bi-three-dots"></i></td>
+                </tr>
+                <tr class="hover-lista-repodruccion">
+                    <td class="d-none d-md-block lista-enumeracion">4</td>
+                    <td class="fila2"><img src="../assets/img/dua-lipa-lista-3.jpg" alt="" class="imagen-lista-canciones"> Levitating</td>
+                    <td></td>
+                    <td></td>
+                    <td class="">Future Nostalgia</td>
+                    <td>03:23</td>
+                    <td><i type="button" class="bi bi-plus-circle p-2"></i><i type="button" class="bi bi-three-dots"></i></td>
+                </tr>
+                <tr class="hover-lista-repodruccion">
+                    <td class="d-none d-md-block lista-enumeracion">5</td>
+                    <td class="fila2"><img src="../assets/img/dua-lipa-lista-3.jpg" alt="" class="imagen-lista-canciones"> Physical</td>
+                    <td></td>
+                    <td></td>
+                    <td class="">Future Nostalgia</td>
+                    <td>03:14</td>
+                    <td><i type="button" class="bi bi-plus-circle p-2"></i><i type="button" class="bi bi-three-dots"></i></td>
+                </tr>
+                <tr class="hover-lista-repodruccion">
+                    <td class="d-none d-md-block lista-enumeracion">6</td>
+                    <td class="fila2"><img src="../assets/img/dua-lipa-5.jpg" alt="" class="imagen-lista-canciones"> IDGAF</td>
+                    <td></td>
+                    <td></td>
+                    <td class="">Deluxe</td>
+                    <td>03:38</td>
+                    <td><i type="button" class="bi bi-plus-circle p-2"></i><i type="button" class="bi bi-three-dots"></i></td>
+                </tr>
+                <tr class="hover-lista-repodruccion">
+                    <td class="d-none d-md-block lista-enumeracion">7</td>
+                    <td class="fila2"><img src="../assets/img/dua-lipa-lista-4.jpg" alt="" class="imagen-lista-canciones"> Blow Your Mind</td>
+                    <td></td>
+                    <td></td>
+                    <td class="">Blow Your Mind</td>
+                    <td>02:59</td>
+                    <td><i type="button" class="bi bi-plus-circle p-2"></i><i type="button" class="bi bi-three-dots"></i></td>
+                </tr>
+                <tr class="hover-lista-repodruccion">
+                    <td class="d-none d-md-block lista-enumeracion">8</td>
+                    <td class="fila2"><img src="../assets/img/dua-lipa-lista-4.jpg" alt="" class="imagen-lista-canciones"> Fever</td>
+                    <td></td>
+                    <td></td>
+                    <td class="">Future Nostalgia</td>
+                    <td>02:37</td>
+                    <td><i type="button" class="bi bi-plus-circle p-2"></i><i type="button" class="bi bi-three-dots"></i></td>
+                </tr>
+                <tr class="hover-lista-repodruccion">
+                    <td class="d-none d-md-block lista-enumeracion">9</td>
+                    <td class="fila2"><img src="../assets/img/dua-lipa-lista-1.jpg" alt="" class="imagen-lista-canciones"> No Lie</td>
+                    <td></td>
+                    <td></td>
+                    <td class="">Mad Love The Prequel</td>
+                    <td>03:41</td>
+                    <td><i type="button" class="bi bi-plus-circle p-2"></i><i type="button" class="bi bi-three-dots"></i></td>
+                </tr>
+                <tr class="hover-lista-repodruccion">
+                    <td class="d-none d-md-block lista-enumeracion">10</td>
+                    <td class="fila2"><img src="../assets/img/dua-lipa-lista-4.jpg" alt="" class="imagen-lista-canciones"> Un Dia</td>
+                    <td></td>
+                    <td></td>
+                    <td class="">Future Nostalgia</td>
+                    <td>03:52</td>
+                    <td><i type="button" class="bi bi-plus-circle p-2"></i><i type="button" class="bi bi-three-dots"></i></td>
+                </tr>
+            </tbody>
+            </table>
         </section>
-    <section class="mt-5" >
-        <section class="d-flex flex-row text-center">
-            <div class="lista-enumeracion">1</div>
-            <div class="lista-imagen"><img src="../assets/img/EMILIA-Mernes.jpg" alt="" width="100px"></div>
-            <div class="lista-nombre-cancion">GTA.mp3</div>
-            <div class="lista-codigo-unico">#1</div>
-            <div class="lista-tiempo">04:02</div>
-            <div class="lista-tiempo">+ ...</div>
-        </section>
-        <section class="d-flex flex-row mt-4">
-            <div class="lista-enumeracion">1</div>
-            <div class="lista-imagen"><img src="../assets/img/EMILIA-Mernes.jpg" alt="" width="100px"></div>
-            <div class="lista-nombre-cancion">GTA.mp3</div>
-            <div class="lista-codigo-unico">#1</div>
-            <div class="lista-tiempo">04:02</div>
-            <div class="lista-tiempo">+ ...</div>
-        </section>
-        <section class="d-flex flex-row mt-4">
-            <div class="lista-enumeracion">1</div>
-            <div class="lista-imagen"><img src="../assets/img/EMILIA-Mernes.jpg" alt="" width="100px"></div>
-            <div class="lista-nombre-cancion">GTA.mp3</div>
-            <div class="lista-codigo-unico">#1</div>
-            <div class="lista-tiempo">04:02</div>
-            <div class="lista-tiempo">+ ...</div>
-        </section>
-        <section class="d-flex flex-row mt-4">
-            <div class="lista-enumeracion">1</div>
-            <div class="lista-imagen"><img src="../assets/img/EMILIA-Mernes.jpg" alt="" width="100px"></div>
-            <div class="lista-nombre-cancion">GTA.mp3</div>
-            <div class="lista-codigo-unico">#1</div>
-            <div class="lista-tiempo">04:02</div>
-            <div class="lista-tiempo">+ ...</div>
-        </section>
-        <section class="d-flex flex-row mt-4">
-            <div class="lista-enumeracion">1</div>
-            <div class="lista-imagen"><img src="../assets/img/EMILIA-Mernes.jpg" alt="" width="100px"></div>
-            <div class="lista-nombre-cancion">GTA.mp3</div>
-            <div class="lista-codigo-unico">#1</div>
-            <div class="lista-tiempo">04:02</div>
-            <div class="lista-tiempo">+ ...</div>
-        </section>
-        <section class="d-flex flex-row mt-4">
-            <div class="lista-enumeracion">1</div>
-            <div class="lista-imagen"><img src="../assets/img/EMILIA-Mernes.jpg" alt="" width="100px"></div>
-            <div class="lista-nombre-cancion">GTA.mp3</div>
-            <div class="lista-codigo-unico">#1</div>
-            <div class="lista-tiempo">04:02</div>
-            <div class="lista-tiempo">+ ...</div>
-        </section>
-        <section class="d-flex flex-row mt-4">
-            <div class="lista-enumeracion">1</div>
-            <div class="lista-imagen"><img src="../assets/img/EMILIA-Mernes.jpg" alt="" width="100px"></div>
-            <div class="lista-nombre-cancion">GTA.mp3</div>
-            <div class="lista-codigo-unico">#1</div>
-            <div class="lista-tiempo">04:02</div>
-            <div class="lista-tiempo">+ ...</div>
-        </section>
-        <section class="d-flex flex-row mt-4">
-            <div class="lista-enumeracion">1</div>
-            <div class="lista-imagen"><img src="../assets/img/EMILIA-Mernes.jpg" alt="" width="100px"></div>
-            <div class="lista-nombre-cancion">GTA.mp3</div>
-            <div class="lista-codigo-unico">#1</div>
-            <div class="lista-tiempo">04:02</div>
-            <div class="lista-tiempo">+ ...</div>
-        </section>
-        <section class="d-flex flex-row mt-4">
-            <div class="lista-enumeracion">1</div>
-            <div class="lista-imagen"><img src="../assets/img/EMILIA-Mernes.jpg" alt="" width="100px"></div>
-            <div class="lista-nombre-cancion">GTA.mp3</div>
-            <div class="lista-codigo-unico">#1</div>
-            <div class="lista-tiempo">04:02</div>
-            <div class="lista-tiempo">+ ...</div>
-        </section>
-        <section class="d-flex flex-row mt-4">
-            <div class="lista-enumeracion">1</div>
-            <div class="lista-imagen"><img src="../assets/img/EMILIA-Mernes.jpg" alt="" width="100px"></div>
-            <div class="lista-nombre-cancion">GTA.mp3</div>
-            <div class="lista-codigo-unico">#1</div>
-            <div class="lista-tiempo">04:02</div>
-            <div class="lista-tiempo">+ ...</div>
-        </section>
-    </section>
-
+        </div>
+        
+    </div>
     </main>
     <footer>
 
