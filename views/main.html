@@ -18,18 +18,88 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
     />
-    <link rel="stylesheet" href="../styles/main.css" />
+    <link rel="stylesheet" href="../styles/main0.css" />
   </head>
   <body>
     <!-- Navbar -->
-    <!-- Navbar para dispositivos móviles -->
-    <div id="mobileNavbar" class="d-md-none d-lg-none">
-      <p id="toggleNavbarBtn">DevTunes</p>
-      <button id="hideNavbarBtn" style="display: none">Ocultar</button>
-    </div>
+    <!-- Navbar responsive -->
+    <nav
+      class="navbar navbar-expand-lg navbar-light bg-light d-lg-none d-md-none"
+    >
+      <a class="navbar-brand" href="#">DevTunes</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <!-- Contenido del menú -->
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Iniciar sesión</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Registrarse</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="navbarDropdownMenuLink1"
+              role="button"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              Recomendado
+            </a>
+            <div
+              class="dropdown-menu"
+              aria-labelledby="navbarDropdownMenuLink1"
+            >
+              <a class="dropdown-item" href="#">Explorar</a>
+              <a class="dropdown-item" href="#">Géneros</a>
+              <a class="dropdown-item" href="#">Artistas</a>
+              <a class="dropdown-item" href="#">Álbumes</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="navbarDropdownMenuLink2"
+              role="button"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              Mi biblioteca
+            </a>
+            <div
+              class="dropdown-menu"
+              aria-labelledby="navbarDropdownMenuLink2"
+            >
+              <a class="dropdown-item" href="#">Escuchado Recientemente</a>
+              <a class="dropdown-item" href="#">Favoritos</a>
+              <a class="dropdown-item" href="#">Descargas</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Administrador</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!-- Fin Navbar responsive -->
 
     <!-- Navbar para pantallas grandes -->
-    <div id="navbar">
+    <div id="navbar" class="screen-navbar d-none d-lg-block d-md-block">
       <!-- Contenedor 1 -->
       <div class="navbar-container navbar-logo" id="logoContainer">
         <p>DevTunes</p>
@@ -40,6 +110,7 @@
         <ul>
           <li>Iniciar sesión</li>
           <li>Registrarse</li>
+          <li>Administrador</li>
         </ul>
       </div>
 
@@ -176,7 +247,7 @@
       <div id="featured-content">
         <!-- Primera mitad -->
         <div id="top-songs">
-          <h2>Canciones más escuchadas en Argentina</h2>
+          <h2>Top canciones Argentina</h2>
           <ul>
             <!-- Lista de 10 canciones -->
             <!-- Canción 1 -->
@@ -286,15 +357,11 @@
             <h2>Descubrir géneros</h2>
             <!-- Fotos de géneros con texto arriba -->
             <div class="genre-images">
-              <div class="genre">
-                <img src="../assets/img/genre-1.png" alt="Género 1" />
-                <img src="../assets/img/genre-2.png" alt="Género 2" />
-                <img src="../assets/img/genre-3.png" alt="Género 3" />
-                <img src="../assets/img/genre-4.png" alt="Género 4" />
-                <img src="../assets/img/genre-6.png" alt="Género 5" />
-                <a href="#" class="see-more-link">Ver más</a>
-              </div>
-              <!-- Repite para los demás géneros -->
+              <img src="../assets/img/genre-1.png" alt="Género 1" />
+              <img src="../assets/img/genre-2.png" alt="Género 2" />
+              <img src="../assets/img/genre-3.png" alt="Género 3" />
+              <img src="../assets/img/genre-4.png" alt="Género 4" />
+              <img src="../assets/img/genre-6.png" alt="Género 5" />
             </div>
           </div>
         </div>
@@ -303,7 +370,6 @@
     </div>
 
     <!-- Scripts de Bootstrap y cualquier otro script necesario -->
-    <script src="../js/main.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
