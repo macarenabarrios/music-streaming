@@ -15,55 +15,84 @@
 <body>
     <main>
         
-    <!-- Navbar -->
-    <div id="navbar">
+     <!-- Navbar -->
+    <!-- Navbar para dispositivos móviles -->
+    <div id="mobileNavbar" class="d-md-none d-lg-none">
+        <p id="toggleNavbarBtn">DevTunes</p>
+        <button id="hideNavbarBtn" style="display: none">Ocultar</button>
+      </div>
+  
+      <!-- Navbar para pantallas grandes -->
+      <div id="navbar">
         <!-- Contenedor 1 -->
-        <div class="navbar-container navbar-logo">
-        <p>Nombre de la Página</p>
+        <div class="navbar-container navbar-logo" id="logoContainer">
+          <p>DevTunes</p>
         </div>
+  
         <!-- Contenedor 2 -->
         <div class="navbar-container">
-        <p>RECOMENDADO</p>
-        <ul>
+          <ul>
+            <li>Iniciar sesión</li>
+            <li>Registrarse</li>
+          </ul>
+        </div>
+  
+        <!-- Contenedor 3 -->
+        <div class="navbar-container">
+          <p>RECOMENDADO</p>
+          <ul>
             <li class="active">Explorar</li>
             <li>Generos</li>
             <li>Artistas</li>
             <li>Albumes</li>
-        </ul>
+          </ul>
         </div>
-        <!-- Contenedor 3 -->
+  
+        <!-- Contenedor 4 -->
         <div class="navbar-container">
-        <p>MI BIBLIOTECA</p>
-        <ul>
+          <p>MI BIBLIOTECA</p>
+          <ul>
             <li>Escuchado Recientemente</li>
             <li>Favoritos</li>
             <li>Descargas</li>
-        </ul>
+          </ul>
         </div>
-    </div>
+      </div>
+      <!-- Fin Navbar -->
     <div id="main-content">
         <div id="banner">
-            <section class="d-flex flex-row mt-5 texto">
-                    <div class="w-50 text-center">
+            <section class=" mt-3 nano">
+                    <div class="otro-nano">
                         <img class="imagen-dua-lipa" src="../assets/img/dua-lipa-detalle-uno.jpg" alt="" >
                     </div>
-                    <div class="w-50">
-                        <p>Lista de canciones</p>
+                    <div class="">
+                        <p class="d-none d-md-block">Lista de canciones</p>
                         <h1 class="dua-lipa">Dua Lipa</h1>
-                        <p>Es una cantante pop, a demás es compositora y modelo Britanica .</p>
-                        <p>10 canciones, 25 minutos</p>
+                        <p class="d-none d-md-block">Es una cantante pop, a demás es compositora y modelo Britanica .</p>
+                        <p class="d-none d-md-block">10 canciones, 25 minutos</p>
                     </div>
             </div>
             </section>
             <section class="fondo">
-            <section class="d-flex flex-row mt-4 mb-2 align-items-center seccion-medio">
-                <p><i class="bi bi-play-circle-fill fas fa-check fa-4x px-5"></i></p>
-                <p><i class="bi bi-shuffle fas fa-check fa-2x px-2"></i></p>
-                <p><i class="bi bi-plus-circle-fill fas fa-check fa-2x px-2"></i></p>
-                <p><i class="bi bi-arrow-down-circle-fill fas fa-check fa-2x px-2"></i></p>
-                <p><i class="bi bi-three-dots fas fa-check fa-2x px-2"></i></p>
-                
+            <section class="mt-4 mb-2 align-items-center d-none d-md-block">
+                <div class="seccion-medio">
+                    <p><i class="bi bi-play-circle-fill fas fa-check fa-4x px-5"></i></p>
+                    <p><i class="bi bi-shuffle fas fa-check fa-2x px-2"></i></p>
+                    <p><i class="bi bi-plus-circle-fill fas fa-check fa-2x px-2"></i></p>
+                    <p><i class="bi bi-arrow-down-circle-fill fas fa-check fa-2x px-2"></i></p>
+                    <p><i class="bi bi-three-dots fas fa-check fa-2x px-2"></i></p>
+                </div>
             </section>
+            <section class="mt-4 mb-2 align-items-center">
+                <div class="seccion-tamaño-movil">
+                    <p><i class="bi bi-plus-circle-fill fas fa-check fa-2x px-2"></i></p>
+                    <p><i class="bi bi-arrow-down-circle-fill fas fa-check fa-2x px-2"></i></p>
+                    <p><i class="bi bi-three-dots fas fa-check fa-2x px-2"></i></p>
+                    <p><i class="bi bi-shuffle fas fa-check fa-2x  aleatorio"></i></p>
+                    <p><i class="bi bi-play-circle-fill fas fa-check fa-2x px-3"></i></p>
+                </div>
+            </section>
+            
             <table>
                 <tr class="linea">
                     <th class="d-none d-md-block lista-enumeracion">#</th>
@@ -75,16 +104,25 @@
                     <th></th>
                 </tr>
                 <tbody>
-                <tr class="hover-lista-repodruccion">
-                    <td class="d-none d-md-block lista-enumeracion">1</td>
+                <tr class="hover-lista-repodruccion tamaño-movil">
+                    <td class="lista-enumeracion">1</td>
                     <td><img src="../assets/img/dua-lipa-lista-1.jpg" class="imagen-lista-canciones" alt="" > Houdini</td>
                     <td></td>
                     <td></td>
-                    <td class="">Houdini</td>
+                    <td>Deluxe</td>
                     <td>03:06</td>
-                    <td><i type="button" class="bi bi-plus-circle p-2"></i><i type="button" class="bi bi-three-dots"></i></td>
+                    <td class="opciones"><i type="button" class="bi bi-plus-circle p-2"></i><i type="button" class="bi bi-three-dots p-2"></i></td>
                 </tr>
-                <tr class="hover-lista-repodruccion">
+                <tr class="hover-lista-repodruccion tamaño-computadora">
+                    <td class="d-none d-md-block lista-enumeracion">1</td>
+                    <td><img src="../assets/img/dua-lipa-lista-1.jpg" class="imagen-lista-canciones" alt=""></td>
+                    <td></td>
+                    <td class="nombre-album"> Houdini Deluxe</td>
+                    <td></td>
+                    <td class="tiempo">03:06</td>
+                    <td class="opciones"><i type="button" class="bi bi-plus-circle p-2"></i><i type="button" class="bi bi-three-dots p-2"></i></td>
+                </tr>
+                <tr class="hover-lista-repodruccion probar">
                     <td class="d-none d-md-block lista-enumeracion">2</td>
                     <td><img src="../assets/img/dua-lipa-5.jpg" class="imagen-lista-canciones" alt="" > New Rules</td>
                     <td></td>
@@ -172,9 +210,97 @@
         
     </div>
     </main>
-    <footer>
 
+    <footer>
+        <div id="main-content">
+
+        
+        <div class="container text-center">
+            <div class="row">
+              <div class="col-md-2 d-none d-md-block">
+                    <img class="logoFooter" src="../assets/img/DevTunes.png" alt="Logo de DevTunes">
+              </div>
+
+              <div class="col">
+                    <p>
+                        <h5 class="tituloListaFooter">DevTunes</h5>
+                    </p>
+                    <ul class="listaFooter">
+                        
+                        <li><a href="">Reseñas</a></li>
+                        <li><a href="">Empleo</a></li>
+                        <li><a href="">Aplicación móvil gratis</a></li>
+                        <li><a href="">Ayuda</a></li>
+                    </ul>
+              </div>
+
+              <div class="col">
+                    <p >
+                        <h5 class="tituloListaFooter">Nosotros</h5>
+                    </p>
+                    <ul class="listaFooter">
+                        <li><a href="">Equipo DevTunes</a></li> <!--linkear con sobre nosotros-->
+                    </ul>
+              </div>
+
+                <div class="col">
+                    <p >
+                        <h5 class="tituloListaFooter">Comunidades</h5>
+                    </p>
+                    <ul class="listaFooter">
+                        <li><a href="">Musicos</a></li>
+                        <li><a href="">Podcasters</a></li>
+                        <li><a href="">Desarrolladores</a></li>
+                        <li><a href="">Inversores</a></li>
+                        <li><a href="">Publicidad</a></li>
+                    </ul>
+              </div>
+
+                <div class="col">
+                    <p >
+                        <h5 class="tituloListaFooter">Legal</h5>
+                    </p>
+                    <ul class="listaFooter">
+                        <li><a href="">Política de privacidad</a></li>
+                        <li><a href="">Cookies</a></li>
+                        <li><a href="">Condiciones de uso</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </div>
+        <hr>
+        <div class="container text-center">
+            <div class="row">
+              <div class="col-md-6">
+                <ul class="listaRedes">
+                    <li>
+                        <a href=""> 
+                            <i class="bi bi-facebook"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <i class="bi bi-instagram"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <i class="bi bi-twitter-x"></i>
+                        </a>
+                    </li>
+                </ul>
+              </div>
+              <div class="col-md-6">
+                    <p class="copy">&copy; 2024 DevTunes - Todos los derechos reservados</p>
+              </div>
+            </div>
+        </div>
+    </div>
     </footer>
+    <script src="../js/main.js"></script>
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
 </html>

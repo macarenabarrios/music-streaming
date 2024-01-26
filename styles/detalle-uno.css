@@ -10,6 +10,8 @@ background: linear-gradient(90deg, rgba(60,103,162,1) 0%, rgba(29,22,22,1) 18%);
 
 .seccion-medio{
   padding-left: 40px;
+  display: flex;
+  flex-direction: row;
 }
 .dua-lipa {
   font-size: 70px;
@@ -43,8 +45,21 @@ background: linear-gradient(90deg, rgba(60,103,162,1) 0%, rgba(29,22,22,1) 18%);
     justify-content: space-between;
 }
 
+.nano{
+  display: flex;
+  flex-direction: row;
+}
 
-
+.otro-nano{
+  padding-left: 100px;
+  padding-right: 100px;
+}
+.seccion-tamaño-movil{
+  padding-left: 20px;
+  display: flex;
+  flex-direction: row;
+  display: none;
+}
 /* media querie de celular*/
 @media (min-width: 320px) and (max-width: 575px){
 
@@ -52,16 +67,43 @@ background: linear-gradient(90deg, rgba(60,103,162,1) 0%, rgba(29,22,22,1) 18%);
         margin-right: 0px;
         
     }
+  .otro-nano{
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+.imagen-lista-canciones{
+  padding-left: 20px;
+}
+  .seccion-tamaño-movil{
+    padding-left: 5px;
+    display: flex;
+    flex-direction: row;
+    
+  }
+  .nombre-album{
+    padding-right: 30px;
+  }
+  .opciones{
+    padding-right: 20px;
+    display: flex;
+    flex-direction: row;
+  }
+  .tiempo{
+    padding-right: 30px;
+  }
+  .aleatorio{
+    padding-left: 125px;
+  }
 
     .imagen-dua-lipa {
-        margin: 0 0 0 0;
-        width: 100%;
-    }
+    display: flex;
+    justify-content: center;
 
-    .texto{
-        display: flex;
-        flex-wrap: wrap;
-        text-align: center;
+    }
+    .nano{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
     .texto-lista-canciones{
         font-size: 20px;
@@ -70,15 +112,22 @@ background: linear-gradient(90deg, rgba(60,103,162,1) 0%, rgba(29,22,22,1) 18%);
         align-items: center;
         align-content: center;
     }
+
+    .tamaño-movil{
+      display: none;
+    }
 }
 
-
+@media screen and (min-width: 1024px) {
+  .tamaño-computadora{
+  display: none;
+}
+}
 
 table {
     width: 100%;
     height: 100%;
     border-collapse: collapse;
-
 }
 
 td {
@@ -98,63 +147,59 @@ body {
     margin: 0;
     padding: 0;
   }
-
-
-  
-  #navbar {
-    background-color: #ffffff;
-    height: 100vh;
-    width: 20%;
-    position: fixed;
-    left: 0;
-    top: 0;
-    display: flex;
-    flex-direction: column;
-    font-family: 'Poppins', sans-serif;
-  
-  }
-
   .imagen-lista-canciones{
     border-radius: 10px;
   }
+
+
   
-  .navbar-container.navbar-logo {
-    margin-top: 50px;
-    color: #222A53;
-    margin-left: 10px;
-    font-size: 16px;
-  }
-  
-  .navbar-container {
-    color: #7A7C8A;
-    padding: 15px;
-    margin-bottom: 45px;
-    font-size: 14px;
-    margin-left: 10px;
-  }
-  
-  .navbar-container p {
-    margin: 0;
-    font-weight: bold;
-  }
-  
-  .navbar-container ul {
-    list-style: none;
-    padding: 0;
-    margin-top: 10px;
-    /* Espacio entre los contenedores 2 y 3 */
-  }
-  
-  .navbar-container li {
-    padding: 5px 0;
-    cursor: pointer;
-  }
-  
-  .navbar-container li.active {
-    font-weight: bold;
-    color: #ED5790;
-    /* Color para el enlace activo */
-  }
+ /* Navbar */
+#navbar {
+  background-color: #ffffff;
+  height: 100vh;
+  width: 20%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Poppins', sans-serif;
+}
+
+.navbar-container.navbar-logo {
+  color: #222A53;
+  margin-left: 10px;
+  font-size: 16px;
+}
+
+.navbar-container {
+  color: #7A7C8A;
+  padding: 15px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  margin-left: 10px;
+}
+
+.navbar-container p {
+  margin: 0;
+  font-weight: bold;
+}
+
+.navbar-container ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+}
+
+.navbar-container li {
+  padding: 5px 0;
+  cursor: pointer;
+}
+
+.navbar-container li.active {
+  font-weight: bold;
+  color: #ED5790;
+}
 
   #main-content {
     margin-left: 20%;
@@ -164,14 +209,13 @@ body {
   #banner {
     width: 100%;
     padding-bottom: 20px;
-    display: flex;
+    padding-top: 20px;
     font-family: 'Poppins', sans-serif;
     background: rgb(44,109,191);
     background: linear-gradient(to bottom, rgba(44,109,191,0.8239670868347339) 0%, rgba(45,45,45,1) 100%);
     color: #ffffff;
   }
-/*    background: rgb(62, 124, 210);
-    background: linear-gradient(to bottom, rgba(60,122,208,1) 0%, rgba(29,22,22,1) 72%);*/
+
 
   tbody .hover-lista-repodruccion{
     cursor: pointer;
@@ -235,4 +279,27 @@ footer{
 }
 .copy {
   color: #7a7c8a;
+}
+
+@media only screen and (max-width: 767px) {
+  #navbar {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    width: 50%;
+  }
+
+  #mobileNavbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    padding-left: 25px;
+    padding-bottom: 0;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  #main-content {
+    margin-left: 0;
+  }
 }
