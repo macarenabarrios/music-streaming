@@ -6,12 +6,15 @@ body {
 
 /* Estilos para pantallas más grandes */
 @media only screen and (min-width: 1025px) {
+
+  /* Contenido principal */
   #main-content {
     margin-top: 0;
     margin-right: 10px;
     margin-left: 20%;
   }
 
+  /* Navbar */
   #navbar {
     background-color: #ffffff;
     height: 100vh;
@@ -227,22 +230,16 @@ body {
     display: flex;
   }
 
+  .genre-images img,
   .artist-images img {
     border-radius: 30%;
     width: 85px;
     margin-right: 25px;
     margin-bottom: 25px;
   }
-
-  .genre-images img {
-    border-radius: 30%;
-    width: 85px;
-    margin-right: 20px;
-    margin-bottom: 25px;
-  }
 }
 
-/* Estilo para tablet: iPad Pro*/
+/* Estilo para tablet: iPad Pro */
 @media only screen and (min-width: 1024px) and (max-width: 1366px) {
 
   /* Navbar */
@@ -441,7 +438,7 @@ body {
     color: #ff4d8b;
   }
 
-  /* ARTISTAS Y GENEROS */
+  /* Artistas y generos */
   #artists-genres {
     font-family: 'Poppins', sans-serif;
     width: 100%;
@@ -671,7 +668,7 @@ body {
     color: #ff4d8b;
   }
 
-  /* ARTISTAS Y GENEROS */
+  /* Artistas y generos */
   #artists-genres {
     font-family: 'Poppins', sans-serif;
     width: 100%;
@@ -767,7 +764,6 @@ body {
   }
 
   /* Carrousel */
-
   #carouselContainer {
     position: relative;
     z-index: 1;
@@ -817,7 +813,6 @@ body {
   /* Top songs */
   #top-songs {
     width: calc(100% - 10px);
-    /* Resta el margen izquierdo del 100% del ancho */
     margin-left: 10px;
     font-family: 'Poppins', sans-serif;
   }
@@ -927,5 +922,4 @@ body {
     font-size: 13px !important;
     margin-bottom: 10px;
   }
-
 }
