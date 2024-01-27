@@ -32,68 +32,6 @@ iconoConfirmarContraseña.addEventListener("click", () => {
 })
 
 
-/*
-//FUNCION DE VALIDACIONES
-function validaciones() {
-    const contraseña = document.getElementById("registroInputContraseña").value;
-    const contraseña2 = document.getElementById("registroInputConfirmarContraseña").value;
-    const texto = document.getElementById("registroInputNombre").value;
-    const email = document.getElementById("registroInputEmail").value;
-
-
-
-    const regex1 = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{7,15}$/;
-    const valido1 = regex1.test(contraseña);
-    
-    const regex2 = /^[A-Za-z]+$/;
-    const valido2 = regex2.test(texto);
-
-    const regex3 = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    const valido3 = regex3.test(email);
-
-
-    const contraseñasIguales = contraseña === contraseña2;
-    
-    if (valido1 && contraseñasIguales && valido2 && valido3) {
-
-//ALMACENAR LOS DATOS EN EL LOCALSTORAGE
-
-const form = document.querySelector("registroFormulario");
-
-form.addEventListener("submit" , (e) => {
-  e.preventDefault();
-  const data = Object.assign.fromEntries(new FormData(e.target));
-
-});
-
-
-
-alert("Se ha registrado correctamente, probando funcion");
-
-
-    } else {
-      alert("¡Error! No se pudo registrar la cuenta");
-
-      if (!valido1) {
-        alert("La contraseña debe cumplir con los siguientes requisitos:\n- Longitud mínima de 7 caracteres y máxima de 15\n- Al menos una letra y un número.");
-      }
-      if (!contraseñasIguales) {
-        alert("Las contraseñas ingresadas no coinciden");
-      }
-      if (!valido2) {
-        alert("El nombre no debe contener números ni símbolos");
-      }
-      if (!valido3) {
-        alert ("El correo ingresado es Incorrecto")
-      }
-    }
-  }
-  
-  // Asigna la función al evento onclick del botón de registrarme
-  document.getElementById("registroBtn").onclick = validaciones;
-
-*/
-
 
 const signupForm = document.querySelector('#registroFormulario');
 
@@ -106,9 +44,15 @@ signupForm.addEventListener('submit', function (e) {
     const clave1 = document.querySelector('#registroInputContraseña').value;
     const clave2 = document.querySelector('#registroInputConfirmarContraseña').value;
 
-    // Comprobar si las contraseñas son iguales
-    if (clave1 === clave2) {
-        // Resto del código de registro
+    
+    const regex1 = /^[A-Za-z]+$/;
+    const valido1 = regex1.test(name);
+
+    const regex2 = /^[A-Za-z0-9\\*\\#\\$]{7,15}$/;
+    const valido2 = regex2.test(clave1);
+   
+    if ((clave1 === clave2) && valido1 && valido2) {
+  
         const Users = JSON.parse(localStorage.getItem('users')) || [];
         const isUserRegistered = Users.find(user => user.email === email);
 
@@ -118,11 +62,23 @@ signupForm.addEventListener('submit', function (e) {
 
         Users.push({ name: name, email: email, password: clave2 });
         localStorage.setItem('users', JSON.stringify(Users));
-        alert('Registro Exitoso!');
+        alert('Se ha registrado correctamente');
         window.location.href = 'login.html';
     } else {
+
+      if (!valido1) {
+        alert("El nombre no debe contener números ni símbolos");
+      }
+
+      if (!(clave1===clave2)) {
         alert("Las contraseñas ingresadas no son iguales");
-    }
+      }
+
+      if (!valido2) {
+        alert("La contraseña debe cumplir con los siguientes requisitos:\n- Longitud mínima de 7 caracteres y máxima de 15\n- Al menos una letra y un número o uno de estos símbolos: # *");
+      }
+
+   }
 });
 
 
