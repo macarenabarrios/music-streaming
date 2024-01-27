@@ -24,115 +24,92 @@
 
     <main class="container d-flex justify-content-center">
 
-        <form id="registroFormulario" class="justify-content-center">
-          <div
-            class="text-center">
-            
-            <a href="/views/main.html"><img src="/assets/img/DevTunes.png" class=" w-25 " alt="logo de DevTunes"/></a>
-           
 
-              <h1 class="display-5 fw-semibold">Dev Tunes</h1>
-              <br>
-              <h4 class="">Regístrate para empezar a escuchar nuestro contenido</h4>
-              <br>
-              <h6>¿Ya tienes una cuenta DevTunes? <a href="/views/registro.html">Inicia sesión</a></h6>
+          <form action="" name="f1" id="registroFormulario" class="justify-content-center">
 
-              <br>
-
-              <div class="">
-                <button id="registroRedesBtn" class="rounded-circle btn">
-                    <i class="bi bi-facebook"></i>
-                  </button>
-    
+            <div class="text-center">
+              <a href="/views/main.html"><img src="/assets/img/DevTunes.png" class=" w-25 " alt="logo de DevTunes"/></a>
+             
+  
+                <h1 class="display-5 fw-semibold">Dev Tunes</h1>
+                <br>
+                <h4 class="">Regístrate para empezar a escuchar nuestro contenido</h4>
+                <br>
+                <h6>¿Ya tienes una cuenta DevTunes? <a href="/views/login.html">Iniciar sesión</a></h6>
+  
+                <br>
+  
+                <div class="">
                   <button id="registroRedesBtn" class="rounded-circle btn">
-                    <i class="bi bi-google"></i>
-                  </button>
+                      <i class="bi bi-facebook"></i>
+                    </button>
+      
+                    <button id="registroRedesBtn" class="rounded-circle btn">
+                      <i class="bi bi-google"></i>
+                    </button>
+                </div>
+            </div>
+            <br>
+
+
+              <label for="registroInputNombre" class="form-label">Nombre</label>
+            <div class="mb-4 position-relative">
+              <input type="text" placeholder="Ingrese su nombre" id="registroInputNombre" class="form-control" required autofocus maxlength="15"
+              placeholder="Ingrese su nombre>">
+            </div>
+            
+
+                <label for="registroInputEmail" class="form-label">Dirección de email</label>
+              <div class="mb-4  position-relative">
+                <input type="email" placeholder="ejemplo@gmail.com" id="registroInputEmail" class="form-control" required maxlength="30">
+              </div>
+              
+                <label for="registroInputContraseña" class="form-label">Contraseña</label>
+                <div class=" mb-1 position-relative">
+                <input type="password" name="clave1"  placeholder="..." id="registroInputContraseña" class="form-control" required  maxlength="15" minlength="7">
+
+                <i class="bi bi-eye" id="iconoMostrarContraseña"></i>
+
               </div>
 
-          </div>
-          <br>
-           <div class="mb-4 position-relative">
-            <label for="registroInputNombre" class="form-label"
-              >Nombre</label>
-            <input
-              required
-              type="text"
-              class="form-control"
-              id="registroInputNombre"
-              name="text"
-              maxlength="15"
-              placeholder="Ingrese su nombre"/>
-              
-          </div>
-
-          <div class="mb-4  position-relative">
-            <label for="registroInputEmail" class="form-label"
-              >Dirección de email</label>
-            <input
-              required
-              type="email"
-              class="form-control"
-              id="registroInputEmail"
-              name="email"
-              maxlength="30"
-              placeholder="ejemplo@gmail.com"/>
-            <div class="invalid-feedback">
-              El email ingresado es invalido o ya esta registrado.
-            </div>
-          </div>
-
-          <label for="registroInputContraseña" class="form-label"
-            >Ingrese su contraseña</label>
-          <div class=" mb-1 position-relative">
-            <input
-              required
-              type="password"
-              class="form-control"
-              id="registroInputContraseña"
-              name="password"
-              maxlength="15"
-              minlength="7"/>
-       
-            <i class="bi bi-eye" id="iconoMostrarContraseña"></i>
-
-          </div>
-          <div class="form-text mb-3" id="basic-addon4">
-            Debe contener entre 7 y 15 caracteres y al menos un numero y una letra
-          </div>
-
-          <label for="registroInputContraseña" class="form-label"
-          >Vuelva a ingresar su contraseña</label>
-        <div class="mb-1 position-relative">
-          <input
-            required
-            type="password"
-            class="form-control"
-            id="registroInputConfirmarContraseña"
-            maxlength="15"
-            minlength="7"/>
-     
-          <i class="bi bi-eye" id="iconoMostrarConfirmarContraseña"></i>
-
-        </div>
-
-          <br>
-
-          <div class="row justify-content-center">
-            <button id="registroBtn" type="submit" class="col-8 col-sm-3 btn" onclick="validarEmail()">
-              Registrarse
-            </button>
-          </div>
-            
-          <br>
-          <div class="form-text mb-3" id="basic-addon4">
-            Haciendo click en “Registrarse”, aceptas las 
-            Condiciones generales de uso y la Política de privacidad
-          </div>
-          <br>
+              <div class="form-text mb-3">
+                Debe contener entre 7 y 15 caracteres y al menos un numero y una letra
+              </div>
 
 
-        </form>
+                <label for="registroInputConfirmarContraseña" class="form-label">Vuelva a ingresar su contraseña</label>
+                <div class="mb-1 position-relative">
+                <input type="password" name="clave2"  placeholder="..." id="registroInputConfirmarContraseña" class="form-control" required maxlength="15"
+                minlength="7">
+
+                <i class="bi bi-eye" id="iconoMostrarConfirmarContraseña"></i>
+
+              </div>
+
+              <br>
+
+              <div class="row justify-content-center">
+              <input type= "submit" value="Registrarse" class="col-8 col-sm-3 btn" id="registroBtn">
+              </div>
+
+              <br>
+
+              <div class="form-text mb-3">
+                Haciendo click en “Registrarse”, aceptas las 
+                Condiciones generales de uso y la Política de privacidad
+              </div>
+
+              <br>
+
+          </form>
+
+
     </main>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+<script src="js/signup.js"></script>
+
+
 
 
     <footer>

@@ -32,7 +32,7 @@ iconoConfirmarContraseña.addEventListener("click", () => {
 })
 
 
-
+/*
 //FUNCION DE VALIDACIONES
 function validaciones() {
     const contraseña = document.getElementById("registroInputContraseña").value;
@@ -57,24 +57,17 @@ function validaciones() {
     if (valido1 && contraseñasIguales && valido2 && valido3) {
 
 //ALMACENAR LOS DATOS EN EL LOCALSTORAGE
-// Obtener el elemento del formulario por su id
-const formulario = document.getElementById("registroFormulario");
-// Crear un objeto vacío para almacenar los datos
-const datos = {};
-// Recorrer los elementos del formulario
-for (const i = 0; i < formulario.elements.length; i++) {
-  // Obtener el elemento actual
-  const elemento = formulario.elements[i];
-  // Verificar si el elemento tiene un nombre y un valor
-  if (elemento.name && elemento.value) {
-    // Asignar el nombre y el valor al objeto de datos
-    datos[elemento.name] = elemento.value;
-  }
-}
-// Convertir el objeto de datos en una cadena JSON
-const datosJSON = JSON.stringify(datos);
-// Guardar la cadena JSON en localstorage con una clave única
-localStorage.setItem("DatosFormulario", datosJSON);
+
+const form = document.querySelector("registroFormulario");
+
+form.addEventListener("submit" , (e) => {
+  e.preventDefault();
+  const data = Object.assign.fromEntries(new FormData(e.target));
+
+});
+
+
+
 alert("Se ha registrado correctamente, probando funcion");
 
 
@@ -99,7 +92,38 @@ alert("Se ha registrado correctamente, probando funcion");
   // Asigna la función al evento onclick del botón de registrarme
   document.getElementById("registroBtn").onclick = validaciones;
 
+*/
 
 
+const signupForm = document.querySelector('#registroFormulario');
 
-// FUNCION PARA GUARDAR LOS DATOS
+signupForm.addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    // Obtener valores del formulario
+    const name = document.querySelector('#registroInputNombre').value;
+    const email = document.querySelector('#registroInputEmail').value;
+    const clave1 = document.querySelector('#registroInputContraseña').value;
+    const clave2 = document.querySelector('#registroInputConfirmarContraseña').value;
+
+    // Comprobar si las contraseñas son iguales
+    if (clave1 === clave2) {
+        // Resto del código de registro
+        const Users = JSON.parse(localStorage.getItem('users')) || [];
+        const isUserRegistered = Users.find(user => user.email === email);
+
+        if (isUserRegistered) {
+            return alert('El usuario ya se encuentra registrado!');
+        }
+
+        Users.push({ name: name, email: email, password: clave2 });
+        localStorage.setItem('users', JSON.stringify(Users));
+        alert('Registro Exitoso!');
+        window.location.href = 'login.html';
+    } else {
+        alert("Las contraseñas ingresadas no son iguales");
+    }
+});
+
+
+//localStorage.removeItem('users');
