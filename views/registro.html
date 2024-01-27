@@ -13,6 +13,7 @@
 
   <link rel="stylesheet" href="../styles/main.css">
   <link rel="stylesheet" href="../styles/registro.css">
+  <link rel="stylesheet" href="../styles/styleFooter.css">
   
 
     <title>Registro</title>
@@ -21,15 +22,13 @@
 
 
 
-    <main>
-        <section
-        class="container vh-100 mt-5 w-100 d-flex justify-content-center">
+    <main class="container d-flex justify-content-center">
 
         <form id="registroFormulario" class="justify-content-center">
           <div
             class="text-center">
             
-            <a href="/views/main.html"><img src="/assets/img/DevTunes.png" class=" w-25 " alt="logo de imagen"/></a>
+            <a href="/views/main.html"><img src="/assets/img/DevTunes.png" class=" w-25 " alt="logo de DevTunes"/></a>
            
 
               <h1 class="display-5 fw-semibold">Dev Tunes</h1>
@@ -63,11 +62,10 @@
               name="text"
               maxlength="15"
               placeholder="Ingrese su nombre"/>
-
               
           </div>
 
-          <div class="mb-4 position-relative">
+          <div class="mb-4  position-relative">
             <label for="registroInputEmail" class="form-label"
               >Dirección de email</label>
             <input
@@ -85,12 +83,13 @@
 
           <label for="registroInputContraseña" class="form-label"
             >Ingrese su contraseña</label>
-          <div class="input-group mb-1 position-relative">
+          <div class=" mb-1 position-relative">
             <input
               required
               type="password"
               class="form-control"
               id="registroInputContraseña"
+              name="password"
               maxlength="15"
               minlength="7"/>
        
@@ -103,7 +102,7 @@
 
           <label for="registroInputContraseña" class="form-label"
           >Vuelva a ingresar su contraseña</label>
-        <div class="input-group mb-1 position-relative">
+        <div class="mb-1 position-relative">
           <input
             required
             type="password"
@@ -119,7 +118,7 @@
           <br>
 
           <div class="row justify-content-center">
-            <button id="registroBtn" type="submit" class="col-8 col-sm-3 btn">
+            <button id="registroBtn" type="submit" class="col-8 col-sm-3 btn" onclick="validarEmail()">
               Registrarse
             </button>
           </div>
@@ -133,33 +132,94 @@
 
 
         </form>
-      </section>
+    </main>
 
-      <div
-      class="modal fade modal-lg"
-      id="succesfulSignupModal"
-      tabindex="-1"
-      data-bs-backdrop="static"
-      aria-labelledby="exampleModalLabel"
-      aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-          <div class="modal-body border-0">
-            <div class="text-center">
-              <i class="bi bi-check-lg display-1 text-success"></i>
-              <h2 class="fw-normal my-2">Te has registrado exitosamente!</h2>
-              <p class="my-4">
-                Te redirigiremos a nuestra pagina principal para que puedas
-                explorar todos nuestros productos.
-              </p>
+
+    <footer>
+      <div class="container text-center">
+          <div class="row">
+            <div class="col-md-2">
+                  <img class="logoFooter" src="../assets/img/DevTunes.png" alt="Logo de DevTunes">
+            </div>
+
+            <div class="col">
+                  <p>
+                      <h5 class="tituloListaFooter">DevTunes</h5>
+                  </p>
+                  <ul class="listaFooter">
+                      
+                      <li><a href="">Reseñas</a></li>
+                      <li><a href="">Empleo</a></li>
+                      <li><a href="">Aplicación móvil gratis</a></li>
+                      <li><a href="">Ayuda</a></li>
+                  </ul>
+            </div>
+
+            <div class="col">
+                  <p >
+                      <h5 class="tituloListaFooter">Nosotros</h5>
+                  </p>
+                  <ul class="listaFooter">
+                      <li><a href="">Equipo DevTunes</a></li> <!--linkear con sobre nosotros-->
+                  </ul>
+            </div>
+
+              <div class="col">
+                  <p >
+                      <h5 class="tituloListaFooter">Comunidades</h5>
+                  </p>
+                  <ul class="listaFooter">
+                      <li><a href="">Musicos</a></li>
+                      <li><a href="">Podcasters</a></li>
+                      <li><a href="">Desarrolladores</a></li>
+                      <li><a href="">Inversores</a></li>
+                      <li><a href="">Publicidad</a></li>
+                  </ul>
+            </div>
+
+              <div class="col">
+                  <p >
+                      <h5 class="tituloListaFooter">Legal</h5>
+                  </p>
+                  <ul class="listaFooter">
+                      <li><a href="">Política de privacidad</a></li>
+                      <li><a href="">Cookies</a></li>
+                      <li><a href="">Condiciones de uso</a></li>
+                  </ul>
+              </div>
+
+          </div>
+
+      </div>
+      <hr>
+      <div class="container text-center">
+          <div class="row">
+            <div class="col-md-6">
+              <ul class="listaRedes">
+                  <li>
+                      <a href=""> 
+                          <i class="bi bi-facebook"></i>
+                      </a>
+                  </li>
+                  <li>
+                      <a href="">
+                          <i class="bi bi-instagram"></i>
+                      </a>
+                  </li>
+                  <li>
+                      <a href="">
+                          <i class="bi bi-twitter-x"></i>
+                      </a>
+                  </li>
+              </ul>
+            </div>
+            <div class="col-md-6">
+                  <p class="copy">&copy; 2024 DevTunes - Todos los derechos reservados</p>
             </div>
           </div>
-        </div>
       </div>
-    </div>
-
-    </main>
-    
+      
+  </footer>
 
     
 

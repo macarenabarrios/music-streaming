@@ -33,29 +33,53 @@ iconoConfirmarContraseña.addEventListener("click", () => {
 
 
 
-//FUNCION VALIDAR CONTRASEÑA Y NOMBRE
-function validarContraseñaNombre() {
-    let contraseña = document.getElementById("registroInputContraseña").value;
-    let contraseña2 = document.getElementById("registroInputConfirmarContraseña").value;
-    let texto = document.getElementById("registroInputNombre").value;
+//FUNCION DE VALIDACIONES
+function validaciones() {
+    const contraseña = document.getElementById("registroInputContraseña").value;
+    const contraseña2 = document.getElementById("registroInputConfirmarContraseña").value;
+    const texto = document.getElementById("registroInputNombre").value;
+    const email = document.getElementById("registroInputEmail").value;
 
 
-    let regex1 = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{7,15}$/;
-    let valido1 = regex1.test(contraseña);
+
+    const regex1 = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{7,15}$/;
+    const valido1 = regex1.test(contraseña);
     
-    let regex2 = /^[A-Za-z]+$/;
-    let valido2 = regex2.test(texto);
+    const regex2 = /^[A-Za-z]+$/;
+    const valido2 = regex2.test(texto);
 
-    let contraseñasIguales = contraseña === contraseña2;
+    const regex3 = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    const valido3 = regex3.test(email);
 
+
+    const contraseñasIguales = contraseña === contraseña2;
     
-    if (valido1 && contraseñasIguales && valido2) {
+    if (valido1 && contraseñasIguales && valido2 && valido3) {
 
-      alert("Se ha registrado correctamente");
-      document.getElementById("registroFormulario").submit();
+//ALMACENAR LOS DATOS EN EL LOCALSTORAGE
+// Obtener el elemento del formulario por su id
+const formulario = document.getElementById("registroFormulario");
+// Crear un objeto vacío para almacenar los datos
+const datos = {};
+// Recorrer los elementos del formulario
+for (const i = 0; i < formulario.elements.length; i++) {
+  // Obtener el elemento actual
+  const elemento = formulario.elements[i];
+  // Verificar si el elemento tiene un nombre y un valor
+  if (elemento.name && elemento.value) {
+    // Asignar el nombre y el valor al objeto de datos
+    datos[elemento.name] = elemento.value;
+  }
+}
+// Convertir el objeto de datos en una cadena JSON
+const datosJSON = JSON.stringify(datos);
+// Guardar la cadena JSON en localstorage con una clave única
+localStorage.setItem("DatosFormulario", datosJSON);
+alert("Se ha registrado correctamente, probando funcion");
+
 
     } else {
-      alert("No se pudo registrar la cuenta");
+      alert("¡Error! No se pudo registrar la cuenta");
 
       if (!valido1) {
         alert("La contraseña debe cumplir con los siguientes requisitos:\n- Longitud mínima de 7 caracteres y máxima de 15\n- Al menos una letra y un número.");
@@ -66,41 +90,16 @@ function validarContraseñaNombre() {
       if (!valido2) {
         alert("El nombre no debe contener números ni símbolos");
       }
+      if (!valido3) {
+        alert ("El correo ingresado es Incorrecto")
+      }
     }
   }
   
   // Asigna la función al evento onclick del botón de registrarme
-  document.getElementById("registroBtn").onclick = validarContraseñaNombre;
+  document.getElementById("registroBtn").onclick = validaciones;
 
 
 
 
-
-  /*// FUNCION VALIDAR EMAIL
-const emailFeedback = (email) =>{
-    signUpFormPasswordInput.classList.remove("is-valid")
-    signUpFormPasswordInput.classList.remove("is-invalid")
-
-    if (validateEmail(email) && validateExistingEmail(email)) {
-        signUpFormEmailInput.classList.add("is-valid")
-        return true
-    }
-    signUpFormEmailInput.classList.add("is-invalid")
-    return false
-}
-
-
-const validarEmail = (email) =>{
-    const users = JSON.parse(localStorage.getItem("users")) || []
-    const foundUserEmail = users.find(user => user.email == email)
-    
-    if (foundUserEmail) {
-        return false
-    }
-
-    return true
-}
-
-*/
-
-
+// FUNCION PARA GUARDAR LOS DATOS
