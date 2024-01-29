@@ -1,0 +1,56 @@
+/*estilos del footer*/
+footer{
+  background-color: #f9f1fa;
+}
+.logoFooter {
+  height: 100px;
+}
+
+.listaFooter,
+.tituloListaFooter {
+  list-style-type: none;
+  text-align: left;
+  padding-left: 0%;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+}
+
+.tituloListaFooter{
+  font-weight: bold;
+  color: #7a7c8a;
+}
+
+.listaFooter a {
+  text-decoration: none;
+  color: #7a7c8a;
+}
+
+.listaFooter a:hover, 
+.listaRedes a:hover {
+  color: #ed5790;
+}
+
+/*fin del primer contenedor*/
+
+/*segundo contenedor*/
+
+.listaRedes li {
+  list-style-type: none;
+  display: inline;
+}
+
+.listaRedes{
+    padding: 0%;
+}
+
+.listaRedes a {
+  text-decoration: none;
+  color: #7a7c8a;
+  font-size: 25px;
+  padding: 10px;
+}
+.copy {
+  color: #7a7c8a;
+}
+/*fin del segundo contenedor*/
+/*FIN DEL FOOTER*/
