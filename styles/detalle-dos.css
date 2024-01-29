@@ -1,0 +1,54 @@
+
+#banner {
+    width: 100%;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    font-family: 'Poppins', sans-serif;
+    background: rgb(117, 87, 237);
+    background: linear-gradient(to bottom, rgba(87, 237, 154, 0.883) 0%, rgba(223,178,195,1) 100%);
+    color: #000000;
+    }
+
+    .nombre-del-album{
+        padding-right: 300px;
+        padding-left: 0px;
+    }
+
+    .nombre-del-album-1{
+        padding-right: 239px;
+    }
+
+/* Estilos para dispositivos móviles */
+@media only screen and (max-width: 767px) {
+
+    .texto-portada {
+        font-size: 50px;
+        margin-top: 15px;
+        margin-bottom: 0px;
+    }
+
+    #banner {
+        padding-bottom: 0px;
+        }
+}
+
+    
+    @media only screen and (min-width: 1024px) and (max-width: 1366px) {
+
+        .nombre-del-album{
+            padding-right: 150px;
+            padding-left: 0px;
+        }
+    
+        .nombre-del-album-1{
+            padding-right: 86px;
+        }
+
+        .encabezado-album{
+            padding-right: 140px;
+        }
+
+        .encabezado-titulo{
+            padding-left: 60px;
+        }
+    }

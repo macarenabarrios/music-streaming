@@ -19,6 +19,9 @@ body {
   color: #000000;
 }
 
+.seccion-tamaño-movil{
+  display: none;
+}
 /*Comienzo de la portada*/
 .portada-general{
   display: flex;
@@ -63,17 +66,26 @@ body {
 .aleatorio-computadora{
   padding-left: 50px;
   padding-right: 8px;
-  color: #7A7C8A;
+  color: #000000;
 }
 .iconos-computadora{
-  color: #7A7C8A;
+  color: #000000;
 }
-.seccion-tamaño-movil{
-  padding-left: 20px;
+
+.icono-lupa{
+  color: #000000;
+  margin-left: 550px;
+}
+
+.icono-personalizado{
+  color: #000000;
+}
+
+.orden-personalizado{
   display: flex;
-  flex-direction: row;
-  display: none;
+  align-items: center;
 }
+
 /*Fin Iconos de reproduccion*/
 
 /*encabezado tamaño computadora*/
@@ -157,16 +169,6 @@ p{
 }
 /*Fin Lista Reproduccion tamaño computadora*/
 
-
-/* media querie de celular*/
-@media (min-width: 320px) and (max-width: 575px){
-
-
-  /*Fin Iconos de reproduccion*/
-}
-
-
-
   .song{
     cursor: pointer;
   }
@@ -174,12 +176,6 @@ p{
 .song:hover{
   background: rgba(243, 103, 199, 0.4);
 }
-
-
-
-
-
-
 @media only screen and (min-width: 1025px) {
   #main-content {
     margin-top: 0;
@@ -303,7 +299,19 @@ p{
     display: none;
   }
 
+  .icono-lupa{
+    color: #000000;
+    margin-left: 250px;
+    font-size: 25px;
+  }
+  
+  .icono-personalizado{
+    color: #000000;
+  }
 
+  .seccion-tamaño-movil{
+    display: none;
+  }
 }
 
 /* Estilos para pantallas tablet: iPad Mini */
@@ -390,6 +398,25 @@ p{
   .imagen-tamaño-movil{
     margin-right: 10px;
     border-radius: 10px;
+  }
+
+  .icono-lupa{
+    color: #000000;
+    margin-left: 190px;
+    font-size: 25px;
+  }
+  
+  .icono-personalizado{
+    color: #000000;
+    
+  }
+
+  .orden-personalizado{
+    display: none;
+  }
+
+  .seccion-tamaño-movil{
+    display: none;
   }
 }
 
@@ -493,11 +520,10 @@ p{
       display: none;
     }
   
-    .seccion-tamaño-movil{
-      padding-left: 5px;
-    }
     /*Fin Iconos de reproduccion*/
-
+    #banner {
+      padding-bottom: 0px;
+    }
     .tamaño-computadora{
       display: none;
     }
@@ -514,6 +540,16 @@ p{
     .icono-duracion-tablet{
       padding-right: 15px;
     }
+
+    .seccion-tamaño-movil{
+      display: flex;
+      flex-direction: row;
+      padding-left: 20px;
+    }
+
+    .fondo{
+      padding-top: 1px;
+      }
 }
 
 
