@@ -1,0 +1,87 @@
+
+.nombre-del-album{
+    padding-right: 250px;
+    padding-left: 0px;
+    }
+
+    .nombre-del-album-1{
+    padding-right: 300px;
+    }
+
+    .nombre-del-album-1-1{
+        padding-right: 330px;
+    }
+
+    .nombre-del-album-1-1-1{
+        padding-right: 350px;
+    }
+
+    .nombre-del-album-1-1-2{
+        padding-right: 320px;
+    }
+
+    .icono-lupa{
+        color: #000000;
+        margin-left: 590px;
+    }
+    @media only screen and (min-width: 1024px) and (max-width: 1366px) {
+
+        .nombre-del-album{
+            padding-right: 100px;
+            padding-left: 0px;
+        }
+    
+        .nombre-del-album-1{
+            padding-right: 150px;
+        }
+
+        .nombre-del-album-1-1{
+            padding-right: 180px;
+        }
+    
+        .nombre-del-album-1-1-2{
+            padding-right: 170px;
+        }
+
+        .nombre-del-album-1-1-1{
+            padding-right: 200px;
+        }
+        .encabezado-album{
+            padding-right: 140px;
+        }
+
+        .encabezado-titulo{
+            padding-left: 60px;
+        }
+
+        .icono-lupa{
+            color: #000000;
+            margin-left: 260px;
+        }
+    }
+
+    @media only screen and (max-width: 767px) {
+
+        .texto-portada {
+            font-size: 50px;
+            margin-top: 15px;
+            margin-bottom: 0px;
+        }
+    
+        #banner {
+            padding-bottom: 0px;
+            }
+
+            .tamaño-tablet{
+                margin: 0px;
+            }
+    }
+
+    /* Estilos para pantallas tablet: iPad Mini */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+
+    .icono-lupa{
+        color: #000000;
+        margin-left: 180px;
+    }
+}

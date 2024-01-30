@@ -14,8 +14,8 @@ body {
   padding-bottom: 20px;
   padding-top: 20px;
   font-family: 'Poppins', sans-serif;
-  background: rgb(237,87,144);
-  background: linear-gradient(to bottom, rgba(237,87,144,0.8827906162464986) 0%, rgba(223,178,195,1) 100%);
+  background: rgb(87,161,237);
+  background: linear-gradient(74deg, rgba(87,161,237,0.7203256302521008) 0%, rgba(2,9,36,0.8911939775910365) 140%);
   color: #000000;
 }
 
@@ -49,9 +49,10 @@ body {
 /*Iconos de reproduccion*/
 
 .fondo{
-  color: #000000;
+  color: #ffffff;
   padding-top: 15px;
-  background: rgba(223,178,195,1);
+  background: rgb(2,9,36);
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.942) 100%, rgba(0,0,0,1) 100%);
   }
 
 .seccion-medio{
@@ -64,21 +65,21 @@ body {
   color: #ED5790;
 }
 .aleatorio-computadora{
-  padding-left: 50px;
+  padding-left: 30px;
   padding-right: 8px;
-  color: #000000;
+  color: #a8a8a8;
 }
 .iconos-computadora{
-  color: #000000;
+  color: #a8a8a8;
 }
 
 .icono-lupa{
-  color: #000000;
+  color: #a8a8a8;
   margin-left: 550px;
 }
 
 .icono-personalizado{
-  color: #000000;
+  color: #a8a8a8;
 }
 
 .orden-personalizado{
@@ -90,6 +91,12 @@ body {
 
 /*encabezado tamaño computadora*/
 .song {
+  display: flex;
+  align-items: center; 
+  padding: 5px 10px 5px 10px ;
+}
+
+.song-encabezado {
   display: flex;
   align-items: center; 
   padding: 5px 10px 5px 10px ;
@@ -183,7 +190,7 @@ p{
   }
 
   #navbar {
-    background-color: #ffffff;
+    background-color: #1c1919;
     height: 100vh;
     width: 20%;
     position: fixed;
@@ -195,13 +202,13 @@ p{
   }
 
   .navbar-container.navbar-logo {
-    color: #222A53;
+    color: #ffffff;
     margin-left: 10px;
     font-size: 16px;
   }
 
   .navbar-container {
-    color: #7A7C8A;
+    color: #ffffff;
     padding: 15px;
     margin-bottom: 20px;
     font-size: 14px;
@@ -300,13 +307,13 @@ p{
   }
 
   .icono-lupa{
-    color: #000000;
+    color: #a8a8a8;
     margin-left: 250px;
     font-size: 25px;
   }
   
   .icono-personalizado{
-    color: #000000;
+    color: #a8a8a8;
   }
 
   .seccion-tamaño-movil{
@@ -401,13 +408,13 @@ p{
   }
 
   .icono-lupa{
-    color: #000000;
+    color: #a8a8a8;
     margin-left: 190px;
     font-size: 25px;
   }
   
   .icono-personalizado{
-    color: #000000;
+    color: #a8a8a8;
     
   }
 
@@ -489,6 +496,12 @@ p{
   
     /*Encabezado tamaño computadora*/
     .song {
+      display: flex;
+      align-items: center;
+      margin: 10px;
+    }
+
+    .song-encabezado {
       display: flex;
       align-items: center;
       margin: 10px;
