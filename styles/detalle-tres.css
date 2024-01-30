@@ -75,13 +75,31 @@
             .tamaño-tablet{
                 margin: 0px;
             }
+
+            .aleatorio-movil{
+                color: #a8a8a8;
+                margin-left: 25px;
+            }
+        
+            .reproductor{
+                color: #ed5790;
+            }
+        
+            .iconos-movil{
+                color: #a8a8a8;
+            }
+
     }
 
     /* Estilos para pantallas tablet: iPad Mini */
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
 
     .icono-lupa{
-        color: #000000;
-        margin-left: 180px;
+        color: #a8a8a8;
+        margin-left: 220px;
+    }
+
+    .seccion-medio{
+        padding-left: 20px;
     }
 }

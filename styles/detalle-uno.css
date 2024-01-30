@@ -75,7 +75,7 @@ body {
 
 .icono-lupa{
   color: #a8a8a8;
-  margin-left: 550px;
+  margin-left: 600px;
 }
 
 .icono-personalizado{
@@ -308,7 +308,7 @@ p{
 
   .icono-lupa{
     color: #a8a8a8;
-    margin-left: 250px;
+    margin-left: 270px;
     font-size: 25px;
   }
   
@@ -409,7 +409,7 @@ p{
 
   .icono-lupa{
     color: #a8a8a8;
-    margin-left: 190px;
+    margin-left: 230px;
     font-size: 25px;
   }
   
@@ -424,6 +424,10 @@ p{
 
   .seccion-tamaño-movil{
     display: none;
+  }
+
+  .seccion-medio{
+    padding-left: 20px;
   }
 }
 
@@ -563,6 +567,22 @@ p{
     .fondo{
       padding-top: 1px;
       }
+
+      .seccion-tamaño-movil{
+        padding-left: 5px;
+    }
+    .aleatorio-movil{
+        color: #a8a8a8;
+        margin-left: 25px;
+    }
+
+    .reproductor{
+        color: #ed5790;
+    }
+
+    .iconos-movil{
+        color: #a8a8a8;
+    }
 }
 
 
