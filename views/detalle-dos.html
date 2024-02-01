@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/e32550aef3.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="../styles/detalle-uno.css">
+    <link rel="stylesheet" href="../styles/detalle-dos.css">
+</head>
+<body>
+    <main>
+    <!-- Navbar -->
+    <!-- Navbar responsive -->
+    <nav
+    class="navbar navbar-expand-lg navbar-light bg-light d-lg-none d-md-none">
+    <a class="navbar-brand" href="./main.html">DevTunes</a>
+    <button
+    class="navbar-toggler"
+    type="button"
+    data-toggle="collapse"
+    data-target="#navbarNav"
+    aria-controls="navbarNav"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+    >
+    <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+    <!-- Contenido del menú -->
+    <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+        <a class="nav-link" href="#">Iniciar sesión</a>
+        </li>
+        <li class="nav-item">
+        <a class="nav-link" href="#">Registrarse</a>
+        </li>
+        <li class="nav-item dropdown">
+        <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="navbarDropdownMenuLink1"
+            role="button"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+        >
+            Recomendado
+        </a>
+        <div
+            class="dropdown-menu"
+            aria-labelledby="navbarDropdownMenuLink1"
+        >
+            <a class="dropdown-item" href="#">Explorar</a>
+            <a class="dropdown-item" href="#">Géneros</a>
+            <a class="dropdown-item" href="#">Artistas</a>
+            <a class="dropdown-item" href="#">Álbumes</a>
+        </div>
+        </li>
+        <li class="nav-item dropdown">
+        <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="navbarDropdownMenuLink2"
+            role="button"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+        >
+            Mi biblioteca
+        </a>
+        <div
+            class="dropdown-menu"
+            aria-labelledby="navbarDropdownMenuLink2"
+        >
+            <a class="dropdown-item" href="#">Escuchado Recientemente</a>
+            <a class="dropdown-item" href="#">Favoritos</a>
+            <a class="dropdown-item" href="#">Descargas</a>
+        </div>
+        </li>
+        <li class="nav-item">
+        <a class="nav-link" href="#">Administrador</a>
+        </li>
+    </ul>
+    </div>
+</nav>
+<!-- Fin Navbar responsive -->
+
+<!-- Navbar para pantallas grandes -->
+<div id="navbar" class="screen-navbar d-none d-lg-block d-md-block">
+    <!-- Contenedor 1 -->
+    <div class="navbar-container navbar-logo" id="logoContainer">
+    <a href="./main.html"><p>DevTunes</p></a>
+    </div>
+
+    <!-- Contenedor 2 -->
+    <div class="navbar-container">
+    <ul>
+        <li>Iniciar sesión</li>
+        <li>Registrarse</li>
+        <li>Administrador</li>
+    </ul>
+    </div>
+
+    <!-- Contenedor 3 -->
+    <div class="navbar-container">
+    <p>RECOMENDADO</p>
+    <ul>
+        <li class="active">Explorar</li>
+        <li>Generos</li>
+        <li>Artistas</li>
+        <li>Albumes</li>
+    </ul>
+    </div>
+
+    <!-- Contenedor 4 -->
+    <div class="navbar-container">
+    <p>MI BIBLIOTECA</p>
+    <ul>
+        <li>Escuchado Recientemente</li>
+        <li>Favoritos</li>
+        <li>Descargas</li>
+    </ul>
+    </div>
+</div>
+<!-- Fin Navbar -->
+    <div id="main-content">
+        <div id="banner">
+            <!--Comienzo de la portada-->
+            <section class=" mt-3 portada-general">
+                    <div class="portada-imagen">
+                        <img class="imagen-dua-lipa" src="../assets/img/topartist-2.jpeg" alt="Imganen de la portada" >
+                    </div>
+                    <div>
+                        <p class="d-none d-md-block">Lista de canciones</p>
+                        <h1 class="texto-portada">Ed Sheeran</h1>
+                        <p class="d-none d-md-block">Es un cantautor de dance-pop y músico británico.</p>
+                        <p class="d-none d-md-block">10 canciones, 25 minutos</p>
+                    </div>
+            </div>
+            </section>
+            <!--Fin de la portada-->
+            <!--Iconos de reproduccion-->
+            <section class="fondo">
+            <section class="mt-4 mb-2 align-items-center d-none d-md-block">
+                <div class="seccion-medio">
+                    <p><i class="bi bi-play-circle-fill fas fa-check fa-3x reproductor"></i></p>
+                    <p><i class="bi bi-shuffle fas fa-check fa-2x aleatorio-computadora"></i></p>
+                    <p><i class="bi bi-plus-circle-fill fas fa-check fa-2x px-2 iconos-computadora"></i></p>
+                    <p><i class="bi bi-arrow-down-circle-fill fas fa-check fa-2x px-2 iconos-computadora"></i></p>
+                    <p><i class="bi bi-three-dots fas fa-check fa-2x px-2 iconos-computadora"></i></p>
+                    <p><i class="bi bi-search px-2 icono-lupa"></i></p>
+                    <p class="orden-personalizado">Orden personalizado</p>
+                    <p><i class="bi bi-list-ul fa-2x px-2 icono-personalizado"></i></p>
+                </div>
+            </section>
+            <section class="mt-4 mb-2 align-items-center">
+                <div class="seccion-tamaño-movil">
+                    <p><i class="bi bi-plus-circle-fill fas fa-check fa-2x px-2 iconos-movil"></i></p>
+                    <p><i class="bi bi-arrow-down-circle-fill fas fa-check fa-2x px-2 iconos-movil"></i></p>
+                    <p><i class="bi bi-three-dots fas fa-check fa-2x px-2 iconos-movil"></i></p>
+                    <p><i class="bi bi-shuffle fas fa-check fa-2x aleatorio-movil"></i></p>
+                    <p><i class="bi bi-play-circle-fill fas fa-check fa-2x px-3 reproductor"></i></p>
+                </div>
+            </section>
+            <!--Iconos de reproduccion-->
+
+            <!-- encabezado tamaño computadora -->
+            <div class="song-encabezado linea encabezado-tamaño-computadora">
+                <div class="icono-enumeracion">
+                    <h3>#</h3>
+                </div>
+                <div class="song-details encabezado-titulo">
+                <h3>Titulo</h3>
+                </div>
+                <div class="encabezado-album">
+                    <h3>Album</h3>
+                </div>
+                <div class="icono-duracion-cancion">
+                    <i class="bi bi-clock-fill"></i>
+                </div>
+            </div>
+                <!--fin encabezado tamaño computadora -->
+
+                <!-- tamaño computadora 1-->
+            <div class="song tamaño-computadora ">
+                <div class="lista-enumeracion">
+                    <p>1</p>
+                </div>
+                <img src="../assets/img/ed-sheeran-3.jpg" class="imagen-lista-canciones" alt="Imagen de la canción 1">
+                <div class="song-details">
+                <p>American Town</p>
+                </div>
+                <div class="nombre-del-album-1">
+                    <p>Autumn variations</p>
+                </div>
+                <div class="duracion-cancion">
+                    <p>03:18</p>
+                </div>
+                <div class="icons">
+                    <i type="button" class="bi bi-plus-circle p-2"></i><i type="button" class="bi bi-three-dots p-3"></i>
+                </div>
+            </div>
+                <!--fin tamaño computadora -->
+                <!-- tamaño computadora 2-->
+            <div class="song tamaño-computadora paso">
+                <div class="lista-enumeracion">
+                    <p>2</p>
+                </div>
+                <img src="../assets/img/ed-sheeran-4.jpg" class="imagen-lista-canciones" alt="Imagen de la canción 2">
+                <div class="song-details">
+                <p>Eyes Closed</p>
+                </div>
+                <div class="nombre-del-album">
+                    <p>- (deluxe)</p>
+                </div>
+                <div class="duracion-cancion">
+                    <p>03:15</p>
+                </div>
+                <div class="icons">
+                    <i type="button" class="bi bi-plus-circle p-2"></i><i type="button" class="bi bi-three-dots p-3"></i>
+                </div>
+            </div>
+                <!--fin tamaño computadora -->
+                <!-- tamaño computadora 3 -->
+            <div class="song tamaño-computadora">
+                <div class="lista-enumeracion">
+                    <p>3</p>
+                </div>
+                <img src="../assets/img/ed-sheeran-1.jpg" class="imagen-lista-canciones" alt="Imagen de la canción 3">
+                <div class="song-details">
+                <p>Trinking Out Loud </p>
+                </div>
+                <div class="nombre-del-album">
+                    <p>x (Deluxe)</p>
+                </div>
+                <div class="duracion-cancion">
+                    <p>04:42</p>
+                </div>
+                <div class="icons">
+                    <i type="button" class="bi bi-plus-circle p-2"></i><i type="button" class="bi bi-three-dots p-3"></i>
+                </div>
+            </div>
+                <!--fin tamaño computadora -->
+                <!-- tamaño computadora 4-->
+            <div class="song tamaño-computadora">
+                <div class="lista-enumeracion">
+                    <p>4</p>
+                </div>
+                <img src="../assets/img/ed-sheeran-2.jpg" class="imagen-lista-canciones" alt="Imagen de la canción 4">
+                <div class="song-details">
+                <p>Shape of You</p>
+                </div>
+                <div class="nombre-del-album">
+                    <p>÷ (Deluxe)</p>
+                </div>
+                <div class="duracion-cancion">
+                    <p>03:54</p>
+                </div>
+                <div class="icons">
+                    <i type="button" class="bi bi-plus-circle p-2"></i><i type="button" class="bi bi-three-dots p-3"></i>
+                </div>
+            </div>
+                <!--fin tamaño computadora -->
+                <!-- tamaño computadora 5-->
+            <div class="song tamaño-computadora">
+                <div class="lista-enumeracion">
+                    <p>5</p>
+                </div>
+                <img src="../assets/img/ed-sheeran-2.jpg" class="imagen-lista-canciones" alt="Imagen de la canción 5">
+                <div class="song-details">
+                <p>Perfect</p>
+                </div>
+                <div class="nombre-del-album">
+                    <p>÷ (Deluxe)</p>
+                </div>
+                <div class="duracion-cancion">
+                    <p>04:23</p>
+                </div>
+                <div class="icons">
+                    <i type="button" class="bi bi-plus-circle p-2"></i><i type="button" class="bi bi-three-dots p-3"></i>
+                </div>
+            </div>
+                <!--fin tamaño computadora -->
+                <!-- tamaño computadora 6-->
+            <div class="song tamaño-computadora">
+                <div class="lista-enumeracion">
+                    <p>6</p>
+                </div>
+                <img src="../assets/img/ed-sheeran-4.jpg" class="imagen-lista-canciones" alt="Imagen de la canción 6">
+                <div class="song-details">
+                <p>Boat</p>
+                </div>
+                <div class="nombre-del-album">
+                    <p>- (Deluxe)</p>
+                </div>
+                <div class="duracion-cancion">
+                    <p>03:06</p>
+                </div>
+                <div class="icons">
+                    <i type="button" class="bi bi-plus-circle p-2"></i><i type="button" class="bi bi-three-dots p-3"></i>
+                </div>
+            </div>
+                <!--fin tamaño computadora -->
+                <!-- tamaño computadora 7-->
+            <div class="song tamaño-computadora">
+                <div class="lista-enumeracion">
+                    <p>7</p>
+                </div>
+                <img src="../assets/img/ed-sheeran-1.jpg" class="imagen-lista-canciones" alt="Imagen de la canción 7">
+                <div class="song-details">
+                <p>Tenerife Sea</p>
+                </div>
+                <div class="nombre-del-album">
+                    <p>x (Deluxe)</p>
+                </div>
+                <div class="duracion-cancion">
+                    <p>04:01</p>
+                </div>
+                <div class="icons">
+                    <i type="button" class="bi bi-plus-circle p-2"></i><i type="button" class="bi bi-three-dots p-3"></i>
+                </div>
+            </div>
+                <!--fin tamaño computadora -->
+                <!-- tamaño computadora 8-->
+            <div class="song tamaño-computadora">
+                <div class="lista-enumeracion">
+                    <p>8</p>
+                </div>
+                <img src="../assets/img/ed-sheeran-2.jpg" class="imagen-lista-canciones" alt="Imagen de la canción 8">
+                <div class="song-details">
+                <p>Happier</p>
+                </div>
+                <div class="nombre-del-album">
+                    <p>÷ (Deluxe)</p>
+                </div>
+                <div class="duracion-cancion">
+                    <p>03:28</p>
+                </div>
+                <div class="icons">
+                    <i type="button" class="bi bi-plus-circle p-2"></i><i type="button" class="bi bi-three-dots p-3"></i>
+                </div>
+            </div>
+                <!--fin tamaño computadora -->
+                <!-- tamaño computadora 9-->
+            <div class="song tamaño-computadora">
+                <div class="lista-enumeracion">
+                    <p>9</p>
+                </div>
+                <img src="../assets/img/ed-sheeran-1.jpg" class="imagen-lista-canciones" alt="Imagen de la canción 9">
+                <div class="song-details">
+                <p>Sycamore</p>
+                </div>
+                <div class="nombre-del-album">
+                    <p>x (Deluxe)</p>
+                </div>
+                <div class="duracion-cancion">
+                    <p>02:50</p>
+                </div>
+                <div class="icons">
+                    <i type="button" class="bi bi-plus-circle p-2"></i><i type="button" class="bi bi-three-dots p-3"></i>
+                </div>
+            </div>
+                <!--fin tamaño computadora -->
+                <!-- tamaño computadora 10-->
+            <div class="song tamaño-computadora">
+                <div class="lista-enumeracion-1">
+                    <p>10</p>
+                </div>
+                <img src="../assets/img/ed-sheeran-3.jpg" class="imagen-lista-canciones" alt="Imagen de la canción 10">
+                <div class="song-details">
+                <p>Magical</p>
+                </div>
+                <div class="nombre-del-album-1">
+                    <p>Autumn variations</p>
+                </div>
+                <div class="duracion-cancion">
+                    <p>03:14</p>
+                </div>
+                <div class="icons">
+                    <i type="button" class="bi bi-plus-circle p-2"></i><i type="button" class="bi bi-three-dots p-3"></i>
+                </div>
+            </div>
+                <!--fin tamaño computadora -->
+                            <!-- encabezado tamaño tablet -->
+            <div class="linea"></div>
+                <!--fin encabezado tamaño tablet -->
+                <!-- tamaño tablet 1 -->
+                <div class="song tamaño-tablet">
+                    <img src="../assets/img/ed-sheeran-3.jpg" alt="Imagen de la canción 1" class="imagen-tamaño-movil">
+                    <div class="song-details">
+                    <p>American Town</p>
+                    <p class="subtitulo-album">Autumn variations</p>
+                    </div>
+                    <div class="icons icono-duracion-tablet">
+                        <p>03:18</p>
+                    </div>
+                    <div class="icons icono-tablet">
+                        <i type="button" class="bi bi-plus-circle p-2"></i><i type="button" class="bi bi-three-dots p-2"></i>
+                    </div>
+                </div>
+                <!-- tamaño tablet -->
+                                <!-- tamaño tablet 2 -->
+                                <div class="song tamaño-tablet">
+                                    <img src="../assets/img/ed-sheeran-4.jpg" alt="Imagen de la canción 2" class="imagen-tamaño-movil">
+                                    <div class="song-details">
+                                    <p>Eyes Closed</p>
+                                    <p class="subtitulo-album">- (deluxe)</p>
+                                    </div>
+                                    <div class="icons icono-duracion-tablet">
+                                        <p>03:15</p>
+                                    </div>
+                                    <div class="icons icono-tablet">
+                                        <i type="button" class="bi bi-plus-circle p-2"></i><i type="button" class="bi bi-three-dots p-2"></i>
+                                    </div>
+                                </div>
+                                <!-- tamaño tablet  -->
+                                                <!-- tamaño tablet 3 -->
+                <div class="song tamaño-tablet">
+                    <img src="../assets/img/ed-sheeran-1.jpg" alt="Imagen de la canción 3 " class="imagen-tamaño-movil">
+                    <div class="song-details">
+                    <p>Trinking Out Loud</p>
+                    <p class="subtitulo-album">x (deluxe)</p>
+                    </div>
+                    <div class="icons icono-duracion-tablet">
+                        <p>04:42</p>
+                    </div>
+                    <div class="icons icono-tablet">
+                        <i type="button" class="bi bi-plus-circle p-2"></i><i type="button" class="bi bi-three-dots p-2"></i>
+                    </div>
+                </div>
+                <!-- tamaño tablet -->
+                                <!-- tamaño tablet 4 -->
+                                <div class="song tamaño-tablet">
+                                    <img src="../assets/img/ed-sheeran-2.jpg" alt="Imagen de la canción 4" class="imagen-tamaño-movil">
+                                    <div class="song-details">
+                                    <p>Shape of You</p>
+                                    <p class="subtitulo-album">÷ (Deluxe)</p>
+                                    </div>
+                                    <div class="icons icono-duracion-tablet">
+                                        <p>03:54</p>
+                                    </div>
+                                    <div class="icons icono-tablet">
+                                        <i type="button" class="bi bi-plus-circle p-2"></i><i type="button" class="bi bi-three-dots p-2"></i>
+                                    </div>
+                                </div>
+                                <!-- tamaño tablet 5 -->
+                                                <!-- tamaño tablet 1 -->
+                <div class="song tamaño-tablet">
+                    <img src="../assets/img/ed-sheeran-2.jpg" alt="Imagen de la canción 5" class="imagen-tamaño-movil">
+                    <div class="song-details">
+                    <p>Perfect</p>
+                    <p class="subtitulo-album">÷ (Deluxe)</p>
+                    </div>
+                    <div class="icons icono-duracion-tablet">
+                        <p>04:23</p>
+                    </div>
+                    <div class="icons icono-tablet">
+                        <i type="button" class="bi bi-plus-circle p-2"></i><i type="button" class="bi bi-three-dots p-2"></i>
+                    </div>
+                </div>
+                <!-- tamaño tablet -->
+                                <!-- tamaño tablet 6 -->
+                                <div class="song tamaño-tablet">
+                                    <img src="../assets/img/ed-sheeran-4.jpg" alt="Imagen de la canción 6" class="imagen-tamaño-movil">
+                                    <div class="song-details">
+                                    <p>Boat</p>
+                                    <p class="subtitulo-album">- (Deluxe)</p>
+                                    </div>
+                                    <div class="icons icono-duracion-tablet">
+                                        <p>03:06</p>
+                                    </div>
+                                    <div class="icons icono-tablet">
+                                        <i type="button" class="bi bi-plus-circle p-2"></i><i type="button" class="bi bi-three-dots p-2"></i>
+                                    </div>
+                                </div>
+                                <!-- tamaño tablet -->
+                                                <!-- tamaño tablet 7 -->
+                <div class="song tamaño-tablet">
+                    <img src="../assets/img/ed-sheeran-1.jpg" alt="Imagen de la canción 7" class="imagen-tamaño-movil">
+                    <div class="song-details">
+                    <p>Tenerife Sea</p>
+                    <p class="subtitulo-album">x (Wembley Edition)</p>
+                    </div>
+                    <div class="icons icono-duracion-tablet">
+                        <p>04:01</p>
+                    </div>
+                    <div class="icons icono-tablet">
+                        <i type="button" class="bi bi-plus-circle p-2"></i><i type="button" class="bi bi-three-dots p-2"></i>
+                    </div>
+                </div>
+                <!-- tamaño tablet  -->
+                                <!-- tamaño tablet 8 -->
+                                <div class="song tamaño-tablet">
+                                    <img src="../assets/img/ed-sheeran-2.jpg" alt="Imagen de la canción 8" class="imagen-tamaño-movil">
+                                    <div class="song-details">
+                                    <p>Happier</p>
+                                    <p class="subtitulo-album">÷ (Deluxe)</p>
+                                    </div>
+                                    <div class="icons icono-duracion-tablet">
+                                        <p>03:28</p>
+                                    </div>
+                                    <div class="icons icono-tablet">
+                                        <i type="button" class="bi bi-plus-circle p-2"></i><i type="button" class="bi bi-three-dots p-2"></i>
+                                    </div>
+                                </div>
+                                <!-- tamaño tablet  -->
+                                                <!-- tamaño tablet 9 -->
+                <div class="song tamaño-tablet">
+                    <img src="../assets/img/ed-sheeran-1.jpg" alt="Imagen de la canción 9" class="imagen-tamaño-movil">
+                    <div class="song-details">
+                    <p>Sycamore</p>
+                    <p class="subtitulo-album">x (Deluxe)</p>
+                    </div>
+                    <div class="icons icono-duracion-tablet">
+                        <p>02:50</p>
+                    </div>
+                    <div class="icons icono-tablet">
+                        <i type="button" class="bi bi-plus-circle p-2"></i><i type="button" class="bi bi-three-dots p-2"></i>
+                    </div>
+                </div>
+                <!-- tamaño tablet -->
+                                <!-- tamaño tablet 10 -->
+                                <div class="song tamaño-tablet">
+                                    <img src="../assets/img/ed-sheeran-3.jpg" alt="Imagen de la canción 10" class="imagen-tamaño-movil">
+                                    <div class="song-details">
+                                    <p>Magical</p>
+                                    <p class="subtitulo-album">Autumn variations</p>
+                                    </div>
+                                    <div class="icons icono-duracion-tablet">
+                                        <p>03:14</p>
+                                    </div>
+                                    <div class="icons icono-tablet">
+                                        <i type="button" class="bi bi-plus-circle p-2"></i><i type="button" class="bi bi-three-dots p-2"></i>
+                                    </div>
+                                </div>
+                                <!-- tamaño tablet -->
+        </section>
+        </div>
+    </div>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>
