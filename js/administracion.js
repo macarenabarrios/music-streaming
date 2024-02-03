@@ -80,17 +80,25 @@ function Eliminar(botonEliminar) {
   botonEliminar.addEventListener("click", function () {
     const fila = botonEliminar.parentNode.parentNode;
     const codigoDeCancion = fila.firstChild.textContent;
+    const nombreDeUsuario = fila.firstChild.textContent;
+
 
     //obtengo la lista de canciones del localStorage
     const Canciones = JSON.parse(localStorage.getItem("canciones")) || [];
+    const Usuarios = JSON.parse(localStorage.getItem("users")) || [];
 
     //aqui se filtra la lista de canciones y se compara el codigo de la cancion a eliminar, para guardar la lista actualizada en la variable "cancionesActualizadas"
     const cancionesActualizadas = Canciones.filter(function (cancion) {
       return cancion.codigo !== codigoDeCancion;
     });
-
+    //comparamos si el user a eliminar es difente al resto de los users y guardamos la nueva lista actualizada.
+    const listaUsuariosActualizada = Usuarios.filter(function (usuario) {
+      return usuario.name !== nombreDeUsuario;
+    });
+    
     //aqui se guarda la lista actualizada en el localstorage
     localStorage.setItem("canciones", JSON.stringify(cancionesActualizadas));
+    localStorage.setItem("users", JSON.stringify(listaUsuariosActualizada));
 
     //eliminamos la fila de la tabla
     fila.remove();
@@ -190,5 +198,43 @@ function renderizarTablaDesdeLocalStorage() {
     Editar(botonEditar);
   });
 }
+
+
+
+
+
+  // Recuperar datos desde localStorage
+  const usuariosGuardados = localStorage.getItem('users');
+
+  // Convertir datos a un objeto JavaScript
+  const usuarios = JSON.parse(usuariosGuardados);
+  
+  // Acceder a la tabla en la página HTML
+  const tabla2 = document.getElementById('tabla-usuarios'); // Asegúrate de que tengas una tabla con el id "miTabla"
+  
+  // Iterar sobre los datos y agregar filas a la tabla
+  usuarios.forEach(function (usuario) {
+    const fila = tabla2.insertRow();
+    const celdaNombre = fila.insertCell(0);
+    const celdaEmail = fila.insertCell(1);
+
+
+    const botonEliminar = document.createElement("button");
+    botonEliminar.textContent = "Eliminar";
+    const celdaOpcion = document.createElement("td");
+    celdaOpcion.appendChild(botonEliminar);
+    fila.appendChild(celdaOpcion);
+
+    tabla2.appendChild(fila);
+
+    Eliminar(botonEliminar);
+  
+    celdaNombre.textContent = usuario.name;
+    celdaEmail.textContent = usuario.email;
+  });
+
+
+
+
 
 //localStorage.removeItem('canciones'); //limpiar localStorage para prueba
