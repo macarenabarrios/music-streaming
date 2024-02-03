@@ -22,21 +22,24 @@
 </head>
 
 <body>
+  <nav class="navbar bg-body-tertiary text-center">
+    <div class="container-fluid">
+        <a class="navbar-brand d-inline-block mx-auto" href="../views/main.html">
+            <img src="../assets/img/DevTunesBlanco.png" alt="Logo" width="150" height="50" class="d-inline-block align-text-top">
+        </a>
+    </div>
+</nav>
 
-  <main class="container d-flex justify-content-center" id="fondoFormulario">
+  <main class="container-fluid d-flex justify-content-center p-3">
 
 
-    <form id="registroFormulario" class="justify-content-center">
+    <form id="registroFormulario" class="justify-content-center formulario-rectangular  ">
 
-      <div class="text-center">
-        <a href="/views/main.html"><img src="/assets/img/DevTunes.png" class=" w-25 " alt="logo de DevTunes" /></a>
+      <div class="text-center mt-3">
 
-
-        <h1 class="display-5 fw-semibold">Dev Tunes</h1>
-        <br>
         <h4 class="">Regístrate para empezar a escuchar nuestro contenido</h4>
-        <br>
-        <h6>¿Ya tienes una cuenta DevTunes? <a href="/views/login.html">Iniciar sesión</a></h6>
+
+        <h6>¿Ya tienes una cuenta DevTunes? <a href="../views/login.html">Iniciar sesión</a></h6>
 
         <br>
 
@@ -49,9 +52,7 @@
 
         </div>
       </div>
-      <br>
-
-
+<div class="main-text p-3 ">
       <label for="registroInputNombre" class="form-label">Nombre</label>
       <div class="mb-4 position-relative">
         <input type="text" placeholder="Ingrese su nombre" id="registroInputNombre" class="form-control" required
@@ -75,13 +76,13 @@
       </div>
 
       <div class="form-text mb-3">
-        Debe contener entre 7 a 15 caracteres, letras mayúsculas, minúsculas y al menos un número o un símbolo de estos:
+        Debe contener entre 7 a 15 caracteres, al menos una letra mayuscula y un número o un símbolo de estos:
         # *.
       </div>
 
 
       <label for="registroInputConfirmarContraseña" class="form-label">Vuelva a ingresar su contraseña</label>
-      <div class="mb-1 position-relative">
+      <div class="mb-1 position-relative mb-3">
         <input type="password" name="clave2" placeholder="..." id="registroInputConfirmarContraseña"
           class="form-control" required maxlength="15" minlength="7">
 
@@ -89,21 +90,16 @@
 
       </div>
 
-      <br>
 
       <div class="row justify-content-center">
         <input type="submit" value="Registrarse" class="col-8 col-sm-3 btn" id="registroBtn">
       </div>
 
-      <br>
-
-      <div class="form-text mb-3 text-center">
+      <div class="form-text mb-5 text-center">
         Haciendo click en “Registrarse”, aceptas las
         Condiciones generales de uso y la Política de privacidad
       </div>
-
-      <br>
-
+</div>
     </form>
 
 
@@ -203,7 +199,7 @@
     integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
     crossorigin="anonymous"></script>
 
-  <script src="/js/registro.js"></script>
+  <script src="../js/registro.js"></script>
 
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 

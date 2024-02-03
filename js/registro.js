@@ -1,32 +1,21 @@
-//FUNCION MOSTRAR/OCULTAR CONTRASEÑA
-
+// FUNCION MOSTRAR/OCULTAR CONTRASEÑA
 const contraseña = document.getElementById("registroInputContraseña");
-const confirmarContraseña = document.getElementById(
-  "registroInputConfirmarContraseña"
-);
+const confirmarContraseña = document.getElementById("registroInputConfirmarContraseña");
 const iconoContraseña = document.getElementById("iconoMostrarContraseña");
-const iconoConfirmarContraseña = document.getElementById(
-  "iconoMostrarConfirmarContraseña"
-);
+const iconoConfirmarContraseña = document.getElementById("iconoMostrarConfirmarContraseña");
 
 iconoContraseña.addEventListener("click", () => {
-  if (contraseña.type === "password") {
-    contraseña.type = "text";
-    iconoContraseña.style.opacity = 0.8;
-  } else {
-    contraseña.type = "password";
-    iconoContraseña.style.opacity = 0.2;
-  }
+  // Cambiar el tipo de input entre "password" y "text"
+  contraseña.type = (contraseña.type === "password") ? "text" : "password";
+  // Cambiar la opacidad del ícono según el tipo de input
+  iconoContraseña.style.opacity = (contraseña.type === "password") ? 0.2 : 0.8;
 });
 
 iconoConfirmarContraseña.addEventListener("click", () => {
-  if (confirmarContraseña.type === "password") {
-    confirmarContraseña.type = "text";
-    iconoConfirmarContraseña.style.opacity = 0.8;
-  } else {
-    confirmarContraseña.type = "password";
-    iconoConfirmarContraseña.style.opacity = 0.2;
-  }
+  // Cambiar el tipo de input entre "password" y "text"
+  confirmarContraseña.type = (confirmarContraseña.type === "password") ? "text" : "password";
+  // Cambiar la opacidad del ícono según el tipo de input
+  iconoConfirmarContraseña.style.opacity = (confirmarContraseña.type === "password") ? 0.2 : 0.8;
 });
 
 const signupForm = document.querySelector("#registroFormulario");
@@ -42,58 +31,68 @@ signupForm.addEventListener("submit", function (e) {
 
   const email = correoElectronico.toLowerCase();
 
+  // Expresiones regulares para validar el nombre y la contraseña
   const regex1 = /^[A-Za-z]+$/;
-  const valido1 = regex1.test(name);
+  const regex2 = /^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9#*])[A-Za-z\d*#]{7,15}$/;
 
-  const regex2 = /^[A-Za-z0-9\\*\\#\\$]{7,15}$/;
+
+  // Validar el nombre y la contraseña
+  const valido1 = regex1.test(name);
   const valido2 = regex2.test(clave1);
 
   if (clave1 === clave2 && valido1 && valido2) {
+    // Verificar si el usuario ya está registrado
     const Users = JSON.parse(localStorage.getItem("users")) || [];
     const isUserRegistered = Users.find((user) => user.email === email);
 
     if (isUserRegistered) {
-
-    return Swal.fire({
-      title: "¡El usuario ya se encuentra registrado!",
-      icon: "error"
-  });
+      // Mostrar alerta si el usuario ya está registrado
+      return Swal.fire({
+        title: "¡El usuario ya se encuentra registrado!",
+        icon: "error"
+      });
     }
 
+    // Almacenar el nuevo usuario en el localStorage
     Users.push({ name: name, email: email, password: clave2 });
     localStorage.setItem("users", JSON.stringify(Users));
 
-
-    alert("Se ha registrado correctamente");
-
-    
-    window.location.href = "login.html";
+    // Mostrar alerta de registro exitoso
+    Swal.fire({
+      title: "Registro exitoso",
+      text: "Se ha registrado correctamente",
+      icon: "success",
+      showCancelButton: false,
+      confirmButtonColor: "#3085d6",
+      confirmButtonText: "Continuar"
+    }).then((result) => {
+      // Redirigir a la página de inicio de sesión si se confirma la alerta
+      if (result.isConfirmed) {
+        window.location.href = "login.html";
+      }
+    });
   } else {
+    // Mostrar alertas de validación si hay errores
     if (!valido1) {
-
       Swal.fire({
         title: "El nombre no debe contener números ni símbolos",
         icon: "error"
-    });
-
+      });
     }
 
     if (!(clave1 === clave2)) {
-
       Swal.fire({
         title: "Las contraseñas ingresadas no son iguales",
         icon: "error"
-    });
-
+      });
     }
 
     if (!valido2) {
-
       Swal.fire({
-        title: "La contraseña debe cumplir con los siguientes requisitos:\n- Longitud mínima de 7 caracteres y máxima de 15\n- Al menos una letra y un número o uno de estos símbolos: # *",
+        title: "La contraseña no cumple con los requisitos",
+        text: "Debe contener entre 7 y 15 caracteres, al menos una letra y un número o uno de estos símbolos: # *",
         icon: "error"
-    });
-    
+      });
     }
   }
 });

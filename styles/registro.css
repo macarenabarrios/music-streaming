@@ -10,7 +10,15 @@ body {
 
     font-family: var('League Spartan'); 
 }
-
+main {
+    background-image: url(../assets/img/REGISTRATE.png);
+    background-color: black;
+    background-size: cover; /* Ajusta al ancho y alto del elemento main sin deformar la imagen */
+    background-repeat: no-repeat; /* Evita la repetición de la imagen */
+    font-family: 'League Spartan', sans-serif;
+    height: 100vh; /* Establece la altura al 100% de la ventana gráfica */
+    margin: 0; /* Elimina los márgenes predeterminados del body */
+}
 #registroBtn {
     background-color:   #ea7ba1e5;
     border-color: #fb3374;
@@ -47,3 +55,17 @@ body {
     right: -15px;
     top: 1px;
 }
+.formulario-rectangular {
+    background-color: white;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    overflow: hidden; 
+  }
+  .navbar {
+    background-color: #ff3175 !important;
+}
+.navbar-brand:hover img {
+    transform: scale(1.1); 
+    transition: transform 0.3s ease; 
+}
+  
