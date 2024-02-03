@@ -1,0 +1,51 @@
+const badbunny = [
+    {
+      id:19,
+      enumeracion: 1,
+      img: "../assets/img/bad-bunny-uno.jpg",
+      nombre: "Monaco",
+      album: "Un verano sin ti",
+      precio: "04:27",
+    },
+    {
+      id:20,
+      enumeracion: 2,
+      img: "../assets/img/bad-bunny-uno.jpg",
+      nombre: "Perro Negro",
+      album: "Un preview",
+      precio: "03:29",
+    },
+    {
+      id:21,
+      enumeracion: 3,
+      img: "../assets/img/bad-bunny-tres.jpg",
+      nombre: "Where She Goes",
+      album: "Where She Goes",
+      precio: "03:03",
+    },
+    {
+      id:22,
+      enumeracion: 4,
+      img: "../assets/img/bad-bunny-dos.jpg",
+      nombre: "K-pop",
+      album: "Un verano sin ti",
+      precio: "03:23",
+    },
+    {
+      id:23,
+      enumeracion: 5,
+      img: "../assets/img/bad-bunny-tres.jpg",
+      nombre: "Titi me pregunto",
+      album: "Data",
+      precio: "03:14",
+    },
+    {
+      id:24,
+      enumeracion: 6,
+      img: "../assets/img/bad-bunny-uno.jpg",
+      nombre: "Dakiti",
+      album: "Mañana sera bonito",
+      precio: "03:38",
+    },
+    
+  ]

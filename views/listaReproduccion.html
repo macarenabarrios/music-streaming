@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="../styles/listaReproduccion.css">
+    <link rel="stylesheet" href="../styles/detalle-uno.css">
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
@@ -153,153 +154,22 @@
 
             <div class="container col-12 p-0">
                 <!--aqui ira la lista de canciones-->
-                <table class="table table-hover">
-                    <thead>
-                        <tr>
-                            <th scope="col">#</th>
-                            <th scope="col">Título</th>
-                            <th scope="col">Álbum</th>
-                            <th scope="col">
-                                <i class="bi bi-clock icono-duracion"></i>
-                            </th>
-                            <th></th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr id="fila0" class="fila-contenido">
-                            <th id="num-lista" scope="row">1</th>
-                            <td>
-                                <div class="info-cancion">
-                                    <a href=""><!--linkear con error 404-->
-                                        <img src="../assets/img/topsongs-1.jpeg" alt="Portada de la canción" />
-                                        <div class="detalle-cancion">
-                                            <p>En La Intimidad</p>
-                                            <p id="artista-nombre">Emilia, Callejero Fino</p>
-                                        </div>
-                                    </a>
-                                </div>
-                            </td>
-                            <td>
-                                <a href="" class="link-album"><!--linkear con error 404-->
-                                    En La Intimidad | CROSSOVER#1
-                                </a>
-                            </td>
+                
+                <div class="song-encabezado linea encabezado-tamaño-computadora">
+                    <div class="song-details encabezado-titulo">
+                    <h3>Titulo</h3>
+                    </div>
+                    <div class="encabezado-album">
+                        <h3>Album</h3>
+                    </div>
+                    <div class="icono-duracion-cancion">
+                        <i class="bi bi-clock-fill"></i>
+                    </div>
+                </div>
+                <section id="productos-container">
 
-                            <td id="num-lista">02:45</td>
-                            <td>
-                                <button onclick="eliminarFila(0)" class="btn-eliminar">
-                                    <i class="bi bi-dash-circle"></i>
-                                </button>
-                            </td>
-                        </tr>
-
-                        <tr id="fila1" class="fila-contenido">
-                            <th id="num-lista" scope="row">2</th>
-                            <td>
-                                <div class="info-cancion">
-                                    <a href=""><!--linkear con error 404-->
-                                        <img src="../assets/img/topsongs-1.jpeg" alt="Portada de la canción" />
-                                        <div class="detalle-cancion">
-                                            <p>En La Intimidad</p>
-                                            <p id="artista-nombre">Emilia, Callejero Fino</p>
-                                        </div>
-                                    </a>
-                                </div>
-                            </td>
-                            <td>
-                                <a href="" class="link-album"><!--linkear con error 404-->
-                                    En La Intimidad | CROSSOVER#1
-                                </a>
-                            </td>
-
-                            <td id="num-lista">02:45</td>
-                            <td>
-                                <button onclick="eliminarFila(1)" class="btn-eliminar">
-                                    <i class="bi bi-dash-circle"></i>
-                                </button>
-                            </td>
-                        </tr>
-
-                        <tr id="fila2" class="fila-contenido">
-                            <th id="num-lista" scope="row">3</th>
-                            <td>
-                                <div class="info-cancion">
-                                    <a href=""><!--linkear con error 404-->
-                                        <img src="../assets/img/topsongs-1.jpeg" alt="Portada de la canción" />
-                                        <div class="detalle-cancion">
-                                            <p>En La Intimidad</p>
-                                            <p id="artista-nombre">Emilia, Callejero Fino</p>
-                                        </div>
-                                    </a>
-                                </div>
-                            </td>
-                            <td>
-                                <a href="" class="link-album"><!--linkear con error 404-->
-                                    En La Intimidad | CROSSOVER#1
-                            </td>
-                            </a>
-                            <td id="num-lista">02:45</td>
-                            <td>
-                                <button onclick="eliminarFila(2)" class="btn-eliminar">
-                                    <i class="bi bi-dash-circle"></i>
-                                </button>
-                            </td>
-                        </tr>
-
-                        <tr id="fila3" class="fila-contenido">
-                            <th id="num-lista" scope="row">4</th>
-                            <td>
-                                <div class="info-cancion">
-                                    <a href=""><!--linkear con error 404-->
-                                        <img src="../assets/img/topsongs-1.jpeg" alt="Portada de la canción" />
-                                        <div class="detalle-cancion">
-                                            <p>En La Intimidad</p>
-                                            <p id="artista-nombre">Emilia, Callejero Fino</p>
-                                        </div>
-                                    </a>
-                                </div>
-                            </td>
-                            <td>
-                                <a href="" class="link-album"><!--linkear con error 404-->
-                                    En La Intimidad | CROSSOVER#1
-                            </td>
-                            </a>
-                            <td id="num-lista">02:45</td>
-                            <td>
-                                <button onclick="eliminarFila(3)" class="btn-eliminar">
-                                    <i class="bi bi-dash-circle"></i>
-                                </button>
-                            </td>
-                        </tr>
-
-                        <tr id="fila4" class="fila-contenido">
-                            <th id="num-lista" scope="row">5</th>
-                            <td>
-                                <div class="info-cancion">
-                                    <a href=""><!--linkear con error 404-->
-                                        <img src="../assets/img/topsongs-1.jpeg" alt="Portada de la canción" />
-                                        <div class="detalle-cancion">
-                                            <p>Prueba</p>
-                                            <p id="artista-nombre">Emilia, Callejero Fino</p>
-                                        </div>
-                                    </a>
-                                </div>
-                            </td>
-                            <td>
-                                <a href="" class="link-album"><!--linkear con error 404-->
-                                    En La Intimidad | CROSSOVER#1
-                                </a>
-                            </td>
-
-                            <td id="num-lista">02:45</td>
-                            <td>
-                                <button onclick="eliminarFila(4)" class="btn-eliminar">
-                                    <i class="bi bi-dash-circle"></i>
-                                </button>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
+                </section>
+                
             </div>
 
             <footer>
@@ -411,6 +281,8 @@
     <!-- fin scripts de nav -->
 
     <script src="../js/listaReproduccion.js"></script>
+    <script src="../js/funcioncarrito.js"></script>
+    <script src="../js/mostrarcarrito.js"></script>
 </body>
 
 </html>
