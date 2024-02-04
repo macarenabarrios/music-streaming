@@ -33,7 +33,7 @@ signupForm.addEventListener("submit", function (e) {
 
   // Expresiones regulares para validar el nombre y la contraseña
   const regex1 = /^[A-Za-z]+$/;
-  const regex2 = /^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9#*])[A-Za-z\d*#]{7,15}$/;
+const regex2 = /^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9#*])[A-Za-z\d*#]{7,15}$/;
 
 
   // Validar el nombre y la contraseña
