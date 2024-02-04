@@ -9,13 +9,12 @@ function Agregar() {
 
   //aqui obtengo los valores del formulario
   const codigo = document.querySelector("#cod-cancion").value;
-  const nombre = document.querySelector("#nombre-cancion").value;
-  const artista = document.querySelector("#artista").value;
+  const titulo = document.querySelector("#titulo-cancion").value;
   const album = document.querySelector("#album").value;
   const duracion = document.querySelector("#durac-cancion").value;
 
   //aqui controlo que no se agreguen campos vacios a la tabla
-  if (!codigo || !nombre || !artista || !album || !duracion) {
+  if (!codigo || !titulo || !album || !duracion) {
     alert("Por favor, completa todos los campos antes de agregar una canción.");
     return;
   }
@@ -24,8 +23,7 @@ function Agregar() {
 
   Canciones.push({
     codigo: codigo,
-    nombre: nombre,
-    artista: artista,
+    titulo: titulo,
     album: album,
     duracion: duracion
   });
@@ -36,28 +34,25 @@ function Agregar() {
 
   const fila = document.createElement("tr");
   const celdaCodigo = document.createElement("th");
-  const celdaNombre = document.createElement("td");
-  const celdaArtista = document.createElement("td");
+  const celdaTitulo = document.createElement("td");
   const celdaAlbum = document.createElement("td");
   const celdaDuracion = document.createElement("td");
 
   //se asignan los valores del form a la celdas
   celdaCodigo.textContent = codigo;
-  celdaNombre.textContent = nombre;
-  celdaArtista.textContent = artista;
+  celdaTitulo.textContent = titulo;
   celdaAlbum.textContent = album;
   celdaDuracion.textContent =duracion;
 
   //aqui agrego las celdas con los valores a la fila
   fila.appendChild(celdaCodigo);
-  fila.appendChild(celdaNombre);
-  fila.appendChild(celdaArtista);
+  fila.appendChild(celdaTitulo);
   fila.appendChild(celdaAlbum);
   fila.appendChild(celdaDuracion);
 
   //agrego botones Editar y Eliminar a la fila
   const botonEditar = document.createElement("button");
-    botonEditar.classList.add("btn", "btn-success");
+    botonEditar.classList.add("btn", "btn-success", "m-1");
     const editarSpan = document.createElement("span");
     editarSpan.classList.add("bi", "bi-pencil"); 
     botonEditar.appendChild(editarSpan);
@@ -129,8 +124,7 @@ function Editar(botonEditar) {
 
     if (cancionAEditar) {
       //si es true mostrara los prompt y se editara la cancion
-      const nuevoNombre = prompt("Nuevo nombre:", cancionAEditar.nombre);
-      const nuevoArtista = prompt("Nuevo artista:", cancionAEditar.artista);
+      const nuevoTitulo = prompt("Nuevo Título:", cancionAEditar.titulo);
       const nuevoAlbum = prompt("Nuevo album:", cancionAEditar.album);
       const nuevaDuracion = prompt(
         "Nueva duración:",
@@ -138,8 +132,7 @@ function Editar(botonEditar) {
       );
 
       //se actualizan los datos de la cancion
-      cancionAEditar.nombre = nuevoNombre;
-      cancionAEditar.artista = nuevoArtista;
+      cancionAEditar.titulo = nuevoTitulo;
       cancionAEditar.album = nuevoAlbum;
       cancionAEditar.duracion = nuevaDuracion;
 
@@ -147,8 +140,7 @@ function Editar(botonEditar) {
       localStorage.setItem("canciones", JSON.stringify(Canciones));
 
       //se actualiza la fila
-      fila.children[1].textContent = nuevoNombre;
-      fila.children[2].textContent = nuevoArtista;
+      fila.children[1].textContent = nuevoTitulo;
       fila.children[3].textContent = nuevoAlbum;
       fila.children[4].textContent = nuevaDuracion;
 
@@ -171,26 +163,23 @@ function renderizarTablaDesdeLocalStorage() {
   Canciones.forEach(function (cancion) {
     const fila = document.createElement("tr");
     const celdaCodigo = document.createElement("th");
-    const celdaNombre = document.createElement("td");
-    const celdaArtista = document.createElement("td");
+    const celdaTitulo = document.createElement("td");
     const celdaAlbum = document.createElement("td");
     const celdaDuracion = document.createElement("td");
 
     //se cargan los valores a las celdas
     celdaCodigo.textContent = cancion.codigo;
-    celdaNombre.textContent = cancion.nombre;
-    celdaArtista.textContent = cancion.artista;
+    celdaTitulo.textContent = cancion.titulo;
     celdaAlbum.textContent = cancion.album;
     celdaDuracion.textContent = cancion.duracion;
 
     fila.appendChild(celdaCodigo);
-    fila.appendChild(celdaNombre);
-    fila.appendChild(celdaArtista);
+    fila.appendChild(celdaTitulo);
     fila.appendChild(celdaAlbum);
     fila.appendChild(celdaDuracion);
 
     const botonEditar = document.createElement("button");
-    botonEditar.classList.add("btn", "btn-success");
+    botonEditar.classList.add("btn", "btn-success", "m-1");
     const editarSpan = document.createElement("span");
     editarSpan.classList.add("bi", "bi-pencil"); 
     botonEditar.appendChild(editarSpan);
