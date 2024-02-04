@@ -146,21 +146,90 @@ function renderSearchResultsMobile(results) {
   searchResultsMobile.appendChild(resultListMobile);
 }
 
-// Función para ver si el administrador inició sesión
-// administrador@devtunes.com Devtunes2024
-document.addEventListener('DOMContentLoaded', function () {
-  const usuarioActual = localStorage.getItem('usuario');
 
-  if (usuarioActual && usuarioActual === 'administrador@devtunes.com') {
-    mostrarAdministradorLink();
+// Funcion para ocultar los botones de iniciar sesion y registro
+document.addEventListener('DOMContentLoaded', () => {
+  const loginSuccess = JSON.parse(localStorage.getItem('login_success'));
+
+  const logoutLink = document.querySelector('.navbar-link-cerrar-sesion');
+  const logoutLinkMoble = document.querySelector('.navbar-link-cerrar-sesion-mobile');
+
+  if (loginSuccess) {
+    console.log("email", loginSuccess.email);
+
+    if (loginSuccess.email === 'administrador@devtunes.com') {
+      console.log("Es administrador --> Ocultar enlace de administrador.");
+      showAdministratorLink()
+    } else {
+      console.log("No es administrador --> Mostrar enlace de administrador.");
+      hideAdministratorLink();
+    }
+    showLogoutLink();
+    hideLoginAndRegisterLinks();
+  } else {
+    hideLogoutLink();
+    hideAdministratorLink();
+  }
+
+  function showLogoutLink() {
+    if (logoutLink) {
+      logoutLink.style.display = 'block';
+    }
+    if (logoutLinkMoble) {
+      logoutLinkMoble.style.display = 'block';
+    }
+  }
+
+  function hideLogoutLink() {
+    if (logoutLink) {
+      logoutLink.style.display = 'none';
+    }
+    if (logoutLinkMoble) {
+      logoutLinkMoble.style.display = 'none';
+    }
   }
 });
 
-function mostrarAdministradorLink() {
-  const enlaceAdministrador = document.querySelector('.navbar-link-administrador');
+function hideLoginAndRegisterLinks() {
+  const loginLink = document.querySelector('.navbar-link-iniciar-sesion');
+  const registerLink = document.querySelector('.navbar-link-registro');
 
-  if (enlaceAdministrador) {
-    enlaceAdministrador.style.display = 'block';
+  const loginLinkMobile = document.querySelector('.navbar-link-iniciar-sesion-mobile');
+  const registerLinkMobile = document.querySelector('.navbar-link-registro-mobile');
+
+  if (loginLink && registerLink) {
+    loginLink.style.display = 'none';
+    registerLink.style.display = 'none';
+  }
+
+  if (loginLinkMobile && registerLinkMobile) {
+    loginLinkMobile.style.display = 'none';
+    registerLinkMobile.style.display = 'none';
   }
 }
 
+function hideAdministratorLink() {
+  const administratorLink = document.querySelector('.navbar-link-administrador');
+  const administratorLinkMobile = document.querySelector('.navbar-link-administrador-mobile');
+  if (administratorLink) {
+    console.log("Ocultar enlace de administrador.");
+    administratorLink.style.display = 'none';
+  }
+  if (administratorLinkMobile) {
+    console.log("Ocultar enlace de administrador mobile.");
+    administratorLinkMobile.style.display = 'none';
+  }
+}
+
+function showAdministratorLink() {
+  const administratorLink = document.querySelector('.navbar-link-administrador');
+  const administratorLinkMobile = document.querySelector('.navbar-link-administrador-mobile');
+  if (administratorLink) {
+    console.log("Mostrar enlace de administrador.");
+    administratorLink.style.display = 'block';
+  }
+  if (administratorLinkMobile) {
+    console.log("Mostrar enlace de administrador mobile.");
+    administratorLinkMobile.style.display = 'block';
+  }
+}

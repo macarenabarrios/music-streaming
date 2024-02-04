@@ -301,10 +301,17 @@ body {
 /* Estilo para tablet: iPad Pro */
 @media only screen and (min-width: 1024px) and (max-width: 1366px) {
 
+  /* Footer */
+  footer {
+    position: relative;
+    z-index: 2;
+    height: 365px;
+  }
+
   /* Navbar */
   #navbar {
     background-color: #ffffff;
-    height: 100vh;
+    height: 73.8vh;
     width: 170px;
     position: fixed;
     left: 0;
@@ -589,10 +596,16 @@ body {
 /* Estilos para pantallas tablet: iPad Mini */
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
 
+  /* Footer */
+  footer {
+    position: relative;
+    z-index: 2;
+  }
+
   /* Navbar */
   #navbar {
     background-color: #ffffff;
-    height: 100vh;
+    height: 81.55vh;
     width: 130px;
     position: fixed;
     left: 0;
