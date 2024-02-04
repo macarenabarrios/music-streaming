@@ -17,16 +17,16 @@ loginForm.addEventListener('submit', (e) => {
     } else {
         const redirectUrl = isAdmin ? 'administracion.html' : 'index.html';
         Swal.fire({
-            title: `Bienvenido ${validUser.name || 'Administrador'}!`,
+            title: `Bienvenido ${validUser ? validUser.name : 'Administrador'}!`,
             icon: "success"
         }).then(() => {
-            localStorage.setItem('login_success', JSON.stringify(validUser));
+            localStorage.setItem('login_success', JSON.stringify(validUser || { email: 'administrador@devtunes.com' }));
             window.location.href = redirectUrl;
         });
     }
 });
 
-//FUNCION MOSTRAR/OCULTAR CONTRASEÑA
+// FUNCION MOSTRAR/OCULTAR CONTRASEÑA
 
 const contraseña = document.getElementById("password");
 const iconoContraseña = document.getElementById("iconoMostrarContraseña");
@@ -40,3 +40,4 @@ iconoContraseña.addEventListener("click", () => {
         iconoContraseña.style.opacity = 0.2;
     }
 });
+//localStorage.removeItem('users'); //limpiar localStorage para prueba
