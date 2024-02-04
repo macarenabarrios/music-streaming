@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <link
+    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Josefin+Sans:wght@600&family=Lato:wght@300;400&family=Orbitron:wght@900&family=Play:wght@400;700&family=Poppins:wght@200;300;400&display=swap"
+    rel="stylesheet"/>
+    <link rel="icon" href="../assets/img/DevTunes.png"">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../styles/login.css">
+    <link rel="stylesheet" href="../styles/styleFooter.css">
+    <title>Inicia Sesión</title>
+</head>
+
+<body>
+
+  <nav class="navbar bg-body-tertiary text-center">
+    <div class="container-fluid">
+        <a class="navbar-brand d-inline-block mx-auto" href="../views/main.html">
+            <img src="../assets/img/DevTunesBlanco.png" alt="Logo" width="150" height="50" class="d-inline-block align-text-top">
+        </a>
+    </div>
+</nav>
+
+<main class="container-fluid d-flex justify-content-center p-5">
+
+    <form id="loginForm" class="justify-content-center formulario-rectangular">
+
+      <div class="text-center p-3 main-text">
+          <h4 class="">Inicia sesión para empezar a escuchar nuestro contenido</h4>
+          <h6>¿No tienes cuenta en DevTunes aún? <a href="../views/registro">Regístrate Gratis</a></h6>
+            <a href="/views/error.html" class="btn rounded-circle" id="registroRedesBtn"><i class="bi bi-facebook"></i></a>
+            <a href="/views/error.html" class="btn rounded-circle" id="registroRedesBtn"><i class="bi bi-google"></i></a>     
+      </div>
+
+      <div class="p-3 main-text">
+          <label for="registroInputEmail" class="form-label">Dirección de email</label>
+
+        <div class="mb-4  position-relative">
+          <input type="email" placeholder="usuario@mail.com" id="email" required autofocus class="form-control" required maxlength="30">
+        </div>
+    
+          <label for="registroInputContraseña" class="form-label">Contraseña</label>
+
+        <div class=" mb-1 position-relative">
+          <input type="password" name="clave1" placeholder="Contraseña" id="password" required class="form-control" required  maxlength="15" minlength="7">
+          <i class="bi bi-eye" id="iconoMostrarContraseña"></i>
+        </div>
+
+        <div class="row justify-content-center mt-4">
+        <input type= "submit" value="Iniciar Sesion" class="col-8 col-sm-3 btn" id="registroBtn">
+        </div>
+        <div class="text-center p-2 main-text">
+            <h6>¿Olvidaste tu contraseña?</h6><a href="../views/error.html">Recupera tu cuenta </a>
+        </div>
+      </div>
+
+    </form>
+
+</main>
+
+<footer>
+    <div class="container text-center">
+        <div class="row">
+          <div class="col-md-2">
+                <img class="logoFooter" src="../assets/img/DevTunes.png" alt="Logo de DevTunes">
+          </div>
+
+          <div class="col">
+                <p>
+                    <h5 class="tituloListaFooter">DevTunes</h5>
+                </p>
+                <ul class="listaFooter">
+                    
+                    <li><a href="../views/error.html">Reseñas</a></li>
+                    <li><a href="../views/error.html">Empleo</a></li>
+                    <li><a href="../views/error.html">Aplicación móvil gratis</a></li>
+                    <li><a href="../views/error.html">Ayuda</a></li>
+                </ul>
+          </div>
+
+          <div class="col">
+                <p >
+                    <h5 class="tituloListaFooter">Nosotros</h5>
+                </p>
+                <ul class="listaFooter">
+                    <li><a href="../views/sobreNosotros.html">Equipo DevTunes</a></li> 
+                </ul>
+          </div>
+
+            <div class="col">
+                <p >
+                    <h5 class="tituloListaFooter">Comunidades</h5>
+                </p>
+                <ul class="listaFooter">
+                    <li><a href="../views/error.html">Musicos</a></li>
+                    <li><a href="../views/error.html">Podcasters</a></li>
+                    <li><a href="../views/error.html">Desarrolladores</a></li>
+                    <li><a href="../views/error.html">Inversores</a></li>
+                    <li><a href="../views/error.html">Publicidad</a></li>
+                </ul>
+          </div>
+
+            <div class="col">
+                <p >
+                    <h5 class="tituloListaFooter">Legal</h5>
+                </p>
+                <ul class="listaFooter">
+                    <li><a href="../views/error.html">Política de privacidad</a></li>
+                    <li><a href="../views/error.html">Cookies</a></li>
+                    <li><a href="../views/error.html">Condiciones de uso</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+    </div>
+    <hr>
+    <div class="container text-center">
+        <div class="row">
+          <div class="col-md-6">
+            <ul class="listaRedes">
+                <li>
+                    <a href="../views/error.html"> 
+                        <i class="bi bi-facebook"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="../views/error.html">
+                        <i class="bi bi-instagram"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="../views/error.html">
+                        <i class="bi bi-twitter-x"></i>
+                    </a>
+                </li>
+            </ul>
+          </div>
+          <div class="col-md-6">
+                <p class="copy">&copy; 2024 DevTunes - Todos los derechos reservados</p>
+          </div>
+        </div>
+    </div>
+    
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+<script src="../js/login.js"></script>
+
+</body>
+</html>
