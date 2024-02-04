@@ -44,15 +44,21 @@
         <!-- Contenido del menú -->
         <ul class="navbar-nav mr-auto">
           <li class="nav-item">
-            <a class="nav-link" href="#">Iniciar sesión</a>
+            <a class="nav-link navbar-link-registro-mobile" href="./login.html">Iniciar sesión</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Registrarse</a>
+            <a class="nav-link navbar-link-iniciar-sesion-mobile" href="./registro.html">Registrarse</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link navbar-link-administrador-mobile" href="./administración.html">Administrador</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link navbar-link-cerrar-sesion-mobile" onclick="window.logout()">Cerrar sesión</a>
           </li>
           <li class="nav-item dropdown">
             <a
               class="nav-link dropdown-toggle"
-              href="#"
+              href="./error.html"
               id="navbarDropdownMenuLink1"
               role="button"
               data-toggle="dropdown"
@@ -65,10 +71,10 @@
               class="dropdown-menu"
               aria-labelledby="navbarDropdownMenuLink1"
             >
-              <a class="dropdown-item" href="#">Explorar</a>
-              <a class="dropdown-item" href="#">Géneros</a>
-              <a class="dropdown-item" href="#">Artistas</a>
-              <a class="dropdown-item" href="#">Álbumes</a>
+              <a class="dropdown-item" href="./main.html">Explorar</a>
+              <a class="dropdown-item" href="./error.html">Géneros</a>
+              <a class="dropdown-item" href="./error.html">Artistas</a>
+              <a class="dropdown-item" href="./error.html">Álbumes</a>
             </div>
           </li>
           <li class="nav-item dropdown">
@@ -87,19 +93,15 @@
               class="dropdown-menu"
               aria-labelledby="navbarDropdownMenuLink2"
             >
-              <a class="dropdown-item" href="#">Escuchado Recientemente</a>
-              <a class="dropdown-item" href="#">Favoritos</a>
-              <a class="dropdown-item" href="#">Descargas</a>
+              <a class="dropdown-item dropdown-custom-link" href="#" onclick="window.redirectOthers()">Escuchado Recientemente</a>
+              <a class="dropdown-item dropdown-custom-link" href="#" onclick="window.redirectOthers()">Favoritos</a>
+              <a class="dropdown-item dropdown-custom-link" href="#" onclick="window.redirectMiBiblioteca()">Mi lista de reproducción</a>
             </div>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Administrador</a>
           </li>
         </ul>
       </div>
     </nav>
     <!-- Formulario de búsqueda -->
-
     <div class="container mt-2 custom-container d-md-none d-lg-none">
       <form class="form-inline" id="searchFormMobile">
         <input
@@ -116,14 +118,15 @@
       id="searchResultsMobile"
       class="search-results-mobile d-md-none d-lg-none"
     ></div>
-
     <!-- Fin Navbar responsive -->
 
     <!-- Navbar para pantallas grandes -->
     <div id="navbar" class="screen-navbar d-none d-lg-block d-md-block">
       <!-- Contenedor 1 -->
       <div class="navbar-container navbar-logo" id="logoContainer">
-        <p>DevTunes</p>
+        <a href="main.html" class="custom-link">
+          <p>DevTunes</p>
+      </a>
       </div>
       <!-- Filtro -->
       <form class="form-inline my-2 my-lg-0 ml-auto" id="formSearchSongs">
@@ -140,9 +143,10 @@
       <!-- Contenedor 2 -->
       <div class="navbar-container">
         <ul>
-          <li>Iniciar sesión</li>
-          <li>Registrarse</li>
-          <li>Administrador</li>
+          <li><a class="navbar-link navbar-link-iniciar-sesion" href="login.html">Iniciar sesión</a></li>
+          <li><a class="navbar-link navbar-link-registro" href="registro.html">Registrarse</a></li>
+          <li><a class="navbar-link navbar-link-administrador" href="administracion.html">Administrador</a></li>
+          <li><a class="navbar-link navbar-link-cerrar-sesion" onclick="window.logout()">Cerrar sesión</a></li>
         </ul>
       </div>
 
@@ -150,10 +154,10 @@
       <div class="navbar-container">
         <p>RECOMENDADO</p>
         <ul>
-          <li class="active">Explorar</li>
-          <li>Generos</li>
-          <li>Artistas</li>
-          <li>Albumes</li>
+          <li class="active"><a class="navbar-link" href="main.html">Explorar</a></li>
+          <li><a class="navbar-link" href="error.html">Generos</a></li>
+          <li><a class="navbar-link" href="error.html">Artistas</a></li>
+          <li><a class="navbar-link" href="error.html">Albumes</a></li>
         </ul>
       </div>
 
@@ -161,13 +165,14 @@
       <div class="navbar-container">
         <p>MI BIBLIOTECA</p>
         <ul>
-          <li>Escuchado Recientemente</li>
-          <li>Favoritos</li>
-          <li>Descargas</li>
+          <li><a class="navbar-link" onclick="window.redirectOthers()">Escuchado Recientemente</a></li>
+          <li><a class="navbar-link" onclick="window.redirectOthers()">Favoritos</a></li>
+          <li><a class="navbar-link" onclick="window.redirectMiBiblioteca()">Mi lista de reproducción</a></li>
         </ul>
       </div>
     </div>
     <!-- Fin Navbar -->
+
     <!-- Contenido principal -->
     <div id="main-content">
       <div id="banner">
@@ -376,11 +381,11 @@
           <div class="top-container">
             <h2>Artistas de la semana</h2>
             <div class="artist-images">
-              <a href="./detalle-tres.html"><img src="../assets/img/topartist-1.jpeg" alt="Artista 1"/></a>
-              <a href="./detalle-dos.html"><img src="../assets/img/topartist-2.jpeg" alt="Artista 2" /></a>
-              <a href="./detalle-uno.html"><img src="../assets/img/topartist-3.jpeg" alt="Artista 3" /></a>
-              <a href="./detalle-cuatro.html"><img src="../assets/img/topartist-4.jpeg" alt="Artista 4" /></a>
-              <a href=""><img src="../assets/img/topartist-5.jpeg" alt="Artista 5" /></a>
+              <img src="../assets/img/topartist-1.jpeg" alt="Artista 1"/>
+              <img src="../assets/img/topartist-2.jpeg" alt="Artista 2" />
+              <img src="../assets/img/topartist-3.jpeg" alt="Artista 3" />
+              <img src="../assets/img/topartist-4.jpeg" alt="Artista 4" />
+              <img src="../assets/img/topartist-5.jpeg" alt="Artista 5" />
             </div>
           </div>
 
@@ -486,7 +491,9 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <script type="module" src="../data/songs.js"></script>
     <script type="module" src="../js/index.js"></script>
+    <script type="module" src="../js/logout.js"></script>
   </body>
 </html>
