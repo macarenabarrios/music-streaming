@@ -4,6 +4,16 @@ body {
   padding: 0;
 }
 
+.navbar-link {
+  color: #7A7C8A;
+  text-decoration: none;
+}
+
+.navbar-link:hover {
+  text-decoration: none;
+  color: #7A7C8A;
+}
+
 /* Estilos para pantallas más grandes */
 @media only screen and (min-width: 1025px) {
 

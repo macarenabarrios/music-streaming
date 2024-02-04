@@ -51,7 +51,6 @@ searchInputMobile.addEventListener('input', (event) => {
   }
 });
 
-
 // Función para filtrar las canciones según el texto de búsqueda
 function filterSongs(searchText) {
 
@@ -147,4 +146,21 @@ function renderSearchResultsMobile(results) {
   searchResultsMobile.appendChild(resultListMobile);
 }
 
+// Función para ver si el administrador inició sesión
+// administrador@devtunes.com Devtunes2024
+document.addEventListener('DOMContentLoaded', function () {
+  const usuarioActual = localStorage.getItem('usuario');
+
+  if (usuarioActual && usuarioActual === 'administrador@devtunes.com') {
+    mostrarAdministradorLink();
+  }
+});
+
+function mostrarAdministradorLink() {
+  const enlaceAdministrador = document.querySelector('.navbar-link-administrador');
+
+  if (enlaceAdministrador) {
+    enlaceAdministrador.style.display = 'block';
+  }
+}
 
