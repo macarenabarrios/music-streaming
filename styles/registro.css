@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@500&display=swap');
+:root{
+    --font-mono: 'League Spartan', sans-serif, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono',
+    'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro',
+    'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
+    --transition: all 0.1s cubic-bezier(0.645, 0.045, 0.355, 1)
+}
+
+body {
+
+    font-family: var('League Spartan'); 
+}
+main {
+    background-image: url(../assets/img/REGISTRATE.png);
+    background-color: black;
+    background-size: cover; 
+    background-repeat: no-repeat;
+    font-family: 'League Spartan', sans-serif;
+    margin: 0; 
+}
+#registroBtn {
+    background-color:   #ea7ba1e5;
+    border-color: #fb3374;
+    color: #ffffff;
+}
+
+#registroBtn:hover {
+    background-color: #fb3374;
+}
+
+#registroRedesBtn {
+    border-color: #fb3374
+}
+
+#registroInputNombre, #registroInputEmail, #registroInputContraseña, #registroInputConfirmarContraseña {
+    border-color: #ea7ba1e5 ;
+}
+
+
+#registroRedesBtn:hover {
+    background-color:   #ea7ba1e5 ;
+}
+
+
+#iconoMostrarContraseña , #iconoMostrarConfirmarContraseña {
+    cursor:pointer;
+    font-size: 20px;
+    transform: translateX(-35px);
+    margin-top: 4px;
+}
+
+.bi-eye {
+    position: absolute;
+    right: -15px;
+    top: 1px;
+}
+.formulario-rectangular {
+    background-color: white;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    overflow: hidden; 
+  }
+  .navbar {
+    background-color: #ff3175 !important;
+}
+.navbar-brand:hover img {
+    transform: scale(1.1); 
+    transition: transform 0.3s ease; 
+}
+  
