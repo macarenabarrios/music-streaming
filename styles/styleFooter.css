@@ -1,8 +1,8 @@
-/*estilos del footer*/
-footer{
+footer {
   background-color: #f9f1fa;
   margin-top: 20px;
 }
+
 .logoFooter {
   height: 100px;
 }
@@ -16,7 +16,7 @@ footer{
   font-size: 16px;
 }
 
-.tituloListaFooter{
+.tituloListaFooter {
   font-weight: bold;
   color: #7a7c8a;
 }
@@ -26,22 +26,18 @@ footer{
   color: #7a7c8a;
 }
 
-.listaFooter a:hover, 
+.listaFooter a:hover,
 .listaRedes a:hover {
   color: #ed5790;
 }
-
-/*fin del primer contenedor*/
-
-/*segundo contenedor*/
 
 .listaRedes li {
   list-style-type: none;
   display: inline;
 }
 
-.listaRedes{
-    padding: 0%;
+.listaRedes {
+  padding: 0%;
 }
 
 .listaRedes a {
@@ -50,8 +46,7 @@ footer{
   font-size: 25px;
   padding: 10px;
 }
+
 .copy {
   color: #7a7c8a;
 }
-/*fin del segundo contenedor*/
-/*FIN DEL FOOTER*/
