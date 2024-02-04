@@ -114,30 +114,30 @@
     <h1 class="text-center">Administración</h1>
     <br>
 
-    <form id="carga-canciones">
-        <div class="mb-3">
-          <label class="form-label">Código</label>
+    <form id="carga-canciones" class="row justify-content-center">
+        <div class="mb-3 col-8">
+          <label class="form-label ">Código</label>
           <input type="number" class="form-control" id="cod-cancion" required>
         </div>
 
-        <div class="mb-3">
+        <div class="mb-3 col-8">
           <label class="form-label">Nombre de canción</label>
           <input type="text" class="form-control" id="nombre-cancion" required maxlength="15">
         </div>
 
-        <div class="mb-3">
+        <div class="mb-3 col-8">
             <label class="form-label">Artista</label>
             <input type="text" class="form-control" id="artista" required maxlength="15">
           </div>
 
-          <div class="mb-3">
+          <div class="mb-3 col-8">
             <label class="form-label">Álbum</label>
             <input type="text" class="form-control" id="album" required maxlength="15">
           </div>
 
-          <div class="mb-3">
-            <label class="form-label">Categoría</label>
-            <input type="text" class="form-control" id="categ-cancion" required maxlength="15">
+          <div class="mb-3 col-8">
+            <label class="form-label">Duración</label>
+            <input type="time" class="form-control" id="durac-cancion" required>
           </div>
 
         <div class="text-center">
@@ -156,7 +156,7 @@
             <th scope="col">Nombre</th>
             <th scope="col">Artista</th>
             <th scope="col">Album</th>
-            <th scope="col">Categoría</th>
+            <th scope="col">Duración</th>
             <th scope="col">Opciones</th>
           </tr>
         </thead>
@@ -192,7 +192,7 @@
           </tr>
         </thead>
         <tbody id="tabla-usuarios">
-          <tr>
+          <!-- <tr>
             <th scope="row">167</th>
             <td>Before to you</td>
             <td>
@@ -200,97 +200,98 @@
                     <i class="bi bi-trash"></i>
                 </button>
             </td>
-          </tr>
+          </tr> -->
         </tbody>
       </table>
 
 
 
-                <footer>
-                    <div class="container text-center">
-                        <div class="row">
-                            <div class="col-md-2">
-                                <img class="logoFooter" src="../assets/img/DevTunes.png" alt="Logo de DevTunes">
-                            </div>
-    
-                            <div class="col">
-                                <p>
-                                <h5 class="tituloListaFooter">DevTunes</h5>
-                                </p>
-                                <ul class="listaFooter">
-    
-                                    <li><a href="">Reseñas</a></li>
-                                    <li><a href="">Empleo</a></li>
-                                    <li><a href="">Aplicación móvil gratis</a></li>
-                                    <li><a href="">Ayuda</a></li>
-                                </ul>
-                            </div>
-    
-                            <div class="col">
-                                <p>
-                                <h5 class="tituloListaFooter">Nosotros</h5>
-                                </p>
-                                <ul class="listaFooter">
-                                    <li><a href="">Equipo DevTunes</a></li> <!--linkear con sobre nosotros-->
-                                </ul>
-                            </div>
-    
-                            <div class="col">
-                                <p>
-                                <h5 class="tituloListaFooter">Comunidades</h5>
-                                </p>
-                                <ul class="listaFooter">
-                                    <li><a href="">Musicos</a></li>
-                                    <li><a href="">Podcasters</a></li>
-                                    <li><a href="">Desarrolladores</a></li>
-                                    <li><a href="">Inversores</a></li>
-                                    <li><a href="">Publicidad</a></li>
-                                </ul>
-                            </div>
-    
-                            <div class="col">
-                                <p>
-                                <h5 class="tituloListaFooter">Legal</h5>
-                                </p>
-                                <ul class="listaFooter">
-                                    <li><a href="">Política de privacidad</a></li>
-                                    <li><a href="">Cookies</a></li>
-                                    <li><a href="">Condiciones de uso</a></li>
-                                </ul>
-                            </div>
-    
-                        </div>
-    
-                    </div>
-                    <hr>
-                    <div class="container text-center">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <ul class="listaRedes">
-                                    <li>
-                                        <a href="">
-                                            <i class="bi bi-facebook"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="">
-                                            <i class="bi bi-instagram"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="">
-                                            <i class="bi bi-twitter-x"></i>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="col-md-6">
-                                <p class="copy">&copy; 2024 DevTunes - Todos los derechos reservados</p>
-                            </div>
-                        </div>
-                    </div>
-    
-                </footer>
+      <footer>
+        <div class="container text-center">
+            <div class="row">
+              <div class="col-md-2">
+                    <img class="logoFooter" src="../assets/img/DevTunes.png" alt="Logo de DevTunes">
+              </div>
+
+              <div class="col">
+                    <p>
+                        <h5 class="tituloListaFooter">DevTunes</h5>
+                    </p>
+                    <ul class="listaFooter">
+                        
+                        <li><a href="../views/error.html">Reseñas</a></li>
+                        <li><a href="../views/error.html">Empleo</a></li>
+                        <li><a href="../views/error.html">Aplicación móvil gratis</a></li>
+                        <li><a href="../views/error.html">Ayuda</a></li>
+                    </ul>
+              </div>
+
+              <div class="col">
+                    <p >
+                        <h5 class="tituloListaFooter">Nosotros</h5>
+                    </p>
+                    <ul class="listaFooter">
+                        <li><a href="../views/sobreNosotros.html">Equipo DevTunes</a></li> 
+                    </ul>
+              </div>
+
+                <div class="col">
+                    <p >
+                        <h5 class="tituloListaFooter">Comunidades</h5>
+                    </p>
+                    <ul class="listaFooter">
+                        <li><a href="../views/error.html">Musicos</a></li>
+                        <li><a href="../views/error.html">Podcasters</a></li>
+                        <li><a href="../views/error.html">Desarrolladores</a></li>
+                        <li><a href="../views/error.html">Inversores</a></li>
+                        <li><a href="../views/error.html">Publicidad</a></li>
+                    </ul>
+              </div>
+
+                <div class="col">
+                    <p >
+                        <h5 class="tituloListaFooter">Legal</h5>
+                    </p>
+                    <ul class="listaFooter">
+                        <li><a href="../views/error.html">Política de privacidad</a></li>
+                        <li><a href="../views/error.html">Cookies</a></li>
+                        <li><a href="../views/error.html">Condiciones de uso</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </div>
+        <hr>
+        <div class="container text-center">
+            <div class="row">
+              <div class="col-md-6">
+                <ul class="listaRedes">
+                    <li>
+                        <a href="../views/error.html"> 
+                            <i class="bi bi-facebook"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../views/error.html">
+                            <i class="bi bi-instagram"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../views/error.html">
+                            <i class="bi bi-twitter-x"></i>
+                        </a>
+                    </li>
+                </ul>
+              </div>
+              <div class="col-md-6">
+                    <p class="copy">&copy; 2024 DevTunes - Todos los derechos reservados</p>
+              </div>
+            </div>
+        </div>
+        
+    </footer>
+
        
         </div>
     </main>

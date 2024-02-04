@@ -12,10 +12,10 @@ function Agregar() {
   const nombre = document.querySelector("#nombre-cancion").value;
   const artista = document.querySelector("#artista").value;
   const album = document.querySelector("#album").value;
-  const categoria = document.querySelector("#categ-cancion").value;
+  const duracion = document.querySelector("#durac-cancion").value;
 
   //aqui controlo que no se agreguen campos vacios a la tabla
-  if (!codigo || !nombre || !artista || !album || !categoria) {
+  if (!codigo || !nombre || !artista || !album || !duracion) {
     alert("Por favor, completa todos los campos antes de agregar una canción.");
     return;
   }
@@ -27,7 +27,7 @@ function Agregar() {
     nombre: nombre,
     artista: artista,
     album: album,
-    categoria: categoria,
+    duracion: duracion
   });
   localStorage.setItem("canciones", JSON.stringify(Canciones));
   alert("Se ha agregado la cancion correctamente");
@@ -39,21 +39,21 @@ function Agregar() {
   const celdaNombre = document.createElement("td");
   const celdaArtista = document.createElement("td");
   const celdaAlbum = document.createElement("td");
-  const celdaCategoria = document.createElement("td");
+  const celdaDuracion = document.createElement("td");
 
   //se asignan los valores del form a la celdas
   celdaCodigo.textContent = codigo;
   celdaNombre.textContent = nombre;
   celdaArtista.textContent = artista;
   celdaAlbum.textContent = album;
-  celdaCategoria.textContent = categoria;
+  celdaDuracion.textContent =duracion;
 
   //aqui agrego las celdas con los valores a la fila
   fila.appendChild(celdaCodigo);
   fila.appendChild(celdaNombre);
   fila.appendChild(celdaArtista);
   fila.appendChild(celdaAlbum);
-  fila.appendChild(celdaCategoria);
+  fila.appendChild(celdaDuracion);
 
   //agrego botones Editar y Eliminar a la fila
   const botonEditar = document.createElement("button");
@@ -124,16 +124,16 @@ function Editar(botonEditar) {
       const nuevoNombre = prompt("Nuevo nombre:", cancionAEditar.nombre);
       const nuevoArtista = prompt("Nuevo artista:", cancionAEditar.artista);
       const nuevoAlbum = prompt("Nuevo album:", cancionAEditar.album);
-      const nuevoCategoria = prompt(
-        "Nueva categoria:",
-        cancionAEditar.categoria
+      const nuevaDuracion = prompt(
+        "Nueva duración:",
+        cancionAEditar.duracion
       );
 
       //se actualizan los datos de la cancion
       cancionAEditar.nombre = nuevoNombre;
       cancionAEditar.artista = nuevoArtista;
       cancionAEditar.album = nuevoAlbum;
-      cancionAEditar.categoria = nuevoCategoria;
+      cancionAEditar.duracion = nuevaDuracion;
 
       //aqui actualizamos el localstorage
       localStorage.setItem("canciones", JSON.stringify(Canciones));
@@ -142,7 +142,7 @@ function Editar(botonEditar) {
       fila.children[1].textContent = nuevoNombre;
       fila.children[2].textContent = nuevoArtista;
       fila.children[3].textContent = nuevoAlbum;
-      fila.children[4].textContent = nuevoCategoria;
+      fila.children[4].textContent = nuevaDuracion;
 
       alert("Canción editada correctamente");
     } else {
@@ -166,20 +166,20 @@ function renderizarTablaDesdeLocalStorage() {
     const celdaNombre = document.createElement("td");
     const celdaArtista = document.createElement("td");
     const celdaAlbum = document.createElement("td");
-    const celdaCategoria = document.createElement("td");
+    const celdaDuracion = document.createElement("td");
 
     //se cargan los valores a las celdas
     celdaCodigo.textContent = cancion.codigo;
     celdaNombre.textContent = cancion.nombre;
     celdaArtista.textContent = cancion.artista;
     celdaAlbum.textContent = cancion.album;
-    celdaCategoria.textContent = cancion.categoria;
+    celdaDuracion.textContent = cancion.duracion;
 
     fila.appendChild(celdaCodigo);
     fila.appendChild(celdaNombre);
     fila.appendChild(celdaArtista);
     fila.appendChild(celdaAlbum);
-    fila.appendChild(celdaCategoria);
+    fila.appendChild(celdaDuracion);
 
     const botonEditar = document.createElement("button");
     botonEditar.textContent = "Editar";
