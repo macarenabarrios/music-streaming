@@ -4,6 +4,26 @@ body {
   padding: 0;
 }
 
+.custom-link {
+  color: #222A53;
+  text-decoration: none;
+}
+
+.custom-link:hover {
+  text-decoration: none;
+  color: #222A53;
+}
+
+.navbar-link {
+  color: #7A7C8A;
+  text-decoration: none;
+}
+
+.navbar-link:hover {
+  text-decoration: none;
+  color: #7A7C8A;
+}
+
 /* Estilos para pantallas más grandes */
 @media only screen and (min-width: 1025px) {
 
@@ -291,10 +311,17 @@ body {
 /* Estilo para tablet: iPad Pro */
 @media only screen and (min-width: 1024px) and (max-width: 1366px) {
 
+  /* Footer */
+  footer {
+    position: relative;
+    z-index: 2;
+    height: 365px;
+  }
+
   /* Navbar */
   #navbar {
     background-color: #ffffff;
-    height: 100vh;
+    height: 73.8vh;
     width: 170px;
     position: fixed;
     left: 0;
@@ -579,10 +606,16 @@ body {
 /* Estilos para pantallas tablet: iPad Mini */
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
 
+  /* Footer */
+  footer {
+    position: relative;
+    z-index: 2;
+  }
+
   /* Navbar */
   #navbar {
     background-color: #ffffff;
-    height: 100vh;
+    height: 81.55vh;
     width: 130px;
     position: fixed;
     left: 0;
@@ -890,6 +923,14 @@ body {
     background-color: #ffffff;
   }
 
+  .dropdown-item {
+    color: #7A7C8A;
+  }
+
+  .dropdown-custom-link {
+    color: #7A7C8A;
+  }
+
   /* Formulario de busqueda */
   #searchFormMobile {
     background-color: #F8F9FA;
@@ -938,7 +979,6 @@ body {
   }
 
   /* Contenido principal */
-
   #main-content {
     margin-left: 0;
     margin-right: 0;

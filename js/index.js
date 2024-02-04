@@ -51,7 +51,6 @@ searchInputMobile.addEventListener('input', (event) => {
   }
 });
 
-
 // Función para filtrar las canciones según el texto de búsqueda
 function filterSongs(searchText) {
 
@@ -148,3 +147,107 @@ function renderSearchResultsMobile(results) {
 }
 
 
+// Funcion para ocultar los botones de iniciar sesion y registro
+document.addEventListener('DOMContentLoaded', () => {
+  const loginSuccess = JSON.parse(localStorage.getItem('login_success'));
+
+  const logoutLink = document.querySelector('.navbar-link-cerrar-sesion');
+  const logoutLinkMoble = document.querySelector('.navbar-link-cerrar-sesion-mobile');
+
+  if (loginSuccess) {
+    console.log("email", loginSuccess.email);
+
+    if (loginSuccess.email === 'administrador@devtunes.com') {
+      console.log("Es administrador --> Ocultar enlace de administrador.");
+      showAdministratorLink()
+    } else {
+      console.log("No es administrador --> Mostrar enlace de administrador.");
+      hideAdministratorLink();
+    }
+    showLogoutLink();
+    hideLoginAndRegisterLinks();
+  } else {
+    hideLogoutLink();
+    hideAdministratorLink();
+  }
+
+  function showLogoutLink() {
+    if (logoutLink) {
+      logoutLink.style.display = 'block';
+    }
+    if (logoutLinkMoble) {
+      logoutLinkMoble.style.display = 'block';
+    }
+  }
+
+  function hideLogoutLink() {
+    if (logoutLink) {
+      logoutLink.style.display = 'none';
+    }
+    if (logoutLinkMoble) {
+      logoutLinkMoble.style.display = 'none';
+    }
+  }
+});
+
+function hideLoginAndRegisterLinks() {
+  const loginLink = document.querySelector('.navbar-link-iniciar-sesion');
+  const registerLink = document.querySelector('.navbar-link-registro');
+
+  const loginLinkMobile = document.querySelector('.navbar-link-iniciar-sesion-mobile');
+  const registerLinkMobile = document.querySelector('.navbar-link-registro-mobile');
+
+  if (loginLink && registerLink) {
+    loginLink.style.display = 'none';
+    registerLink.style.display = 'none';
+  }
+
+  if (loginLinkMobile && registerLinkMobile) {
+    loginLinkMobile.style.display = 'none';
+    registerLinkMobile.style.display = 'none';
+  }
+}
+
+function hideAdministratorLink() {
+  const administratorLink = document.querySelector('.navbar-link-administrador');
+  const administratorLinkMobile = document.querySelector('.navbar-link-administrador-mobile');
+  if (administratorLink) {
+    console.log("Ocultar enlace de administrador.");
+    administratorLink.style.display = 'none';
+  }
+  if (administratorLinkMobile) {
+    console.log("Ocultar enlace de administrador mobile.");
+    administratorLinkMobile.style.display = 'none';
+  }
+}
+
+function showAdministratorLink() {
+  const administratorLink = document.querySelector('.navbar-link-administrador');
+  const administratorLinkMobile = document.querySelector('.navbar-link-administrador-mobile');
+  if (administratorLink) {
+    console.log("Mostrar enlace de administrador.");
+    administratorLink.style.display = 'block';
+  }
+  if (administratorLinkMobile) {
+    console.log("Mostrar enlace de administrador mobile.");
+    administratorLinkMobile.style.display = 'block';
+  }
+}
+
+window.redirectMiBiblioteca = function () {
+  const loginSuccess = JSON.parse(localStorage.getItem('login_success'));
+  if (loginSuccess) {
+    window.location.href = '../views/listaReproduccion.html';
+  } else {
+    window.location.href = '../views/login.html';
+  }
+}
+
+window.redirectOthers = function () {
+  const loginSuccess = JSON.parse(localStorage.getItem('login_success'));
+  if (loginSuccess) {
+    window.location.href = '../views/error.html';
+  } else {
+    window.location.href = '../views/login.html';
+  }
+}
