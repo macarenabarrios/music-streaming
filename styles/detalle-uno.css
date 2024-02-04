@@ -1,0 +1,589 @@
+body {
+  background-color: #F1F3FB;
+  margin: 0;
+  padding: 0;
+}
+
+#main-content {
+  margin-left: 20%;
+
+}
+
+#banner {
+  width: 100%;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  font-family: 'Poppins', sans-serif;
+  background: rgb(87,161,237);
+  background: linear-gradient(74deg, rgba(87,161,237,0.7203256302521008) 0%, rgba(2,9,36,0.8911939775910365) 140%);
+  color: #000000;
+}
+
+.seccion-tamaño-movil{
+  display: none;
+}
+/*Comienzo de la portada*/
+.portada-general{
+  display: flex;
+  flex-direction: row;
+}
+
+.portada-imagen{
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+.imagen-dua-lipa {
+  width: 200px;
+  border-radius: 10px;
+}
+
+.texto-portada {
+  font-size: 70px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+/*Fin de la portada*/
+
+/*Iconos de reproduccion*/
+
+.fondo{
+  color: #ffffff;
+  padding-top: 15px;
+  background: rgb(2,9,36);
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.942) 100%, rgba(0,0,0,1) 100%);
+  }
+
+.seccion-medio{
+  padding-left: 40px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.reproductor{
+  color: #ED5790;
+}
+.aleatorio-computadora{
+  padding-left: 30px;
+  padding-right: 8px;
+  color: #a8a8a8;
+}
+.iconos-computadora{
+  color: #a8a8a8;
+}
+
+.icono-lupa{
+  color: #a8a8a8;
+  margin-left: 600px;
+}
+
+.icono-personalizado{
+  color: #a8a8a8;
+}
+
+.orden-personalizado{
+  display: flex;
+  align-items: center;
+}
+
+/*Fin Iconos de reproduccion*/
+
+/*encabezado tamaño computadora*/
+.song {
+  display: flex;
+  align-items: center; 
+  padding: 5px 10px 5px 10px ;
+}
+
+.song-encabezado {
+  display: flex;
+  align-items: center; 
+  padding: 5px 10px 5px 10px ;
+}
+
+.linea{
+  border-bottom: solid 1px black;
+}
+
+.icono-enumeracion{
+  padding-right: 40px;
+}
+
+.song-details {
+  flex-grow: 1;
+
+}
+
+.encabezado-titulo{
+  padding-left: 50px;
+}
+
+.encabezado-album{
+  padding-right: 290px;
+}
+
+.icono-duracion-cancion{
+  padding-right: 145px;
+}
+/*Fin encabezado tamaño computadora*/
+
+/*Lista Reproduccion tamaño computadora*/
+.lista-enumeracion{
+  padding-right: 40px;
+  font-size: 20px;
+  font-family: 'Raleway', sans-serif;
+}
+
+.lista-enumeracion-1{
+  padding-right: 30px;
+  font-size: 20px;
+  font-family: 'Raleway', sans-serif;
+}
+
+.imagen-lista-canciones{
+  border-radius: 10px;
+  max-width: 100px;
+  height: auto;
+  margin-right: 20px;
+}
+
+.nombre-del-album{
+  padding-right: 300px;
+  padding-left: 0px;
+}
+
+.nombre-del-album-1{
+  padding-right: 232px;
+}
+.duracion-cancion{
+  padding-right: 50px;
+}
+
+p{
+  margin-bottom: 0px;
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+}
+
+.icons .imagen-lista-canciones {
+  max-width: 20px;
+  height: auto;
+  margin-right: 10px;
+}
+/*Fin Lista Reproduccion tamaño computadora*/
+
+  .song{
+    cursor: pointer;
+  }
+
+.song:hover{
+  background: rgba(135, 135, 135, 0.714);
+}
+@media only screen and (min-width: 1025px) {
+  #main-content {
+    margin-top: 0;
+    margin-right: 0px;
+  }
+
+  #navbar {
+    background-color: #1c1919;
+    height: 100vh;
+    width: 20%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  .navbar-container.navbar-logo {
+    color: #ffffff;
+    margin-left: 10px;
+    font-size: 16px;
+  }
+
+  .navbar-container {
+    color: #ffffff;
+    padding: 15px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    margin-left: 10px;
+  }
+
+  .navbar-container p {
+    margin: 0;
+    font-weight: bold;
+  }
+
+  .navbar-container ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+  }
+
+  .navbar-container li {
+    padding: 5px 0;
+    cursor: pointer;
+  }
+
+  .navbar-container li.active {
+    font-weight: bold;
+    color: #ED5790;
+  }
+
+  .navbar-container.navbar-logo {
+    margin-top: 15px;
+    font-size: 30px;
+  }
+  
+  .tamaño-tablet{
+    display: none;
+  }
+
+}
+/* Estilo para tablet: iPad Pro*/
+@media only screen and (min-width: 1024px) and (max-width: 1366px) {
+
+  /* Navbar */
+  #navbar {
+    background-color: #ffffff;
+    height: 100vh;
+    width: 20%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  .navbar-container.navbar-logo {
+    color: #222A53;
+    margin-left: 1px;
+    font-size: 14px;
+  }
+
+  .navbar-container {
+    color: #7A7C8A;
+    padding: 15px;
+    margin-bottom: 20px;
+    font-size: 12px;
+    margin-left: 1px;
+  }
+
+  .navbar-container p {
+    margin: 0;
+    font-weight: bold;
+  }
+
+  .navbar-container ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+  }
+
+  .navbar-container li {
+    padding: 5px 0;
+    cursor: pointer;
+  }
+
+  .navbar-container li.active {
+    font-weight: bold;
+    color: #ED5790;
+  }
+/*Imagen de la portada*/
+  .portada-imagen{
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  .tamaño-tablet{
+    display: none;
+  }
+
+  .icono-lupa{
+    color: #a8a8a8;
+    margin-left: 270px;
+    font-size: 25px;
+  }
+  
+  .icono-personalizado{
+    color: #a8a8a8;
+  }
+
+  .seccion-tamaño-movil{
+    display: none;
+  }
+}
+
+/* Estilos para pantallas tablet: iPad Mini */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+
+  /* Navbar */
+  #navbar {
+    background-color: #ffffff;
+    height: 100vh;
+    width: 20%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  .navbar-container.navbar-logo {
+    color: #222A53;
+    margin-left: 1px;
+    font-size: 14px;
+  }
+
+  .navbar-container {
+    color: #7A7C8A;
+    padding: 15px;
+    margin-bottom: 20px;
+    font-size: 12px;
+    margin-left: 1px;
+  }
+
+  .navbar-container p {
+    margin: 0;
+    font-weight: bold;
+  }
+
+  .navbar-container ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+  }
+
+  .navbar-container li {
+    padding: 5px 0;
+    cursor: pointer;
+  }
+
+  .navbar-container li.active {
+    font-weight: bold;
+    color: #ED5790;
+  }
+
+  /*Imagen de la portada*/
+  .portada-imagen{
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .song-details {
+    flex-grow: 1;
+    margin-bottom: 0px;
+  }
+  .subtitulo-album{
+    font-size: 13px;
+  }
+
+  .icono-duracion-tablet{
+    padding-right: 30px;
+  }
+
+  .icono-tablet{
+    padding-right: 10px;
+  }
+
+  .tamaño-computadora{
+    display: none;
+  }
+
+  .encabezado-tamaño-computadora{
+    display: none;
+  }
+
+  .imagen-tamaño-movil{
+    margin-right: 10px;
+    border-radius: 10px;
+  }
+
+  .icono-lupa{
+    color: #a8a8a8;
+    margin-left: 230px;
+    font-size: 25px;
+  }
+  
+  .icono-personalizado{
+    color: #a8a8a8;
+    
+  }
+
+  .orden-personalizado{
+    display: none;
+  }
+
+  .seccion-tamaño-movil{
+    display: none;
+  }
+
+  .seccion-medio{
+    padding-left: 20px;
+  }
+}
+
+
+/* Estilos para dispositivos móviles */
+@media only screen and (max-width: 767px) {
+  /* Navbar */
+  .navbar-light .navbar-toggler-icon {
+    background-color: #F8F9FA;
+  }
+
+  .navbar-light .navbar-toggler {
+    border-color: #000000;
+  }
+
+  .navbar-collapse {
+    background-color: #F8F9FA;
+  }
+
+  .navbar-nav .nav-link {
+    color: #000000;
+  }
+
+  .navbar-light .navbar-nav .nav-link.active,
+  .navbar-light .navbar-nav .nav-link:hover,
+  .navbar-light .navbar-nav .nav-item.show .nav-link {
+    color: #ed5790;
+  }
+
+  .navbar-light .navbar-nav .nav-item.dropdown:hover .dropdown-menu {
+    background-color: #ffffff;
+  }
+
+  #main-content {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+    /*Comienzo de la portada*/
+    .portada-general{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .portada-imagen{
+      padding-left: 0px;
+      padding-right: 0px;
+    }
+  
+    .imagen-dua-lipa {
+      display: flex;
+      justify-content: center;
+      }
+    /*Fin de la portada*/ 
+    /*Lista de reproduccion tamaño computadora*/
+  .imagen-lista-canciones{
+    padding-left: 20px;
+  }
+  
+  .icons {
+    display: flex;
+    align-items: center;
+  }
+  /*Fin Lista de reproduccion tamaño computadora*/
+  
+    p{
+      margin-bottom: 0px;
+    }
+  
+    /*Encabezado tamaño computadora*/
+    .song {
+      display: flex;
+      align-items: center;
+      margin: 10px;
+    }
+
+    .song-encabezado {
+      display: flex;
+      align-items: center;
+      margin: 10px;
+    }
+  
+    .song-details {
+      flex-grow: 1;
+    }
+    /*Fin Encabezado tamaño computadora*/
+  
+    
+      .imagen-lista-canciones {
+        max-width: 100px;
+        height: auto;
+        margin-right: 10px;
+      }
+      .icons .imagen-lista-canciones {
+        max-width: 20px;
+        height: auto;
+        margin-right: 5px;
+      }
+    
+  
+    /*Iconos de reproduccion*/
+    .aleatorio-movil{
+      padding-left: 125px;
+    }
+    .tamaño-movil{
+      display: none;
+    }
+  
+    /*Fin Iconos de reproduccion*/
+    #banner {
+      padding-bottom: 0px;
+    }
+    .tamaño-computadora{
+      display: none;
+    }
+
+    .encabezado-tamaño-computadora{
+      display: none;
+    }
+
+    .imagen-tamaño-movil{
+      margin-right: 10px;
+      border-radius: 10px;
+    }
+
+    .icono-duracion-tablet{
+      padding-right: 15px;
+    }
+
+    .seccion-tamaño-movil{
+      display: flex;
+      flex-direction: row;
+      padding-left: 20px;
+    }
+
+    .fondo{
+      padding-top: 1px;
+      }
+
+      .seccion-tamaño-movil{
+        padding-left: 5px;
+    }
+    .aleatorio-movil{
+        color: #a8a8a8;
+        margin-left: 25px;
+    }
+
+    .reproductor{
+        color: #ed5790;
+    }
+
+    .iconos-movil{
+        color: #a8a8a8;
+    }
+}
+
+
+
