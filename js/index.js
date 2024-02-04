@@ -233,3 +233,21 @@ function showAdministratorLink() {
     administratorLinkMobile.style.display = 'block';
   }
 }
+
+window.redirectMiBiblioteca = function () {
+  const loginSuccess = JSON.parse(localStorage.getItem('login_success'));
+  if (loginSuccess) {
+    window.location.href = '../views/listaReproduccion.html';
+  } else {
+    window.location.href = '../views/login.html';
+  }
+}
+
+window.redirectOthers = function () {
+  const loginSuccess = JSON.parse(localStorage.getItem('login_success'));
+  if (loginSuccess) {
+    window.location.href = '../views/error.html';
+  } else {
+    window.location.href = '../views/login.html';
+  }
+}

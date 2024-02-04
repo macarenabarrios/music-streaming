@@ -4,6 +4,16 @@ body {
   padding: 0;
 }
 
+.custom-link {
+  color: #222A53;
+  text-decoration: none;
+}
+
+.custom-link:hover {
+  text-decoration: none;
+  color: #222A53;
+}
+
 .navbar-link {
   color: #7A7C8A;
   text-decoration: none;
@@ -442,6 +452,14 @@ body {
 
   .navbar-light .navbar-nav .nav-item.dropdown:hover .dropdown-menu {
     background-color: #ffffff;
+  }
+
+  .dropdown-item {
+    color: #7A7C8A;
+  }
+
+  .dropdown-custom-link {
+    color: #7A7C8A;
   }
 
   /* Formulario de busqueda */
