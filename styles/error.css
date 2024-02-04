@@ -116,11 +116,10 @@ body {
   }
 
   .img-fluid {
-    max-width: 100%;
+    max-width: 90%;
   }
 
   .error-image {
-    max-width: 50%;
     margin-left: auto;
   }
 
@@ -138,6 +137,10 @@ body {
     background-color: #db8fa3e4;
   }
 
+  #main-content {
+    margin-top: 0;
+    margin-left: 0;
+  }
 }
 
 /* Estilo para tablet: iPad Pro */
@@ -246,7 +249,7 @@ body {
   }
 
   .img-fluid {
-    max-width: 100%;
+    max-width: 60%;
   }
 
   .error-image {
@@ -262,12 +265,12 @@ body {
     background-color: #E5A8B7;
     border: none;
     transition: background-color 0.3s;
+    margin-bottom: 100px;
   }
 
   .btn:hover {
     background-color: #db8fa3e4;
   }
-
 
 }
 
@@ -377,7 +380,7 @@ body {
   }
 
   .img-fluid {
-    max-width: 100%;
+    max-width: 90%;
   }
 
   .error-image {
@@ -393,6 +396,7 @@ body {
     background-color: #E5A8B7;
     border: none;
     transition: background-color 0.3s;
+    margin-bottom: 100px;
   }
 
   .btn:hover {
