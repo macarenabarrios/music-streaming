@@ -58,7 +58,7 @@ function Agregar() {
     botonEditar.appendChild(editarSpan);
 
     const botonEliminar = document.createElement("button");
-    botonEliminar.classList.add("btn", "btn-danger");
+    botonEliminar.classList.add("btn", "btn-danger", "m-1");
     const eliminarSpan = document.createElement("span");
     eliminarSpan.classList.add("bi", "bi-trash"); 
     botonEliminar.appendChild(eliminarSpan);
@@ -185,7 +185,7 @@ function renderizarTablaDesdeLocalStorage() {
     botonEditar.appendChild(editarSpan);
 
     const botonEliminar = document.createElement("button");
-    botonEliminar.classList.add("btn", "btn-danger");
+    botonEliminar.classList.add("btn", "btn-danger", "m-1");
     const eliminarSpan = document.createElement("span");
     eliminarSpan.classList.add("bi", "bi-trash"); 
     botonEliminar.appendChild(eliminarSpan);
