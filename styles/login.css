@@ -6,13 +6,12 @@
     --transition: all 0.1s cubic-bezier(0.645, 0.045, 0.355, 1)
 }
 main {
-    background-image: url(../assets/REGISTRATE.png);
+    background-image: url(../assets/img/REGISTRATE.png);
     background-color: black;
-    background-size: cover; /* Ajusta al ancho y alto del elemento main sin deformar la imagen */
-    background-repeat: no-repeat; /* Evita la repetición de la imagen */
+    background-size: cover; 
+    background-repeat: no-repeat;
     font-family: 'League Spartan', sans-serif;
-    height: 100vh; /* Establece la altura al 100% de la ventana gráfica */
-    margin: 0; /* Elimina los márgenes predeterminados del body */
+    margin: 0;
 }
 #registroBtn {
     background-color: #ff8bb1;
