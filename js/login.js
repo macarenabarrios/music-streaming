@@ -15,7 +15,7 @@ loginForm.addEventListener('submit', (e) => {
             icon: "error"
         });
     } else {
-        const redirectUrl = isAdmin ? 'pagina_admin.html' : 'index.html';
+        const redirectUrl = isAdmin ? 'administracion.html' : 'index.html';
         Swal.fire({
             title: `Bienvenido ${validUser.name || 'Administrador'}!`,
             icon: "success"
