@@ -4,7 +4,7 @@ const taylorSwift = [
       enumeracion: 1,
       img: "../assets/img/taylor-uno.jpg",
       nombre: "Cruel Summer",
-      album: "Lover",
+      album: "Folklore",
       precio: "03:46",
     },
     {

@@ -1,13 +1,12 @@
 const contenedorTarjetas = document.getElementById("productos-container");
+const carritoVacio = document.getElementById("carrito-vacio")
 
 
-/** Crea las tarjetas de productos teniendo en cuenta la lista en bicicletas.js */
 function crearTarjetasProductosInicio(){
     contenedorTarjetas.innerHTML = ""
     const productos = JSON.parse(localStorage.getItem("dualipa"))
     console.log(productos)
     if(productos && productos.length > 0){
-
         productos.forEach((producto) => {
             const nuevaLista = document.createElement("div");
             nuevaLista.classList = "tarjeta-producto"
@@ -51,6 +50,15 @@ function crearTarjetasProductosInicio(){
             })
         });
     }
+    revisarMensajeVacio()
+    
 }
 
 crearTarjetasProductosInicio();
+
+function revisarMensajeVacio(){
+    const productos = JSON.parse(localStorage.getItem("dualipa"))
+    carritoVacio.classList.toggle("escondido", (productos && productos.length>0))
+}
+
+

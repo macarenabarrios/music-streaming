@@ -21,7 +21,7 @@ const dualipa = [
     enumeracion: 3,
     img: "../assets/img/dua-lipa-lista-1.jpg",
     nombre: "Don't Start Now",
-    album: "Future Nostalgia",
+    album: "Nostalgia",
     precio: "03:03",
   },
   {
@@ -29,7 +29,7 @@ const dualipa = [
     enumeracion: 4,
     img: "../assets/img/dua-lipa-lista-3.jpg",
     nombre: "Levitating",
-    album: "Future Nostalgia",
+    album: " Nostalgia",
     precio: "03:23",
   },
   {
@@ -37,7 +37,7 @@ const dualipa = [
     enumeracion: 5,
     img: "../assets/img/dua-lipa-lista-3.jpg",
     nombre: "Physical",
-    album: "Future Nostalgia",
+    album: " Nostalgia",
     precio: "03:14",
   },
   {

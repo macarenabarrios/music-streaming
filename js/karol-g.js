@@ -21,7 +21,7 @@ function crearTarjetasProductosInicio(productos){
         <p>${producto.precio}</p>
     </div>
     <div class="icons">
-    <i type="button" class="bi bi-plus-circle p-2"></i><i  class="bi bi-three-dots p-3"></i>
+    <i type="button" class="bi bi-plus-circle p-2 activar"></i><i  class="bi bi-three-dots p-3"></i>
     </div>
 </div>
 <div class="song tamaño-tablet">

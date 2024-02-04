@@ -1,28 +1,29 @@
+#banner {
+    width: 100%;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    font-family: 'Poppins', sans-serif;
+    background: rgb(237,87,229);
+    background: linear-gradient(74deg, rgba(237,87,229,0.6839110644257703) 0%, rgba(36,2,27,1) 140%);
+    color: #000000;
+    }
+
 .nombre-del-album{
     padding-right: 270px;
     padding-left: 0px;
     }
 
-    .nombre-del-album-1{
-        padding-right: 300px;
-    }
-
-    .nombre-del-album-2{
-        padding-right: 335px;
-    }
-
-    .nombre-del-album-3{
-        padding-right: 320px;
-    }
-
-    .nombre-del-album-4{
-        padding-right: 310px;
-    }
+    .activar:hover{
+        transform: scale(1.5);
+      }
 
     .icono-lupa{
         margin-left: 600px;
     }
 
+    .encabezado-album{
+        padding-right: 260px;
+    }
     @media only screen and (min-width: 1024px) and (max-width: 1366px) {
 
         .nombre-del-album{
@@ -30,23 +31,8 @@
             padding-left: 0px;
             }
         
-            .nombre-del-album-1{
-                padding-right: 150px;
-            }
-        
-            .nombre-del-album-2{
-                padding-right: 190px;
-            }
-        
-            .nombre-del-album-3{
-                padding-right: 170px;
-            }
-
-            .nombre-del-album-4{
-                padding-right: 170px;
-            }
         .encabezado-album{
-            padding-right: 140px;
+            padding-right: 120px;
         }
 
         .encabezado-titulo{
@@ -57,12 +43,16 @@
             color: #a8a8a8;
             margin-left: 270px;
         }
+
+        .texto-portada{
+            font-size: 60px;
+        }
     }
 
     @media only screen and (max-width: 767px) {
 
         .texto-portada {
-            font-size: 50px;
+            font-size: 45px;
             margin-top: 15px;
             margin-bottom: 0px;
         }
@@ -74,6 +64,8 @@
             .tamaño-tablet{
                 margin: 0px;
             }
+
+
     }
 
     /* Estilos para pantallas tablet: iPad Mini */
@@ -90,7 +82,7 @@
 
     
     .texto-portada {
-        font-size: 50px;
+        font-size: 45px;
         margin-top: 0px;
         margin-bottom: 0px;
     }

@@ -36,7 +36,7 @@ const badbunny = [
       enumeracion: 5,
       img: "../assets/img/bad-bunny-tres.jpg",
       nombre: "Titi me pregunto",
-      album: "Data",
+      album: "Un verano sin ti",
       precio: "03:14",
     },
     {
