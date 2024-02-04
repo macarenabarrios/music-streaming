@@ -57,9 +57,17 @@ function Agregar() {
 
   //agrego botones Editar y Eliminar a la fila
   const botonEditar = document.createElement("button");
-  botonEditar.textContent = "Editar";
-  const botonEliminar = document.createElement("button");
-  botonEliminar.textContent = "Eliminar";
+    botonEditar.classList.add("btn", "btn-success");
+    const editarSpan = document.createElement("span");
+    editarSpan.classList.add("bi", "bi-pencil"); 
+    botonEditar.appendChild(editarSpan);
+
+    const botonEliminar = document.createElement("button");
+    botonEliminar.classList.add("btn", "btn-danger");
+    const eliminarSpan = document.createElement("span");
+    eliminarSpan.classList.add("bi", "bi-trash"); 
+    botonEliminar.appendChild(eliminarSpan);
+
 
   const celdaOpciones = document.createElement("td");
   celdaOpciones.appendChild(botonEditar);
@@ -182,9 +190,18 @@ function renderizarTablaDesdeLocalStorage() {
     fila.appendChild(celdaDuracion);
 
     const botonEditar = document.createElement("button");
-    botonEditar.textContent = "Editar";
+    botonEditar.classList.add("btn", "btn-success");
+    const editarSpan = document.createElement("span");
+    editarSpan.classList.add("bi", "bi-pencil"); 
+    botonEditar.appendChild(editarSpan);
+
     const botonEliminar = document.createElement("button");
-    botonEliminar.textContent = "Eliminar";
+    botonEliminar.classList.add("btn", "btn-danger");
+    const eliminarSpan = document.createElement("span");
+    eliminarSpan.classList.add("bi", "bi-trash"); 
+    botonEliminar.appendChild(eliminarSpan);
+
+
 
     const celdaOpciones = document.createElement("td");
     celdaOpciones.appendChild(botonEditar);
@@ -218,9 +235,13 @@ function renderizarTablaDesdeLocalStorage() {
     const celdaNombre = fila.insertCell(0);
     const celdaEmail = fila.insertCell(1);
 
-
     const botonEliminar = document.createElement("button");
-    botonEliminar.textContent = "Eliminar";
+    botonEliminar.classList.add("btn", "btn-danger");
+    const eliminarSpan = document.createElement("span");
+    eliminarSpan.classList.add("bi", "bi-trash"); 
+    botonEliminar.appendChild(eliminarSpan);
+
+    
     const celdaOpcion = document.createElement("td");
     celdaOpcion.appendChild(botonEliminar);
     fila.appendChild(celdaOpcion);

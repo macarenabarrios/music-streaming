@@ -109,47 +109,52 @@
     </header>
 
     <main>
-        <div id="contenido-principal">
-    <br>
-    <h1 class="text-center">Administración</h1>
-    <br>
+        <div id="contenido-principal" >
+    
+    <h1 class="text-center pb-3 pt-5" id="tituloAdmin">Administración</h1>
 
-    <form id="carga-canciones" class="row justify-content-center">
-        <div class="mb-3 col-8">
-          <label class="form-label ">Código</label>
-          <input type="number" class="form-control" id="cod-cancion" required>
-        </div>
 
-        <div class="mb-3 col-8">
-          <label class="form-label">Nombre de canción</label>
-          <input type="text" class="form-control" id="nombre-cancion" required maxlength="15">
-        </div>
+    <div class="container">
+        <!-- Content here -->
+        <form id="carga-canciones" class="row justify-content-center" >
+            <div class="mb-3 col-10 col-sm-8">
+              <label class="form-label ">Código</label>
+              <input type="number" class="form-control" id="cod-cancion" required>
+            </div>
+    
+            <div class="mb-3 col-10 col-sm-8">
+              <label class="form-label">Nombre de canción</label>
+              <input type="text" class="form-control" id="nombre-cancion" required maxlength="15">
+            </div>
+    
+            <div class="mb-3 col-10 col-sm-8">
+                <label class="form-label">Artista</label>
+                <input type="text" class="form-control" id="artista" required maxlength="15">
+              </div>
+    
+              <div class="mb-3 col-10 col-sm-8">
+                <label class="form-label">Álbum</label>
+                <input type="text" class="form-control" id="album" required maxlength="15">
+              </div>
+    
+              <div class="mb-3 col-10 col-sm-8">
+                <label class="form-label">Duración</label>
+                <input type="time" class="form-control" id="durac-cancion" required>
+              </div>
+    
+            <div class="text-center">
+                <button type="button" onclick="Agregar()" id="botonForm" class="btn btn-primary col-sm-2 col-8" >Agregar canción</button>  
+            </div>
+            
+          </form>
+      </div>
 
-        <div class="mb-3 col-8">
-            <label class="form-label">Artista</label>
-            <input type="text" class="form-control" id="artista" required maxlength="15">
-          </div>
-
-          <div class="mb-3 col-8">
-            <label class="form-label">Álbum</label>
-            <input type="text" class="form-control" id="album" required maxlength="15">
-          </div>
-
-          <div class="mb-3 col-8">
-            <label class="form-label">Duración</label>
-            <input type="time" class="form-control" id="durac-cancion" required>
-          </div>
-
-        <div class="text-center">
-            <button type="button" onclick="Agregar()" id="botonForm" class="btn btn-primary col-sm-2 col-8" >Agregar canción</button>  
-        </div>
-        
-      </form>
+    
 <br><br>
 
 
-
-    <table class="table">
+<div class="container">
+    <table class="table" id="tablaMusica">
         <thead>
           <tr>
             <th scope="col">Código</th>
@@ -161,29 +166,13 @@
           </tr>
         </thead>
         <tbody id="tabla-canciones">
-          <!-- <tr>
-            <th scope="row">167</th>
-            <td>Before to you</td>
-            <td>Otto</td>
-            <td>Galaxy</td>
-            <td>Pop</td>
-            <td id="opciones">
-                <button class="btn btn-primary" id="editar">
-                    <i class="bi bi-pencil"></i>
-                </button>
-                <button class="btn btn-danger" id="eliminar">
-                    <i class="bi bi-trash"></i>
-                </button>
-            </td>
-          </tr> -->
         </tbody>
       </table>
-
-
-      
-      <h1 class="text-center mt-3 mb-3">Usuarios registrados</h1>
-      
-      <table class="table mb-5">
+    </div>
+      <hr class="mt-5">
+      <h1 class="text-center pb-5 pt-4" id="tituloUsuario">Usuarios registrados</h1>
+ <div class="container">    
+      <table class="table mb-5" id="tablaUsuario">
         <thead>
           <tr>
             <th scope="col">Nombre</th>
@@ -192,18 +181,9 @@
           </tr>
         </thead>
         <tbody id="tabla-usuarios">
-          <!-- <tr>
-            <th scope="row">167</th>
-            <td>Before to you</td>
-            <td>
-                <button class="btn btn-danger" id="eliminar">
-                    <i class="bi bi-trash"></i>
-                </button>
-            </td>
-          </tr> -->
         </tbody>
       </table>
-
+    </div> 
 
 
       <footer>

@@ -5,6 +5,49 @@ body {
     padding: 0;
 }
 
+#tituloAdmin, #tituloUsuario {
+    color: #a70a39;
+    font-weight: 700;
+}
+
+.form-label {
+    color: #a70a39;
+    font-weight: 700;
+    font-size: 15px;
+}
+
+#botonForm {
+    background-color:   #f7548de5;
+    border-color: #a70a39;
+    color: #a70a39;
+    font-weight: 700;
+    font-size:15px;
+
+}
+
+#botonForm:hover {
+    background-color: #fb3374;
+}
+
+#contenido-principal {
+    /*background-image: linear-gradient(to right, rgb(251, 232, 255), rgb(182, 105, 177));*/
+    background-image: url(../assets/img/fondoAdmin.png);
+}
+
+@media (max-width: 767px) {
+    /* Ocultar la columna de Artista en pantallas más pequeñas */
+    #tablaMusica th:nth-child(3),
+    #tablaMusica td:nth-child(3),
+    #tablaMusica th:nth-child(4),
+    #tablaMusica td:nth-child(4),
+    #tablaUsuario th:nth-child(2),
+    #tablaUsuario td:nth-child(2){
+      display: none;
+    }
+  }
+
+
+
 /* Estilos para pantallas más grandes */
 @media only screen and (min-width: 1025px) {
     #navbar {
