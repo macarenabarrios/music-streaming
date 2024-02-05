@@ -333,6 +333,7 @@ p{
 
 }
 /* Estilo para tablet: iPad Pro*/
+/*no se que poner*/
 @media only screen and (min-width: 1024px) and (max-width: 1366px) {
   /* Navbar */
   #navbar {
