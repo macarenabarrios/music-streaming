@@ -1,0 +1,51 @@
+const karolg = [
+    {
+      id:13,
+      enumeracion: 1,
+      img: "../assets/img/karolg-tres.jpg",
+      nombre: "Qlona",
+      album: "Mañana sera bonito",
+      precio: "02:23",
+    },
+    {
+      id:14,
+      enumeracion: 2,
+      img: "../assets/img/karolg-tres.jpg",
+      nombre: "Amargura",
+      album: "Mañana sera bonito",
+      precio: "02:50",
+    },
+    {
+      id:15,
+      enumeracion: 3,
+      img: "../assets/img/karolg-uno.jpg",
+      nombre: "Que chimba de vida",
+      album: "Que chimba de vida",
+      precio: "02:03",
+    },
+    {
+      id:16,
+      enumeracion: 4,
+      img: "../assets/img/karolg-dos.jpg",
+      nombre: "El barco",
+      album: "KGO516",
+      precio: "03:24",
+    },
+    {
+      id:17,
+      enumeracion: 5,
+      img: "../assets/img/karolg-dos.jpg",
+      nombre: "A ella",
+      album: "Unstoppable",
+      precio: "03:19",
+    },
+    {
+      id:18,
+      enumeracion: 6,
+      img: "../assets/img/karolg-tres.jpg",
+      nombre: "Provenza",
+      album: "Mañana sera bonito",
+      precio: "03:28",
+    },
+    
+  ]

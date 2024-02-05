@@ -1,0 +1,51 @@
+const taylorSwift = [
+    {
+      id:25,
+      enumeracion: 1,
+      img: "../assets/img/taylor-uno.jpg",
+      nombre: "Cruel Summer",
+      album: "Folklore",
+      precio: "03:46",
+    },
+    {
+      id:26,
+      enumeracion: 2,
+      img: "../assets/img/taylor-dos.webp",
+      nombre: "Anti-Hero",
+      album: "Midnights",
+      precio: "03:15",
+    },
+    {
+      id:27,
+      enumeracion: 3,
+      img: "../assets/img/taylor-dos.webp",
+      nombre: "Cardigan",
+      album: "Folklore",
+      precio: "02:43",
+    },
+    {
+      id:28,
+      enumeracion: 4,
+      img: "../assets/img/taylor-tres.webp",
+      nombre: "K-Karma",
+      album: "Midnights",
+      precio: "03:13",
+    },
+    {
+      id:29,
+      enumeracion: 5,
+      img: "../assets/img/taylor-uno.jpg",
+      nombre: "Willow",
+      album: "Evermore",
+      precio: "03:14",
+    },
+    {
+      id:30,
+      enumeracion: 6,
+      img: "../assets/img/taylor-tres.webp",
+      nombre: "Don't Blame Me",
+      album: "Midnights",
+      precio: "03:38",
+    },
+    
+  ]

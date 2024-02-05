@@ -1,0 +1,124 @@
+#banner {
+    width: 100%;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    font-family: 'Poppins', sans-serif;
+    background: rgb(237,233,87);
+    background: linear-gradient(74deg, rgba(237,233,87,0.6839110644257703) 0%, rgba(35,36,2,1) 140%);
+    color: #000000;
+    }
+.nombre-del-album{
+    padding-right: 270px;
+    padding-left: 0px;
+    }
+    .activar:hover{
+        transform: scale(1.5);
+      }
+    .nombre-del-album-1{
+        padding-right: 300px;
+    }
+
+    .nombre-del-album-2{
+        padding-right: 345px;
+    }
+
+    .nombre-del-album-3{
+        padding-right: 320px;
+    }
+
+    .icono-lupa{
+        margin-left: 600px;
+    }
+
+    @media only screen and (min-width: 1024px) and (max-width: 1366px) {
+
+        .nombre-del-album{
+            padding-right: 120px;
+            padding-left: 0px;
+            }
+        
+            .nombre-del-album-1{
+                padding-right: 150px;
+            }
+        
+            .nombre-del-album-2{
+                padding-right: 200px;
+            }
+        
+            .nombre-del-album-3{
+                padding-right: 170px;
+            }
+        .encabezado-album{
+            padding-right: 140px;
+        }
+
+        .encabezado-titulo{
+            padding-left: 60px;
+        }
+
+        .icono-lupa{
+            color: #a8a8a8;
+            margin-left: 270px;
+        }
+    }
+
+    @media only screen and (max-width: 767px) {
+
+        .texto-portada {
+            font-size: 50px;
+            margin-top: 15px;
+            margin-bottom: 0px;
+        }
+    
+        #banner {
+            padding-bottom: 0px;
+            }
+
+            .tamaño-tablet{
+                margin: 0px;
+            }
+    }
+
+    /* Estilos para pantallas tablet: iPad Mini */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+
+    .icono-lupa{
+        color: #a8a8a8;
+        margin-left: 220px;
+    }
+
+    .seccion-medio{
+        padding-left: 20px;
+    }
+
+    
+    .texto-portada {
+        font-size: 50px;
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+
+    .descripcion-portada{
+        margin-right: 15px;
+        margin-bottom: 20px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+
+    .seccion-tamaño-movil{
+        padding-left: 5px;
+    }
+    .aleatorio-movil{
+        color: #a8a8a8;
+        margin-left: 25px;
+    }
+
+    .reproductor{
+        color: #ed5790;
+    }
+
+    .iconos-movil{
+        color: #a8a8a8;
+    }
+}

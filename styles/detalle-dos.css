@@ -1,0 +1,81 @@
+
+#banner {
+    width: 100%;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    font-family: 'Poppins', sans-serif;
+    background: rgb(87,237,92);
+    background: linear-gradient(74deg, rgba(87,237,92,0.6839110644257703) 0%, rgba(3,36,2,0.8435749299719888) 140%);
+    color: #000000;
+    }
+    .activar:hover{
+        transform: scale(1.5);
+      }
+    .nombre-del-album{
+        padding-right: 300px;
+        padding-left: 0px;
+    }
+
+    .nombre-del-album-1{
+        padding-right: 239px;
+    }
+    
+    @media only screen and (min-width: 1024px) and (max-width: 1366px) {
+
+        .nombre-del-album{
+            padding-right: 150px;
+            padding-left: 0px;
+        }
+    
+        .nombre-del-album-1{
+            padding-right: 86px;
+        }
+
+        .encabezado-album{
+            padding-right: 140px;
+        }
+
+        .encabezado-titulo{
+            padding-left: 60px;
+        }
+    }
+
+        /* Estilos para pantallas tablet: iPad Mini */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+
+    .texto-portada {
+        font-size: 50px;
+        margin-top: 15px;
+        margin-bottom: 0px;
+    }
+}
+
+    /* Estilos para dispositivos móviles */
+@media only screen and (max-width: 767px) {
+
+    .texto-portada {
+        font-size: 50px;
+        margin-top: 15px;
+        margin-bottom: 0px;
+    }
+
+    #banner {
+        padding-bottom: 0px;
+        }
+
+        .tamaño-tablet{
+            margin: 0px;
+        }
+        .aleatorio-movil{
+            color: #a8a8a8;
+            margin-left: 25px;
+        }
+    
+        .reproductor{
+            color: #ed5790;
+        }
+    
+        .iconos-movil{
+            color: #a8a8a8;
+        }
+}
