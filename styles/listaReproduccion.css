@@ -71,6 +71,15 @@ body {
         margin-top: 15px;
         font-size: 30px;
     }
+
+    .detalle-lista h1 {
+        margin-top: 90px;
+        margin-bottom: 50px;
+        font-weight: bold;
+        color: #000000;
+        padding-left: 50px;
+        font-size: 50px;
+    }
 }
 
 /* Estilo para tablet: iPad Pro*/
@@ -124,6 +133,15 @@ body {
         color: #ED5790;
     }
 
+    .detalle-lista h1 {
+        margin-top: 90px;
+        margin-bottom: 50px;
+        font-weight: bold;
+        color: #000000;
+        padding-left: 50px;
+        font-size: 40px;
+        text-align: center;
+    }
 }
 
 /* Estilos para pantallas tablet: iPad Mini */
@@ -176,6 +194,15 @@ body {
         font-weight: bold;
         color: #ED5790;
     }
+
+    .detalle-lista h1 {
+        margin-top: 90px;
+        margin-bottom: 50px;
+        font-weight: bold;
+        color: #000000;
+        text-align: center;
+        font-size: 30px;
+    }
 }
 
 /* Estilos para dispositivos móviles */
@@ -207,7 +234,15 @@ body {
     .navbar-light .navbar-nav .nav-item.dropdown:hover .dropdown-menu {
         background-color: #ffffff;
     }
+
+    .detalle-lista h1 {
+        font-weight: bold;
+        color: #000000;
+        text-align: center;
+        font-size: 30px;
+    }
 }
+
 
 /*Fin Navbar*/
 
@@ -216,11 +251,11 @@ body {
 
 /***encabezado playlist***/
 .encabezado-lista {
-    background: rgb(0,232,255);
-background: linear-gradient(74deg, rgba(0,232,255,0.6530987394957983) 0%, rgba(255,255,255,1) 100%);
+background-image: url(../assets/img/fondo-uno.png);
     display: flex;
     flex-direction: row;
     font-family: 'Poppins', sans-serif;
+
 }
 
 
@@ -243,14 +278,7 @@ background: linear-gradient(74deg, rgba(0,232,255,0.6530987394957983) 0%, rgba(2
     color: #ffffff;
 }
 
-.detalle-lista h1 {
-    margin-top: 90px;
-    margin-bottom: 50px;
-    font-weight: bold;
-    color: #ffffff;
-    padding-left: 50px;
-    font-size: 50px;
-}
+
 
 ul.lista-opciones {
     padding-left: 0%;
@@ -467,3 +495,8 @@ footer {
 
 /*fin del segundo contenedor*/
 /*FIN DEL FOOTER*/
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+
+
+}
