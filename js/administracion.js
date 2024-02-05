@@ -141,8 +141,8 @@ function Editar(botonEditar) {
 
       //se actualiza la fila
       fila.children[1].textContent = nuevoTitulo;
-      fila.children[3].textContent = nuevoAlbum;
-      fila.children[4].textContent = nuevaDuracion;
+      fila.children[2].textContent = nuevoAlbum;
+      fila.children[3].textContent = nuevaDuracion;
 
       alert("Canción editada correctamente");
     } else {
