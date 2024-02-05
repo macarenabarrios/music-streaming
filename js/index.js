@@ -1,16 +1,4 @@
-import { songs } from '../data/songs.js';
-
-// Función para generar el enlace de la página de la canción
-function generateSongPageLink(title) {
-  const formattedTitle = title.toLowerCase().replace(/\s+/g, '-');
-  return `${formattedTitle}.html`;
-}
-
-// Función para manejar la selección de una canción
-function handleSongSelection(song) {
-  console.log(`Seleccionaste: ${song.title} - ${song.artist}`);
-  window.location.href = generateSongPageLink(song.title);
-}
+import { artistas } from '../data/artistas.js';
 
 // Función para limpiar la lista de resultados cuando el cuadro de búsqueda está vacío
 function clearSearchResults() {
@@ -25,127 +13,113 @@ function clearSearchResults() {
   }
 }
 
-// Adjunta un evento de escucha al cuadro de búsqueda
-const searchInputDesktop = document.getElementById('searchInputDesktop');
+// Funcionalidad para buscar artistas
 searchInputDesktop.addEventListener('input', (event) => {
   const searchText = event.target.value;
 
-  // Verifica si el cuadro de búsqueda está vacío
   if (searchText.trim() === '') {
-    // Si está vacío, limpia la lista de resultados
     clearSearchResults();
   } else {
-    // Si no está vacío, realiza el filtrado de canciones
-    filterSongs(searchText);
+    const filteredResults = filterResults(searchText, artistas);
+    renderSearchResultsArtists(filteredResults);
   }
 });
 
-const searchInputMobile = document.getElementById('searchInputMobile');
 searchInputMobile.addEventListener('input', (event) => {
   const searchText = event.target.value;
 
   if (searchText.trim() === '') {
     clearSearchResults();
   } else {
-    filterSongsMobile(searchText);
+    const filteredResults = filterResults(searchText, artistas);
+    renderSearchResultsMobileArtists(filteredResults);
   }
 });
 
 // Función para filtrar las canciones según el texto de búsqueda
-function filterSongs(searchText) {
-
+function filterResults(searchText, data) {
   const searchTerm = searchText.toLowerCase();
-
-  const filteredSongs = songs.filter(song => {
-    const titleMatch = song.title.toLowerCase().includes(searchTerm);
-    const artistMatch = song.artist.toLowerCase().includes(searchTerm);
-    return titleMatch || artistMatch;
+  return data.filter(item => {
+    const match = item.artist.toLowerCase().includes(searchTerm);
+    return match;
   });
-
-  renderSearchResults(filteredSongs);
-}
-
-function filterSongsMobile(searchText) {
-  const searchTerm = searchText.toLowerCase();
-
-  const filteredSongs = songs.filter(song => {
-    const titleMatch = song.title.toLowerCase().includes(searchTerm);
-    const artistMatch = song.artist.toLowerCase().includes(searchTerm);
-    return titleMatch || artistMatch;
-  });
-
-  renderSearchResultsMobile(filteredSongs);
 }
 
 // Función para renderizar los resultados de búsqueda en el escritorio
-function renderSearchResults(results) {
-  // Selecciona el contenedor de resultados de búsqueda
+function renderSearchResultsArtists(results, isSong) {
   const searchResultsDesktop = document.getElementById('searchResultsDesktop');
-
-  // Limpia el contenido anterior
   searchResultsDesktop.innerHTML = '';
 
-  // Crea elementos de lista y añade cada resultado
   const resultList = document.createElement('ul');
   resultList.classList.add('list-group');
 
-  results.forEach(song => {
+  results.forEach(item => {
     const listItem = document.createElement('li');
     listItem.classList.add('list-group-item');
 
-    // Crea un enlace para cada canción
-    const songLink = document.createElement('a');
-    songLink.href = generateSongPageLink(song.title);
-    songLink.textContent = `${song.title} - ${song.artist}`;
-    songLink.style.textDecoration = 'none'; // Evita el subrayado predeterminado
+    const itemLink = document.createElement('a');
+    itemLink.href = generatePageLink(item, false);
+    itemLink.textContent = item.artist;
+    itemLink.style.textDecoration = 'none';
 
-    // Agrega un evento clic para manejar la selección del resultado
-    songLink.addEventListener('click', (event) => {
-      event.preventDefault(); // Evita la acción predeterminada del enlace
-      handleSongSelection(song);
+    itemLink.addEventListener('click', (event) => {
+      event.preventDefault();
+      handleArtistSelection(item);
     });
 
-    // Añade el enlace al elemento de lista
-    listItem.appendChild(songLink);
-
-    // Añade el elemento de lista al resultado final
+    listItem.appendChild(itemLink);
     resultList.appendChild(listItem);
   });
 
-  // Agrega la lista de resultados al contenedor
   searchResultsDesktop.appendChild(resultList);
 }
 
 // Función para renderizar los resultados de búsqueda en mobile
-function renderSearchResultsMobile(results) {
+function renderSearchResultsMobileArtists(results, isSong) {
   const searchResultsMobile = document.getElementById('searchResultsMobile');
-
   searchResultsMobile.innerHTML = '';
 
   const resultListMobile = document.createElement('ul');
   resultListMobile.classList.add('list-group');
 
-  results.forEach(song => {
+  results.forEach(item => {
     const listItemMobile = document.createElement('li');
     listItemMobile.classList.add('list-group-item');
 
-    const songLinkMobile = document.createElement('a');
-    songLinkMobile.href = generateSongPageLink(song.title);
-    songLinkMobile.textContent = `${song.title} - ${song.artist}`;
-    songLinkMobile.style.textDecoration = 'none';
+    const itemLinkMobile = document.createElement('a');
+    itemLinkMobile.href = generatePageLink(item, false);
+    itemLinkMobile.textContent = item.artist;
+    itemLinkMobile.style.textDecoration = 'none';
 
-    songLinkMobile.addEventListener('click', (event) => {
+    itemLinkMobile.addEventListener('click', (event) => {
       event.preventDefault();
-      handleSongSelection(song);
+      handleArtistSelection(item);
     });
 
-    listItemMobile.appendChild(songLinkMobile);
+    listItemMobile.appendChild(itemLinkMobile);
     resultListMobile.appendChild(listItemMobile);
   });
 
   searchResultsMobile.appendChild(resultListMobile);
 }
 
+// Función para manejar la selección de un artista
+function handleArtistSelection(artist) {
+  console.log(`Seleccionaste al artista: ${artist.artist}`);
+  window.location.href = generatePageLink(artist, false);
+}
+
+// Función para generar el enlace de la página del artista
+function generatePageLink(item, isArtist) {
+  const formattedTitle = item.title ? item.title.toLowerCase().replace(/\s+/g, '-') : item.artist.toLowerCase().replace(/\s+/g, '-');
+
+  if (isArtist) {
+    return `${formattedTitle}.html`;
+  } else {
+    // Si no es un artista, redirige a error.html
+    return 'error.html';
+  }
+}
 
 // Funcion para ocultar los botones de iniciar sesion y registro
 document.addEventListener('DOMContentLoaded', () => {
