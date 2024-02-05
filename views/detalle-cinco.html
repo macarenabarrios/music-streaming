@@ -13,123 +13,113 @@
     <link rel="stylesheet" href="../styles/detalle-uno.css">
     <link rel="stylesheet" href="../styles/detalle-cinco.css">
     <link rel="stylesheet" href="../styles/styleFooter.css">
+    <link rel="shortcut icon" href="../assets/img/DevTunes.png" type="image/x-icon">
 </head>
 <body>
     <main>
     <!-- Navbar -->
-    <!-- Navbar responsive -->
-    <nav
-    class="navbar navbar-expand-lg navbar-light bg-light d-lg-none d-md-none">
-    <a class="navbar-brand" href="./main.html">DevTunes</a>
-    <button
-    class="navbar-toggler"
-    type="button"
-    data-toggle="collapse"
-    data-target="#navbarNav"
-    aria-controls="navbarNav"
-    aria-expanded="false"
-    aria-label="Toggle navigation"
-    >
-    <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-    <!-- Contenido del menú -->
-    <ul class="navbar-nav mr-auto">
-        <li class="nav-item">
-        <a class="nav-link" href="#">Iniciar sesión</a>
-        </li>
-        <li class="nav-item">
-        <a class="nav-link" href="#">Registrarse</a>
-        </li>
-        <li class="nav-item dropdown">
-        <a
-            class="nav-link dropdown-toggle"
-            href="#"
-            id="navbarDropdownMenuLink1"
-            role="button"
-            data-toggle="dropdown"
-            aria-haspopup="true"
-            aria-expanded="false"
-        >
-            Recomendado
-        </a>
-        <div
-            class="dropdown-menu"
-            aria-labelledby="navbarDropdownMenuLink1"
-        >
-            <a class="dropdown-item" href="#">Explorar</a>
-            <a class="dropdown-item" href="#">Géneros</a>
-            <a class="dropdown-item" href="#">Artistas</a>
-            <a class="dropdown-item" href="#">Álbumes</a>
+        <!-- Navbar responsive -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light d-lg-none d-md-none">
+            <a class="navbar-brand" href="./main.html">DevTunes</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <!-- Contenido del menú -->
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Iniciar sesión</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Registrarse</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink1" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Recomendado
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink1">
+                            <a class="dropdown-item" href="./main.html">Explorar</a>
+                            <a class="dropdown-item" href="./error.html">Géneros</a>
+                            <a class="dropdown-item" href="./error.html">Artistas</a>
+                            <a class="dropdown-item" href="./error.html">Álbumes</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink2" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Mi biblioteca
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink2">
+                            <a class="dropdown-item" href="./error.html">Escuchado Recientemente</a>
+                            <a class="dropdown-item" href="./error.html">Favoritos</a>
+                            <a class="dropdown-item" href="../views/listaReproduccion.html">Mi lista de reproduccion</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Administrador</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!-- Formulario de búsqueda -->
+
+        <div class="container mt-2 custom-container d-md-none d-lg-none">
+            <form class="form-inline" id="searchFormMobile">
+                <input class="form-control mr-sm-2" type="search" placeholder="Buscar canción" aria-label="Search"
+                    id="searchInputMobile" />
+                <button type="submit" style="display: none"></button>
+            </form>
         </div>
-        </li>
-        <li class="nav-item dropdown">
-        <a
-            class="nav-link dropdown-toggle"
-            href="#"
-            id="navbarDropdownMenuLink2"
-            role="button"
-            data-toggle="dropdown"
-            aria-haspopup="true"
-            aria-expanded="false"
-        >
-            Mi biblioteca
-        </a>
-        <div
-            class="dropdown-menu"
-            aria-labelledby="navbarDropdownMenuLink2"
-        >
-            <a class="dropdown-item" href="#">Escuchado Recientemente</a>
-            <a class="dropdown-item" href="#">Favoritos</a>
-            <a class="dropdown-item" href="#">Descargas</a>
+        <div id="searchResultsMobile" class="search-results-mobile d-md-none d-lg-none"></div>
+
+        <!-- Fin Navbar responsive -->
+
+        <!-- Navbar para pantallas grandes -->
+        <div id="navbar" class="screen-navbar d-none d-lg-block d-md-block">
+            <!-- Contenedor 1 -->
+            <div class="navbar-container navbar-logo" id="logoContainer">
+                <p>DevTunes</p>
+            </div>
+            <!-- Filtro -->
+            <form class="form-inline my-2 my-lg-0 ml-auto" id="formSearchSongs">
+                <input class="form-control mr-sm-2" type="search" placeholder="Buscar canción" aria-label="Search"
+                    id="searchInputDesktop" />
+            </form>
+            <!-- Contenedor de la lista desplegable para la búsqueda -->
+            <div id="searchResultsDesktop" class="search-results-desktop"></div>
+            <!-- Contenedor 2 -->
+            <div class="navbar-container">
+                <ul>
+                    <li>Iniciar sesión</li>
+                    <li>Registrarse</li>
+                    <li>Administrador</li>
+                </ul>
+            </div>
+
+            <!-- Contenedor 3 -->
+            <div class="navbar-container">
+                <p>RECOMENDADO</p>
+                <ul>
+                    <li class="active"><a class="navbar-link" href="main.html">Explorar</a></li>
+                    <li><a class="navbar-link" href="error.html">Generos</a></li>
+                    <li><a class="navbar-link" href="error.html">Artistas</a></li>
+                    <li><a class="navbar-link" href="error.html">Albumes</a></li>
+                </ul>
+            </div>
+
+            <!-- Contenedor 4 -->
+            <div class="navbar-container">
+                <p>MI BIBLIOTECA</p>
+                <ul>
+                    <li><a class="navbar-link" href="error.html">Escuchado Recientemente</a></li>
+                    <li><a class="navbar-link" href="error.html">Favoritos</a></li>
+                    <li><a class="navbar-link" href="../views/listaReproduccion.html">Mi lista de reproduccion</a></li>
+                </ul>
+            </div>
         </div>
-        </li>
-        <li class="nav-item">
-        <a class="nav-link" href="#">Administrador</a>
-        </li>
-    </ul>
-    </div>
-</nav>
-<!-- Fin Navbar responsive -->
-
-<!-- Navbar para pantallas grandes -->
-<div id="navbar" class="screen-navbar d-none d-lg-block d-md-block">
-    <!-- Contenedor 1 -->
-    <div class="navbar-container navbar-logo" id="logoContainer">
-        <a href="./main.html"><p>DevTunes</p></a>
-    </div>
-
-    <!-- Contenedor 2 -->
-    <div class="navbar-container">
-    <ul>
-        <li>Iniciar sesión</li>
-        <li>Registrarse</li>
-        <li>Administrador</li>
-    </ul>
-    </div>
-
-    <!-- Contenedor 3 -->
-    <div class="navbar-container">
-    <p>RECOMENDADO</p>
-    <ul>
-        <li class="active">Explorar</li>
-        <li>Generos</li>
-        <li>Artistas</li>
-        <li>Albumes</li>
-    </ul>
-    </div>
-
-    <!-- Contenedor 4 -->
-    <div class="navbar-container">
-    <p>MI BIBLIOTECA</p>
-    <ul>
-        <li>Escuchado Recientemente</li>
-        <li>Favoritos</li>
-        <li>Descargas</li>
-    </ul>
-    </div>
-</div>
-<!-- Fin Navbar -->
+        <!-- Fin Navbar -->
     <div id="main-content">
         <div id="banner">
             <!--Comienzo de la portada-->
