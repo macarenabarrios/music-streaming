@@ -110,15 +110,9 @@ function handleArtistSelection(artist) {
 }
 
 // Función para generar el enlace de la página del artista
-function generatePageLink(item, isArtist) {
+function generatePageLink(item, isSong) {
   const formattedTitle = item.title ? item.title.toLowerCase().replace(/\s+/g, '-') : item.artist.toLowerCase().replace(/\s+/g, '-');
-
-  if (isArtist) {
-    return `${formattedTitle}.html`;
-  } else {
-    // Si no es un artista, redirige a error.html
-    return 'error.html';
-  }
+  return isSong ? `${formattedTitle}.html` : `${formattedTitle}.html`;
 }
 
 // Funcion para ocultar los botones de iniciar sesion y registro

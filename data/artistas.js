@@ -6,22 +6,7 @@ const artistas = [
     artist: 'Taylor Swift',
   },
   {
-    artist: 'Callejero Fino',
-  },
-  {
-    artist: 'Feid',
-  },
-  {
-    artist: 'Young Miko',
-  },
-  {
     artist: 'Karol G',
-  },
-  {
-    artist: 'Peso Pluma',
-  },
-  {
-    artist: 'Myke Towers',
   },
   {
     artist: 'Bad Bunny',
