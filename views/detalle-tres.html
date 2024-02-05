@@ -12,123 +12,160 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="../styles/detalle-uno.css">
     <link rel="stylesheet" href="../styles/detalle-tres.css">
+    <link rel="stylesheet" href="../styles/styleFooter.css">
+    <link rel="shortcut icon" href="../assets/img/DevTunes.png" type="image/x-icon">
 </head>
 <body>
     <main>
     <!-- Navbar -->
     <!-- Navbar responsive -->
     <nav
-    class="navbar navbar-expand-lg navbar-light bg-light d-lg-none d-md-none">
-    <a class="navbar-brand" href="./main.html">DevTunes</a>
-    <button
-    class="navbar-toggler"
-    type="button"
-    data-toggle="collapse"
-    data-target="#navbarNav"
-    aria-controls="navbarNav"
-    aria-expanded="false"
-    aria-label="Toggle navigation"
+      class="navbar navbar-expand-lg navbar-light bg-light d-lg-none d-md-none"
     >
-    <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-    <!-- Contenido del menú -->
-    <ul class="navbar-nav mr-auto">
-        <li class="nav-item">
-        <a class="nav-link" href="#">Iniciar sesión</a>
-        </li>
-        <li class="nav-item">
-        <a class="nav-link" href="#">Registrarse</a>
-        </li>
-        <li class="nav-item dropdown">
-        <a
-            class="nav-link dropdown-toggle"
-            href="#"
-            id="navbarDropdownMenuLink1"
-            role="button"
-            data-toggle="dropdown"
-            aria-haspopup="true"
-            aria-expanded="false"
-        >
-            Recomendado
-        </a>
-        <div
-            class="dropdown-menu"
-            aria-labelledby="navbarDropdownMenuLink1"
-        >
-            <a class="dropdown-item" href="#">Explorar</a>
-            <a class="dropdown-item" href="#">Géneros</a>
-            <a class="dropdown-item" href="#">Artistas</a>
-            <a class="dropdown-item" href="#">Álbumes</a>
-        </div>
-        </li>
-        <li class="nav-item dropdown">
-        <a
-            class="nav-link dropdown-toggle"
-            href="#"
-            id="navbarDropdownMenuLink2"
-            role="button"
-            data-toggle="dropdown"
-            aria-haspopup="true"
-            aria-expanded="false"
-        >
-            Mi biblioteca
-        </a>
-        <div
-            class="dropdown-menu"
-            aria-labelledby="navbarDropdownMenuLink2"
-        >
-            <a class="dropdown-item" href="#">Escuchado Recientemente</a>
-            <a class="dropdown-item" href="#">Favoritos</a>
-            <a class="dropdown-item" href="#">Descargas</a>
-        </div>
-        </li>
-        <li class="nav-item">
-        <a class="nav-link" href="#">Administrador</a>
-        </li>
-    </ul>
+      <a class="navbar-brand" href="./main.html">DevTunes</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <!-- Contenido del menú -->
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link navbar-link-registro-mobile" href="./login.html">Iniciar sesión</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link navbar-link-iniciar-sesion-mobile" href="./registro.html">Registrarse</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link navbar-link-administrador-mobile" href="./administración.html">Administrador</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link navbar-link-cerrar-sesion-mobile" onclick="window.logout()">Cerrar sesión</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="./error.html"
+              id="navbarDropdownMenuLink1"
+              role="button"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              Recomendado
+            </a>
+            <div
+              class="dropdown-menu"
+              aria-labelledby="navbarDropdownMenuLink1"
+            >
+              <a class="dropdown-item" href="./main.html">Explorar</a>
+              <a class="dropdown-item" href="./error.html">Géneros</a>
+              <a class="dropdown-item" href="./error.html">Artistas</a>
+              <a class="dropdown-item" href="./error.html">Álbumes</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="navbarDropdownMenuLink2"
+              role="button"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              Mi biblioteca
+            </a>
+            <div
+              class="dropdown-menu"
+              aria-labelledby="navbarDropdownMenuLink2"
+            >
+              <a class="dropdown-item dropdown-custom-link" href="#" onclick="window.redirectOthers()">Escuchado Recientemente</a>
+              <a class="dropdown-item dropdown-custom-link" href="#" onclick="window.redirectOthers()">Favoritos</a>
+              <a class="dropdown-item dropdown-custom-link" href="#" onclick="window.redirectMiBiblioteca()">Mi lista de reproducción</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!-- Formulario de búsqueda -->
+    <div class="container mt-2 custom-container d-md-none d-lg-none">
+      <form class="form-inline" id="searchFormMobile">
+        <input
+          class="form-control mr-sm-2"
+          type="search"
+          placeholder="Buscar canción"
+          aria-label="Search"
+          id="searchInputMobile"
+        />
+        <button type="submit" style="display: none"></button>
+      </form>
     </div>
-</nav>
-<!-- Fin Navbar responsive -->
+    <div
+      id="searchResultsMobile"
+      class="search-results-mobile d-md-none d-lg-none"
+    ></div>
+    <!-- Fin Navbar responsive -->
 
-<!-- Navbar para pantallas grandes -->
-<div id="navbar" class="screen-navbar d-none d-lg-block d-md-block">
-    <!-- Contenedor 1 -->
-    <div class="navbar-container navbar-logo" id="logoContainer">
-        <a href="./main.html"><p>DevTunes</p></a>
-    </div>
+    <!-- Navbar para pantallas grandes -->
+    <div id="navbar" class="screen-navbar d-none d-lg-block d-md-block">
+      <!-- Contenedor 1 -->
+      <div class="navbar-container navbar-logo" id="logoContainer">
+        <a href="main.html" class="custom-link">
+          <p>DevTunes</p>
+      </a>
+      </div>
+      <!-- Filtro -->
+      <form class="form-inline my-2 my-lg-0 ml-auto" id="formSearchSongs">
+        <input
+          class="form-control mr-sm-2"
+          type="search"
+          placeholder="Buscar canción"
+          aria-label="Search"
+          id="searchInputDesktop"
+        />
+      </form>
+      <!-- Contenedor de la lista desplegable para la búsqueda -->
+      <div id="searchResultsDesktop" class="search-results-desktop"></div>
+      <!-- Contenedor 2 -->
+      <div class="navbar-container">
+        <ul>
+          <li><a class="navbar-link navbar-link-iniciar-sesion" href="login.html">Iniciar sesión</a></li>
+          <li><a class="navbar-link navbar-link-registro" href="registro.html">Registrarse</a></li>
+          <li><a class="navbar-link navbar-link-administrador" href="administracion.html">Administrador</a></li>
+          <li><a class="navbar-link navbar-link-cerrar-sesion" onclick="window.logout()">Cerrar sesión</a></li>
+        </ul>
+      </div>
 
-    <!-- Contenedor 2 -->
-    <div class="navbar-container">
-    <ul>
-        <li>Iniciar sesión</li>
-        <li>Registrarse</li>
-        <li>Administrador</li>
-    </ul>
-    </div>
+      <!-- Contenedor 3 -->
+      <div class="navbar-container">
+        <p>RECOMENDADO</p>
+        <ul>
+          <li class="active"><a class="navbar-link" href="main.html">Explorar</a></li>
+          <li><a class="navbar-link" href="error.html">Generos</a></li>
+          <li><a class="navbar-link" href="error.html">Artistas</a></li>
+          <li><a class="navbar-link" href="error.html">Albumes</a></li>
+        </ul>
+      </div>
 
-    <!-- Contenedor 3 -->
-    <div class="navbar-container">
-    <p>RECOMENDADO</p>
-    <ul>
-        <li class="active">Explorar</li>
-        <li>Generos</li>
-        <li>Artistas</li>
-        <li>Albumes</li>
-    </ul>
+      <!-- Contenedor 4 -->
+      <div class="navbar-container">
+        <p>MI BIBLIOTECA</p>
+        <ul>
+          <li><a class="navbar-link" onclick="window.redirectOthers()">Escuchado Recientemente</a></li>
+          <li><a class="navbar-link" onclick="window.redirectOthers()">Favoritos</a></li>
+          <li><a class="navbar-link" onclick="window.redirectMiBiblioteca()">Mi lista de reproducción</a></li>
+        </ul>
+      </div>
     </div>
-
-    <!-- Contenedor 4 -->
-    <div class="navbar-container">
-    <p>MI BIBLIOTECA</p>
-    <ul>
-        <li>Escuchado Recientemente</li>
-        <li>Favoritos</li>
-        <li>Descargas</li>
-    </ul>
-    </div>
-</div>
-<!-- Fin Navbar -->
+    <!-- Fin Navbar -->
     <div id="main-content">
         <div id="banner">
             <!--Comienzo de la portada-->
@@ -169,7 +206,6 @@
                 </div>
             </section>
             <!--Iconos de reproduccion-->
-
             <!-- encabezado tamaño computadora -->
             <div class="song-encabezado linea encabezado-tamaño-computadora">
                 <div class="icono-enumeracion">
@@ -186,364 +222,96 @@
                 </div>
             </div>
                 <!--fin encabezado tamaño computadora -->
-
-                <!-- tamaño computadora 1-->
-            <div class="song tamaño-computadora ">
-                <div class="lista-enumeracion">
-                    <p>1</p>
-                </div>
-                <img src="../assets/img/karolg-tres.jpg" class="imagen-lista-canciones" alt="Imagen de la canción 1">
-                <div class="song-details">
-                <p>Qlona</p>
-                </div>
-                <div class="nombre-del-album">
-                    <p>Mañana sera bonito</p>
-                </div>
-                <div class="duracion-cancion">
-                    <p>02:23</p>
-                </div>
-                <div class="icons">
-                    <i type="button" class="bi bi-plus-circle p-2"></i><i type="button" class="bi bi-three-dots p-3"></i>
-                </div>
-            </div>
-                <!--fin tamaño computadora -->
-                <!-- tamaño computadora 2-->
-            <div class="song tamaño-computadora paso">
-                <div class="lista-enumeracion">
-                    <p>2</p>
-                </div>
-                <img src="../assets/img/karolg-tres.jpg" class="imagen-lista-canciones" alt="Imagen de la canción 2">
-                <div class="song-details">
-                <p>Amargura</p>
-                </div>
-                <div class="nombre-del-album">
-                    <p>Mañana sera bonito</p>
-                </div>
-                <div class="duracion-cancion">
-                    <p>02:50</p>
-                </div>
-                <div class="icons">
-                    <i type="button" class="bi bi-plus-circle p-2"></i><i type="button" class="bi bi-three-dots p-3"></i>
-                </div>
-            </div>
-                <!--fin tamaño computadora -->
-                <!-- tamaño computadora 3 -->
-            <div class="song tamaño-computadora">
-                <div class="lista-enumeracion">
-                    <p>3</p>
-                </div>
-                <img src="../assets/img/karolg-uno.jpg" class="imagen-lista-canciones" alt="Imagen de la canción 3">
-                <div class="song-details">
-                <p>Que chimba de vida</p>
-                </div>
-                <div class="nombre-del-album">
-                    <p>Que chimba de vida</p>
-                </div>
-                <div class="duracion-cancion">
-                    <p>02:03</p>
-                </div>
-                <div class="icons">
-                    <i type="button" class="bi bi-plus-circle p-2"></i><i type="button" class="bi bi-three-dots p-3"></i>
-                </div>
-            </div>
-                <!--fin tamaño computadora -->
-                <!-- tamaño computadora 4-->
-            <div class="song tamaño-computadora">
-                <div class="lista-enumeracion">
-                    <p>4</p>
-                </div>
-                <img src="../assets/img/karolg-dos.jpg" class="imagen-lista-canciones" alt="Imagen de la canción 4">
-                <div class="song-details">
-                <p>El barco</p>
-                </div>
-                <div class="nombre-del-album-1-1">
-                    <p>KGO516</p>
-                </div>
-                <div class="duracion-cancion">
-                    <p>03:24</p>
-                </div>
-                <div class="icons">
-                    <i type="button" class="bi bi-plus-circle p-2"></i><i type="button" class="bi bi-three-dots p-3"></i>
-                </div>
-            </div>
-                <!--fin tamaño computadora -->
-                <!-- tamaño computadora 5-->
-            <div class="song tamaño-computadora">
-                <div class="lista-enumeracion">
-                    <p>5</p>
-                </div>
-                <img src="../assets/img/karolg-dos.jpg" class="imagen-lista-canciones" alt="Imagen de la canción 5">
-                <div class="song-details">
-                <p>A ella</p>
-                </div>
-                <div class="nombre-del-album-1">
-                    <p>Unstoppable</p>
-                </div>
-                <div class="duracion-cancion">
-                    <p>03:19</p>
-                </div>
-                <div class="icons">
-                    <i type="button" class="bi bi-plus-circle p-2"></i><i type="button" class="bi bi-three-dots p-3"></i>
-                </div>
-            </div>
-                <!--fin tamaño computadora -->
-                <!-- tamaño computadora 6-->
-            <div class="song tamaño-computadora">
-                <div class="lista-enumeracion">
-                    <p>6</p>
-                </div>
-                <img src="../assets/img/karolg-tres.jpg" class="imagen-lista-canciones" alt="Imagen de la canción 6">
-                <div class="song-details">
-                <p>Provenza</p>
-                </div>
-                <div class="nombre-del-album">
-                    <p>Mañana sera bonito</p>
-                </div>
-                <div class="duracion-cancion">
-                    <p>03:28</p>
-                </div>
-                <div class="icons">
-                    <i type="button" class="bi bi-plus-circle p-2"></i><i type="button" class="bi bi-three-dots p-3"></i>
-                </div>
-            </div>
-                <!--fin tamaño computadora -->
-                <!-- tamaño computadora 7-->
-            <div class="song tamaño-computadora">
-                <div class="lista-enumeracion">
-                    <p>7</p>
-                </div>
-                <img src="../assets/img/karolg-uno.jpg" class="imagen-lista-canciones" alt="Imagen de la canción 7">
-                <div class="song-details">
-                <p>Mamiii</p>
-                </div>
-                <div class="nombre-del-album-1-1-2">
-                    <p>Esquemas</p>
-                </div>
-                <div class="duracion-cancion">
-                    <p>03:46</p>
-                </div>
-                <div class="icons">
-                    <i type="button" class="bi bi-plus-circle p-2"></i><i type="button" class="bi bi-three-dots p-3"></i>
-                </div>
-            </div>
-                <!--fin tamaño computadora -->
-                <!-- tamaño computadora 8-->
-            <div class="song tamaño-computadora">
-                <div class="lista-enumeracion">
-                    <p>8</p>
-                </div>
-                <img src="../assets/img/karolg-dos.jpg" class="imagen-lista-canciones" alt="Imagen de la canción 8">
-                <div class="song-details">
-                <p>Contigo voy a muerte</p>
-                </div>
-                <div class="nombre-del-album-1-1">
-                    <p>KGO516</p>
-                </div>
-                <div class="duracion-cancion">
-                    <p>03:40</p>
-                </div>
-                <div class="icons">
-                    <i type="button" class="bi bi-plus-circle p-2"></i><i type="button" class="bi bi-three-dots p-3"></i>
-                </div>
-            </div>
-                <!--fin tamaño computadora -->
-                <!-- tamaño computadora 9-->
-            <div class="song tamaño-computadora">
-                <div class="lista-enumeracion">
-                    <p>9</p>
-                </div>
-                <img src="../assets/img/karolg-tres.jpg" class="imagen-lista-canciones" alt="Imagen de la canción 9">
-                <div class="song-details">
-                <p>Gatubela</p>
-                </div>
-                <div class="nombre-del-album-1-1">
-                    <p>Gatubela</p>
-                </div>
-                <div class="duracion-cancion">
-                    <p>03:29</p>
-                </div>
-                <div class="icons">
-                    <i type="button" class="bi bi-plus-circle p-2"></i><i type="button" class="bi bi-three-dots p-3"></i>
-                </div>
-            </div>
-                <!--fin tamaño computadora -->
-                <!-- tamaño computadora 10-->
-            <div class="song tamaño-computadora">
-                <div class="lista-enumeracion-1">
-                    <p>10</p>
-                </div>
-                <img src="../assets/img/karolg-uno.jpg" class="imagen-lista-canciones" alt="Imagen de la canción 10">
-                <div class="song-details">
-                <p>Caramelo</p>
-                </div>
-                <div class="nombre-del-album-1-1-1">
-                    <p>Enoc</p>
-                </div>
-                <div class="duracion-cancion">
-                    <p>03:53</p>
-                </div>
-                <div class="icons">
-                    <i type="button" class="bi bi-plus-circle p-2"></i><i type="button" class="bi bi-three-dots p-3"></i>
-                </div>
-            </div>
-                <!--fin tamaño computadora -->
-                            <!-- encabezado tamaño tablet -->
-            <div class="linea"></div>
-                <!--fin encabezado tamaño tablet -->
-                <!-- tamaño tablet 1 -->
-                <div class="song tamaño-tablet">
-                    <img src="../assets/img/karolg-tres.jpg" alt="Imagen de la canción 1" class="imagen-tamaño-movil">
-                    <div class="song-details">
-                    <p>Qlona</p>
-                    <p class="subtitulo-album">Mañana sera bonito</p>
-                    </div>
-                    <div class="icons icono-duracion-tablet">
-                        <p>02:23</p>
-                    </div>
-                    <div class="icons icono-tablet">
-                        <i type="button" class="bi bi-plus-circle p-2"></i><i type="button" class="bi bi-three-dots p-2"></i>
-                    </div>
-                </div>
-                <!-- tamaño tablet -->
-                                <!-- tamaño tablet 2 -->
-                                <div class="song tamaño-tablet">
-                                    <img src="../assets/img/karolg-tres.jpg" alt="Imagen de la canción 2" class="imagen-tamaño-movil">
-                                    <div class="song-details">
-                                    <p>Amargura</p>
-                                    <p class="subtitulo-album">Mañana ser bonito</p>
-                                    </div>
-                                    <div class="icons icono-duracion-tablet">
-                                        <p>02:50</p>
-                                    </div>
-                                    <div class="icons icono-tablet">
-                                        <i type="button" class="bi bi-plus-circle p-2"></i><i type="button" class="bi bi-three-dots p-2"></i>
-                                    </div>
-                                </div>
-                                <!-- tamaño tablet  -->
-                                                <!-- tamaño tablet 3 -->
-                <div class="song tamaño-tablet">
-                    <img src="../assets/img/karolg-uno.jpg" alt="Imagen de la canción 3 " class="imagen-tamaño-movil">
-                    <div class="song-details">
-                    <p>Que Chimba de Vida</p>
-                    <p class="subtitulo-album">Que Chimba de vida</p>
-                    </div>
-                    <div class="icons icono-duracion-tablet">
-                        <p>02:03</p>
-                    </div>
-                    <div class="icons icono-tablet">
-                        <i type="button" class="bi bi-plus-circle p-2"></i><i type="button" class="bi bi-three-dots p-2"></i>
-                    </div>
-                </div>
-                <!-- tamaño tablet -->
-                                <!-- tamaño tablet 4 -->
-                                <div class="song tamaño-tablet">
-                                    <img src="../assets/img/karolg-dos.jpg" alt="Imagen de la canción 4" class="imagen-tamaño-movil">
-                                    <div class="song-details">
-                                    <p>El barco</p>
-                                    <p class="subtitulo-album">KGO516</p>
-                                    </div>
-                                    <div class="icons icono-duracion-tablet">
-                                        <p>03:24</p>
-                                    </div>
-                                    <div class="icons icono-tablet">
-                                        <i type="button" class="bi bi-plus-circle p-2"></i><i type="button" class="bi bi-three-dots p-2"></i>
-                                    </div>
-                                </div>
-                                <!-- tamaño tablet -->
-                                                <!-- tamaño tablet 5 -->
-                <div class="song tamaño-tablet">
-                    <img src="../assets/img/karolg-dos.jpg" alt="Imagen de la canción 5" class="imagen-tamaño-movil">
-                    <div class="song-details">
-                    <p>A ella</p>
-                    <p class="subtitulo-album">Unstoppable</p>
-                    </div>
-                    <div class="icons icono-duracion-tablet">
-                        <p>03:19</p>
-                    </div>
-                    <div class="icons icono-tablet">
-                        <i type="button" class="bi bi-plus-circle p-2"></i><i type="button" class="bi bi-three-dots p-2"></i>
-                    </div>
-                </div>
-                <!-- tamaño tablet -->
-                                <!-- tamaño tablet 6 -->
-                                <div class="song tamaño-tablet">
-                                    <img src="../assets/img/karolg-tres.jpg" alt="Imagen de la canción 6" class="imagen-tamaño-movil">
-                                    <div class="song-details">
-                                    <p>Provenza</p>
-                                    <p class="subtitulo-album">Mañana sera bonito</p>
-                                    </div>
-                                    <div class="icons icono-duracion-tablet">
-                                        <p>03:28</p>
-                                    </div>
-                                    <div class="icons icono-tablet">
-                                        <i type="button" class="bi bi-plus-circle p-2"></i><i type="button" class="bi bi-three-dots p-2"></i>
-                                    </div>
-                                </div>
-                                <!-- tamaño tablet -->
-                                                <!-- tamaño tablet 7 -->
-                <div class="song tamaño-tablet">
-                    <img src="../assets/img/karolg-uno.jpg" alt="Imagen de la canción 7" class="imagen-tamaño-movil">
-                    <div class="song-details">
-                    <p>Mamiii</p>
-                    <p class="subtitulo-album">Esquemas</p>
-                    </div>
-                    <div class="icons icono-duracion-tablet">
-                        <p>03:46</p>
-                    </div>
-                    <div class="icons icono-tablet">
-                        <i type="button" class="bi bi-plus-circle p-2"></i><i type="button" class="bi bi-three-dots p-2"></i>
-                    </div>
-                </div>
-                <!-- tamaño tablet  -->
-                                <!-- tamaño tablet 8 -->
-                                <div class="song tamaño-tablet">
-                                    <img src="../assets/img/karolg-dos.jpg" alt="Imagen de la canción 8" class="imagen-tamaño-movil">
-                                    <div class="song-details">
-                                    <p>Contigo voy a muerte</p>
-                                    <p class="subtitulo-album">KGO516</p>
-                                    </div>
-                                    <div class="icons icono-duracion-tablet">
-                                        <p>03:40</p>
-                                    </div>
-                                    <div class="icons icono-tablet">
-                                        <i type="button" class="bi bi-plus-circle p-2"></i><i type="button" class="bi bi-three-dots p-2"></i>
-                                    </div>
-                                </div>
-                                <!-- tamaño tablet  -->
-                                                <!-- tamaño tablet 9 -->
-                <div class="song tamaño-tablet">
-                    <img src="../assets/img/karolg-tres.jpg" alt="Imagen de la canción 9" class="imagen-tamaño-movil">
-                    <div class="song-details">
-                    <p>Gatubela</p>
-                    <p class="subtitulo-album">Gatubela</p>
-                    </div>
-                    <div class="icons icono-duracion-tablet">
-                        <p>03:29</p>
-                    </div>
-                    <div class="icons icono-tablet">
-                        <i type="button" class="bi bi-plus-circle p-2"></i><i type="button" class="bi bi-three-dots p-2"></i>
-                    </div>
-                </div>
-                <!-- tamaño tablet -->
-                                <!-- tamaño tablet 10 -->
-                                <div class="song tamaño-tablet">
-                                    <img src="../assets/img/karolg-uno.jpg" alt="Imagen de la canción 10" class="imagen-tamaño-movil">
-                                    <div class="song-details">
-                                    <p>Caramelo</p>
-                                    <p class="subtitulo-album">Enoc</p>
-                                    </div>
-                                    <div class="icons icono-duracion-tablet">
-                                        <p>03:53</p>
-                                    </div>
-                                    <div class="icons icono-tablet">
-                                        <i type="button" class="bi bi-plus-circle p-2"></i><i type="button" class="bi bi-three-dots p-2"></i>
-                                    </div>
-                                </div>
-                                <!-- tamaño tablet -->
+                <section id="productos-container">
+                    <div class="linea"></div>
+                </section>
         </section>
+        <footer>
+            <div class="container text-center">
+                <div class="row">
+                    <div class="col-md-2">
+                        <img class="logoFooter" src="../assets/img/DevTunes.png" alt="Logo de DevTunes">
+                    </div>
+                    <div class="col">
+                        <p>
+                        <h5 class="tituloListaFooter">DevTunes</h5>
+                        </p>
+                        <ul class="listaFooter">
+                            <li><a href="../views/error.html">Reseñas</a></li>
+                            <li><a href="../views/error.html">Empleo</a></li>
+                            <li><a href="../views/error.html">Aplicación móvil gratis</a></li>
+                            <li><a href="../views/error.html">Ayuda</a></li>
+                        </ul>
+                    </div>
+                    <div class="col">
+                        <p>
+                        <h5 class="tituloListaFooter">Nosotros</h5>
+                        </p>
+                        <ul class="listaFooter">
+                            <li><a href="../views/sobreNosotros.html">Equipo DevTunes</a></li>
+                        </ul>
+                    </div>
+                    <div class="col">
+                        <p>
+                        <h5 class="tituloListaFooter">Comunidades</h5>
+                        </p>
+                        <ul class="listaFooter">
+                            <li><a href="../views/error.html">Musicos</a></li>
+                            <li><a href="../views/error.html">Podcasters</a></li>
+                            <li><a href="../views/error.html">Desarrolladores</a></li>
+                            <li><a href="../views/error.html">Inversores</a></li>
+                            <li><a href="../views/error.html">Publicidad</a></li>
+                        </ul>
+                    </div>
+                    <div class="col">
+                        <p>
+                        <h5 class="tituloListaFooter">Legal</h5>
+                        </p>
+                        <ul class="listaFooter">
+                            <li><a href="../views/error.html">Política de privacidad</a></li>
+                            <li><a href="../views/error.html">Cookies</a></li>
+                            <li><a href="../views/error.html">Condiciones de uso</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="container text-center">
+                <div class="row">
+                    <div class="col-md-6">
+                        <ul class="listaRedes">
+                            <li>
+                                <a href="../views/error.html">
+                                    <i class="bi bi-facebook"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../views/error.html">
+                                    <i class="bi bi-instagram"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../views/error.html">
+                                    <i class="bi bi-twitter-x"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <p class="copy">&copy; 2024 DevTunes - Todos los derechos reservados</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
         </div>
     </div>
     </main>
+    <script src="../js/lista-karol-g.js"></script>
+    <script src="../js/karol-g.js"></script>
+    <script src="../js/funcioncarrito.js"></script>
+    <script type="module" src="../data/songs.js"></script>
+    <script type="module" src="../js/index.js"></script>
+    <script type="module" src="../js/logout.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>

@@ -4,11 +4,13 @@
     padding-bottom: 20px;
     padding-top: 20px;
     font-family: 'Poppins', sans-serif;
-    background: rgb(117, 87, 237);
-    background: linear-gradient(to bottom, rgba(87, 237, 154, 0.883) 0%, rgba(223,178,195,1) 100%);
+    background: rgb(87,237,92);
+    background: linear-gradient(74deg, rgba(87,237,92,0.6839110644257703) 0%, rgba(3,36,2,0.8435749299719888) 140%);
     color: #000000;
     }
-
+    .activar:hover{
+        transform: scale(1.5);
+      }
     .nombre-del-album{
         padding-right: 300px;
         padding-left: 0px;

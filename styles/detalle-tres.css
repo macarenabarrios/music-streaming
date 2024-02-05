@@ -1,9 +1,19 @@
-
+#banner {
+    width: 100%;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    font-family: 'Poppins', sans-serif;
+    background: rgb(237,87,87);
+    background: linear-gradient(74deg, rgba(237,87,87,0.6839110644257703) 0%, rgba(36,2,2,1) 140%);
+    color: #000000;
+    }
 .nombre-del-album{
     padding-right: 250px;
     padding-left: 0px;
     }
-
+    .activar:hover{
+        transform: scale(1.5);
+      }
     .nombre-del-album-1{
     padding-right: 300px;
     }

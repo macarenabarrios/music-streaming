@@ -5,6 +5,19 @@ body {
     padding: 0;
 }
 
+#carrito-vacio {
+    text-align: center;
+    font-size: 40px;
+    margin-top: 40px;
+    margin-bottom: 45px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: #ED5790;
+    color: white;
+}
+
+.escondido{
+    display: none;
+}
 /* Estilos para pantallas más grandes */
 @media only screen and (min-width: 1025px) {
     #navbar {
@@ -203,7 +216,8 @@ body {
 
 /***encabezado playlist***/
 .encabezado-lista {
-    background-image: linear-gradient(to right, rgb(251, 232, 255), rgb(182, 105, 177));
+    background: rgb(0,232,255);
+background: linear-gradient(74deg, rgba(0,232,255,0.6530987394957983) 0%, rgba(255,255,255,1) 100%);
     display: flex;
     flex-direction: row;
     font-family: 'Poppins', sans-serif;
@@ -230,11 +244,12 @@ body {
 }
 
 .detalle-lista h1 {
-    margin-top: 50px;
+    margin-top: 90px;
     margin-bottom: 50px;
     font-weight: bold;
     color: #ffffff;
-
+    padding-left: 50px;
+    font-size: 50px;
 }
 
 ul.lista-opciones {
@@ -258,6 +273,7 @@ ul.lista-opciones {
 }
 
 .lista-opciones button:hover,
+
 .btn-eliminar:hover {
     color: #ED5790;
     transform: scale(1.2);
