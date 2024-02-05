@@ -7,7 +7,25 @@ body {
 #main-content {
   margin-left: 20%;
 }
+.custom-link {
+  color: #222A53;
+  text-decoration: none;
+}
 
+.custom-link:hover {
+  text-decoration: none;
+  color: #222A53;
+}
+
+.navbar-link {
+  color: #7A7C8A;
+  text-decoration: none;
+}
+
+.navbar-link:hover {
+  text-decoration: none;
+  color: #7A7C8A;
+}
 
 .activar:hover{
   transform: scale(1.5);
@@ -821,6 +839,14 @@ p{
     .navbar{
       padding: 5px 10px 0px 10px;
     }
+
+    .dropdown-item {
+      color: #7A7C8A;
+    }
+  
+    .dropdown-custom-link {
+      color: #7A7C8A
+    }
 }
 
 
